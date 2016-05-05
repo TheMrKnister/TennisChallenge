@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerDiagram dslVersion="1.0.0.0" Id="d4f3d086-ebff-40ae-a58e-7b2e392e2689" absoluteBounds="0, 0, 11, 8.5" name="TennisChallenge">
+  <layerModelMoniker Id="9839ee7f-130d-45b9-af4b-708c8d1782f8" />
+  <nestedChildShapes>
+    <layerShape Id="3694d9c4-47b7-401b-9a9f-c6c1d2f0c828" absoluteBounds="1.125, 3.375, 2, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="74886acc-77e5-4bdf-87a4-072aee996afd" />
+    </layerShape>
+    <layerShape Id="bf174a8e-a274-4342-bea2-84f6a569598b" absoluteBounds="1.125, 2, 2, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="994c8e32-8c39-40a4-ac8d-0fdbc4bcf06a" />
+    </layerShape>
+    <layerShape Id="6348808f-4b17-4eb0-884f-f7b818469ed9" absoluteBounds="1.125, 0.625, 2, 0.75" customColor="161, 199, 231">
+      <layerMoniker Id="491b6952-31b5-44f0-8357-8a42c9ad84b1" />
+    </layerShape>
+    <dependencyConnector edgePoints="[(2.125 : 1.375); (2.125 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <dependencyFromLayerToLayerMoniker Id="5b2a3660-1c2a-440f-b3d7-ac6b4fd92dcf" />
+      <relativeChildShapes />
+      <nodes>
+        <layerShapeMoniker Id="6348808f-4b17-4eb0-884f-f7b818469ed9" />
+        <layerShapeMoniker Id="bf174a8e-a274-4342-bea2-84f6a569598b" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(2.125 : 2.75); (2.125 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <dependencyFromLayerToLayerMoniker Id="6531efed-b766-402a-9cc3-1c20d28b619e" />
+      <relativeChildShapes />
+      <nodes>
+        <layerShapeMoniker Id="bf174a8e-a274-4342-bea2-84f6a569598b" />
+        <layerShapeMoniker Id="3694d9c4-47b7-401b-9a9f-c6c1d2f0c828" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</layerDiagram>

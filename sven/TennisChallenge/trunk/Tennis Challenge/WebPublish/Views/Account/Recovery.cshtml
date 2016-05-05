@@ -1,0 +1,44 @@
+﻿@using TennisWeb.Utils
+@using CaptchaLib
+@model TennisWeb.Models.PasswordResetModel
+
+@{
+  ViewBag.Title = "Passwort vergessen";
+  ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+@section Scripts
+{
+  @Scripts.Render("~/bundles/captcha")
+}
+
+<h2>Passwort vergessen</h2>
+
+<p>
+  Falls Sie ihr Passwort verloren haben, können Sie sich mit dem folgenden Formular ein neues zusenden lassen.
+</p>
+
+@using (Html.BeginForm())
+{
+  @Html.ValidationSummary(true)
+  <div class="display-row">
+    <span class="display-label">
+      @Html.LabelFor(m => m.EMailAddress)
+    </span>
+    <span class="editor-field">
+      @Html.EditorFor(m => m.EMailAddress)
+      @Html.ValidationMessageFor(m => m.EMailAddress)
+    </span>
+  </div>
+  <div class="display-row">
+    <span class="display-label">Geben Sie die vier Zahlen im Bild in die Box ein.</span>
+    <span class="editor-field">
+      @Html.CaptchaFor(m => m.Captcha, "GetCaptcha", "Home", "Neue Nummer generieren")
+      @Html.ValidationMessageFor(m => m.Captcha)
+    </span>
+  </div>
+    
+  <p>
+    <input type="submit" value="Absenden"/>
+  </p>
+}

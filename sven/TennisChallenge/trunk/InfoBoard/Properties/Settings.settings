@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TennisChallenge.InfoBoard.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogOnUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44300/Account/InfoBoardLogOn</Value>
+    </Setting>
+    <Setting Name="WebUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">IbTCThalwil</Value>
+    </Setting>
+    <Setting Name="WebPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">yqTxbmg_Tb9Motg</Value>
+    </Setting>
+    <Setting Name="RfidComPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="RefreshTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">300000</Value>
+    </Setting>
+    <Setting Name="ClubId" Type="System.Guid" Scope="Application">
+      <Value Profile="(Default)">62386884-e8a7-4121-b316-11e7443a13d4</Value>
+    </Setting>
+    <Setting Name="InfoUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://localhost:44300/InfoBoard?clubId=</Value>
+    </Setting>
+    <Setting Name="StandbyUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44300/InfoBoard/Standby</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

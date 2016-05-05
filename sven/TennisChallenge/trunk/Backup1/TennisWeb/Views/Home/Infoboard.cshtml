@@ -1,0 +1,94 @@
+﻿@using TennisWeb.Models
+@using TennisWeb.Utils
+@model InfoboardViewModel
+@{
+  ViewBag.Title = "Tennis-Challenge";
+  ViewBag.NavTopCat = NavigationTopCat.Infoboard;
+}
+
+@section header
+{
+  @Styles.Render("~/Content/fullcalendar")
+}
+
+@section scripts
+{
+  <script type="text/javascript">
+    CURRENTBOOKINGSURL = '@Url.Action("GetCurrentBookings", "Infoboard")';
+    GetCalendarBookings = '@Url.Action("GetInfoboardCalendarBookings", "Infoboard")';
+  </script>
+  @Scripts.Render("~/bundles/underscore", "~/bundles/jqueryui", "~/bundles/jqueryval")
+  @Scripts.Render("~/bundles/infotable")
+}
+
+<div id="back-calendar">
+  <p>Zurück</p>
+</div>
+<div id="calendar" class="infoboard"></div>
+<div id="calendar-wrapp">
+  <div id="courts-inf">
+    <div id="court-l-0" class="court-div">Platz 1</div>
+    <div id="court-l-1" class="court-div">Platz 2</div>
+    <div id="court-l-2" class="court-div">Platz 3</div>
+    <div id="court-l-3" class="court-div">Platz 4</div>
+    <div id="court-l-4" class="court-div" style="border: solid 1px #e8eef4">Platz 5</div>
+  </div>
+</div>
+
+<h2 id="title-reservations">Die nächsten 6 Stunden</h2>
+<h2 id="title-days">Die nächsten 5 Tage</h2>
+<div id="infotablecointainer">
+  <div id="current-time"><span id="time"></span>Uhr</div>
+  <div id="in-six-time"><span id="six-time"></span>Uhr</div>
+  <div id="first-inter-time"><span id="fint-time"></span>Uhr</div>
+  <div id="second-inter-time"><span id="sint-time"></span>Uhr</div>
+  <div id="infotable">
+    <div id="infotable-caption">Tennisplätze</div>
+    @foreach (var court in Model.Courts.OrderBy(c => c.Id))
+    {
+      <div class="time-table-column" data-court-id="@court.Id">
+        <div class="infoboard-square number">@(court.Id + 1)</div>
+      </div>
+    }
+  </div>
+</div>
+
+@*Sobald von hier sich leute registrieren können aktivieren
+<div id="userreservation">
+  <h3>Deine Reservierung</h3>
+  @foreach (var booking in Model.Bookings.OrderBy(b => b.StartTime))
+  {
+    <div class="userreservation">
+      Reservierung von @booking.StartTime.ToShortTimeString() bis @booking.EndTime.ToShortTimeString() auf Platz @(booking.Court.Id + 1).
+    </div> 
+  }
+  <span class="important">Wichtig:</span> Es müssen sich alle Beteiligten<br />
+  10 Minuten vor Beginn der Reservierung,<br />
+  am Infoboard identifizieren<br />
+  Sonst wird die Reservation automatisch storniert.
+</div>
+*@
+
+<div id="infoboardlegend">
+  <h3>Legende</h3>
+  <div>
+    <div class="infoboard-square match"></div>
+    <div>Reserviert</div>
+  </div>
+  <div>
+    <div class="infoboard-square free"></div>
+    <div>Frei</div>
+  </div>
+  <div>
+    <div class="infoboard-square leg-closed"></div>
+    <div>Gesperrt</div>
+  </div>
+  <div>
+    <div class="infoboard-square tournament"></div>
+    <div class="leg-turnament">Turnier / Interclub</div>
+  </div>
+  <div>
+    <div class="infoboard-square school"></div>
+    <div>Tennisschule</div>
+  </div>
+</div>

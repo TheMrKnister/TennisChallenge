@@ -1,0 +1,5 @@
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\CodeCollection.ApplicationBasics\bin\Debug\CodeCollection.ApplicationBasics.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\CodeCollection.ApplicationBasics\bin\Debug\CodeCollection.ApplicationBasics.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\CodeCollection.ApplicationBasics\obj\Debug\CodeCollection.ApplicationBasics.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\CodeCollection.ApplicationBasics\obj\Debug\CodeCollection.ApplicationBasics.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\CodeCollection.ApplicationBasics\obj\Debug\ApplicationBasics.csprojResolveAssemblyReference.cache

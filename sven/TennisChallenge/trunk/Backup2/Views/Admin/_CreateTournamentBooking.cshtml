@@ -1,0 +1,51 @@
+﻿@model TennisWeb.Models.FullcalendarEventEditModel
+
+@Html.DropDownList("courtSelect", new SelectList(Model.AllCourts, "Courtkey", "Name", Model))
+
+<div style="display: none;" id="dialog">
+  @Html.HiddenFor(m => m.BookingTypeEnum)
+  <div class="editor-field">
+    @Html.EditorFor(m => m.Title)
+    @Html.ValidationMessageFor(m => m.Title)
+  </div>
+  <div class="editor-label">
+    @Html.LabelFor(m => m.CourtFk)
+  </div>
+  <div class="editor-field">
+    @*IPA Relevant Begin*@
+    <div id="tournament-courts">
+      @Html.ListBoxFor(m => m.AllCourts, new SelectList(Model.AllCourts, "CourtKey", "Name"), Model)
+    </div>    
+    @Html.ValidationMessageFor(m => m.CourtFk)
+  </div>
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Type)
+  </div>
+  <div class="editor-field">
+    @Html.DropDownListFor(m => m.Type, SelectListUtils.EnumSelectList<TennisWeb.Models.TourTypeScheme>())
+  </div>
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Mode)
+  </div>
+  <div class="editor-field">    
+    @Html.DropDownListFor(m => m.Mode, SelectListUtils.EnumSelectList<TennisWeb.Models.TourModeScheme>())
+  </div>  
+@*  IPA Relevant End*@
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Duration)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(m => m.Duration, new { @class = "time-picker" })
+  </div>
+  <div class="editor-field">
+    @Html.LabelFor(m => m.TournComment)
+    @Html.EditorFor(m => m.TournComment)
+  </div>
+  <div class="editor-label">
+    @Html.LabelFor(m => m.TournamentId)
+  </div>
+  <div class="editor-field">    
+    @Html.DropDownList("TournamentId", new SelectList(Model.AllTournaments, "TournamentId", "TournName"), Model)
+  </div>
+</div>
+<div id="calendar"></div>

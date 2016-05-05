@@ -1,0 +1,27 @@
+﻿@model TennisWeb.Models.FullcalendarEventEditModel
+@Html.Action("CreateBookingSeries", new { bookingType = Model.BookingTypeEnum })
+
+@Html.DropDownList("courtSelect", new SelectList(Model.AllCourts, "Courtkey", "Name", Model))
+
+<div style="display: none;" id="dialog">
+  @Html.HiddenFor(m => m.BookingTypeEnum)
+  <div class="editor-field">
+    @Html.EditorFor(m => m.Title)
+    @Html.ValidationMessageFor(m => m.Title)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(m => m.CourtFk)
+  </div>
+  <div class="editor-field">
+    @Html.DropDownList("courtFk", new SelectList(Model.AllCourts, "Courtkey", "Name", Model))
+    @Html.ValidationMessageFor(m => m.CourtFk)
+  </div>
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Duration)
+  </div>
+  <div class="editor-field">
+    @Html.TextBoxFor(m => m.Duration, new { @class = "time-picker" })
+  </div>
+</div>
+<div id="calendar"></div>

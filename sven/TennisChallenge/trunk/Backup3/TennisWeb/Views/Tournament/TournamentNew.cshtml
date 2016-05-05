@@ -1,0 +1,24 @@
+﻿@*IPA Relevant Beginn*@
+@{
+    ViewBag.Title = "TournamentNew";
+    ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/tournamentstart")
+  <script type="text/javascript">
+    GetAllTournaments = '@Url.Action("GetNewTournaments")';
+    Site = "new";
+  </script>
+}
+
+<h2>Offene Turniere</h2>
+
+<div class="description-tourn">
+  <p>Alle noch anstehende Turniere</p>
+</div>
+
+@Html.Partial("_TournamentManageMenu")
+
+<div id="tournament-container"></div>
+@*IPA Relevant End*@

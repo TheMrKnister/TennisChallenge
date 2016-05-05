@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TennisChallengeModelStoreContainer" CdmEntityContainer="TennisChallengeEntities">
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Booking">
+        <MappingFragment StoreEntitySet="BookingBase">
+          <ScalarProperty Name="TournamentRound" ColumnName="TournamentRound" />
+          <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+          <ScalarProperty Name="BookingSeriesFk" ColumnName="BookingSeriesFk" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="BookingType" ColumnName="BookingType" />
+          <ScalarProperty Name="Member3Fk" ColumnName="Member3Fk" />
+          <ScalarProperty Name="Member2Fk" ColumnName="Member2Fk" />
+          <ScalarProperty Name="Member1Fk" ColumnName="Member1Fk" />
+          <ScalarProperty Name="Member0Fk" ColumnName="Member0Fk" />
+          <ScalarProperty Name="CourtFk" ColumnName="CourtFk" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="BookingKey" ColumnName="BookingKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Club">
+        <MappingFragment StoreEntitySet="Club">
+          <ScalarProperty Name="AdvertisementsPerNewsFeed" ColumnName="AdvertisementsPerNewsFeed" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClubKey" ColumnName="ClubKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CountryKey" ColumnName="CountryKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courts">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Court">
+        <MappingFragment StoreEntitySet="Court">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClubFk" ColumnName="ClubFk" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CourtKey" ColumnName="CourtKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="TournamentPoints" ColumnName="TournamentPoints" />
+          <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="ClassificationUpdate" ColumnName="ClassificationUpdate" />
+          <ScalarProperty Name="Classification" ColumnName="Classification" />
+          <ScalarProperty Name="LicenseNumber" ColumnName="LicenseNumber" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="BusinessPhone" ColumnName="BusinessPhone" />
+          <ScalarProperty Name="PrivatePhone" ColumnName="PrivatePhone" />
+          <ScalarProperty Name="CountryFk" ColumnName="CountryFk" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="TitleFk" ColumnName="TitleFk" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="MemberKey" ColumnName="MemberKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rfids">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Rfid">
+        <MappingFragment StoreEntitySet="Rfid">
+          <ScalarProperty Name="MemberFk" ColumnName="MemberFk" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RfidKey" ColumnName="RfidKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Title">
+        <MappingFragment StoreEntitySet="Title">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TitleKey" ColumnName="TitleKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TennisChallengeModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersInClubs">
+      <EntityTypeMapping TypeName="TennisChallengeModel.UsersInClub">
+        <MappingFragment StoreEntitySet="UsersInClubs">
+          <ScalarProperty Name="ClubFK" ColumnName="ClubFK" />
+          <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+          <ScalarProperty Name="UsersInClubsKey" ColumnName="UsersInClubsKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsersInClubRole" TypeName="TennisChallengeModel.UsersInClubRole" StoreEntitySet="UsersInClubsInRoles">
+      <EndProperty Name="Role">
+        <ScalarProperty Name="RoleId" ColumnName="RolesFK" />
+      </EndProperty>
+      <EndProperty Name="UsersInClub">
+        <ScalarProperty Name="UsersInClubsKey" ColumnName="UsersInClubsFK" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Advertisements">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Advertisement">
+        <MappingFragment StoreEntitySet="Advertisements">
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ClubKey" ColumnName="ClubKey" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+          <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+          <ScalarProperty Name="Friday" ColumnName="Friday" />
+          <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+          <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+          <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+          <ScalarProperty Name="Monday" ColumnName="Monday" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsFeeds">
+      <EntityTypeMapping TypeName="TennisChallengeModel.NewsFeed">
+        <MappingFragment StoreEntitySet="NewsFeeds">
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ClubKey" ColumnName="ClubKey" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdvertisementShowings">
+      <EntityTypeMapping TypeName="TennisChallengeModel.AdvertisementShowing">
+        <MappingFragment StoreEntitySet="AdvertisementShowings">
+          <ScalarProperty Name="AdvertisementFk" ColumnName="AdvertisementFk" />
+          <ScalarProperty Name="Showed" ColumnName="Showed" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsFeedShowings">
+      <EntityTypeMapping TypeName="TennisChallengeModel.NewsFeedShowing">
+        <MappingFragment StoreEntitySet="NewsFeedShowings">
+          <ScalarProperty Name="NewsFeedFk" ColumnName="NewsFeedFk" />
+          <ScalarProperty Name="Showed" ColumnName="Showed" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookingSeries1">
+      <EntityTypeMapping TypeName="TennisChallengeModel.BookingSeries">
+        <MappingFragment StoreEntitySet="BookingSeries">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RankedGames">
+      <EntityTypeMapping TypeName="TennisChallengeModel.RankedGame">
+        <MappingFragment StoreEntitySet="RankedGame">
+          <ScalarProperty Name="Player2ScoreTie" ColumnName="Player2ScoreTie" />
+          <ScalarProperty Name="Player1ScoreTie" ColumnName="Player1ScoreTie" />
+          <ScalarProperty Name="Player2ScoreSecond" ColumnName="Player2ScoreSecond" />
+          <ScalarProperty Name="Player1ScoreSecond" ColumnName="Player1ScoreSecond" />
+          <ScalarProperty Name="Player2ScoreFirst" ColumnName="Player2ScoreFirst" />
+          <ScalarProperty Name="Player1ScoreFirst" ColumnName="Player1ScoreFirst" />
+          <ScalarProperty Name="WinnerFk" ColumnName="WinnerFk" />
+          <ScalarProperty Name="BookingFk" ColumnName="BookingFk" />
+          <ScalarProperty Name="RankedGameKey" ColumnName="RankedGameKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RankedMembers">
+      <EntityTypeMapping TypeName="TennisChallengeModel.RankedMember">
+        <MappingFragment StoreEntitySet="RankedMember">
+          <ScalarProperty Name="SwissTennisRank" ColumnName="SwissTennisRank" />
+          <ScalarProperty Name="FormerClubRank" ColumnName="FormerClubRank" />
+          <ScalarProperty Name="ClubRank" ColumnName="ClubRank" />
+          <ScalarProperty Name="RankedMemberFk" ColumnName="RankedMemberFk" />
+          <ScalarProperty Name="RankedMemberKey" ColumnName="RankedMemberKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TournamentLadders">
+      <EntityTypeMapping TypeName="TennisChallengeModel.TournamentLadder">
+        <MappingFragment StoreEntitySet="TournamentLadder">
+          <ScalarProperty Name="List" ColumnName="List" />
+          <ScalarProperty Name="LadderId" ColumnName="LadderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tournaments">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Tournament">
+        <MappingFragment StoreEntitySet="Tournaments">
+          <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+          <ScalarProperty Name="Closed" ColumnName="Closed" />
+          <ScalarProperty Name="TournComment" ColumnName="TournComment" />
+          <ScalarProperty Name="TournamentOpen" ColumnName="TournamentOpen" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="TournamentType" ColumnName="TournamentType" />
+          <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAds">
+      <EntityTypeMapping TypeName="TennisChallengeModel.UserAd">
+        <MappingFragment StoreEntitySet="UserAd">
+          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+          <ScalarProperty Name="AdType" ColumnName="AdType" />
+          <ScalarProperty Name="AdText" ColumnName="AdText" />
+          <ScalarProperty Name="UserInClubFk" ColumnName="UserInClubFk" />
+          <ScalarProperty Name="UserAdId" ColumnName="UserAdId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="TennisChallengeModel.Bank">
+        <MappingFragment StoreEntitySet="Bank">
+          <ScalarProperty Name="ValueAmount" ColumnName="ValueAmount" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="MemberFk" ColumnName="MemberFk" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TournamentMembers">
+      <EntityTypeMapping TypeName="TennisChallengeModel.TournamentMember">
+        <MappingFragment StoreEntitySet="TournamentMember">
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="TournamentPoints" ColumnName="TournamentPoints" />
+          <ScalarProperty Name="TournamentFk" ColumnName="TournamentFk" />
+          <ScalarProperty Name="MemberFk" ColumnName="MemberFk" />
+          <ScalarProperty Name="TMemberId" ColumnName="TMemberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

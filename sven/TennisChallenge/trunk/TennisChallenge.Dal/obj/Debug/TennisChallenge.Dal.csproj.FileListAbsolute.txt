@@ -1,0 +1,16 @@
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.dll.config
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.dll
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.pdb
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\EntityFramework.dll
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\EntityFramework.xml
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.csprojResolveAssemblyReference.cache
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.dll
+C:\Users\Ilija\Documents\Visual Studio 2013\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.pdb
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.dll.config
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.dll
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.pdb
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\EntityFramework.dll
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\bin\Debug\EntityFramework.xml
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.csprojResolveAssemblyReference.cache
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.dll
+C:\Users\imandic\Documents\Visual Studio 2015\Projects\TennisChallenge\TennisChallenge\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.pdb

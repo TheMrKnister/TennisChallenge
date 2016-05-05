@@ -1,0 +1,13 @@
+﻿@model TennisWeb.Models.BookingSeriesSimple
+
+@section header
+{
+  @Styles.Render("~/Content/themes/base/jqueryui", "~/Content/fullcalendar")
+}
+
+<ul id="bookin-series">
+<li class="booking-series-list" data-date="@Model.Day"><p class="booking-series-entry">@Html.DisplayFor(m => m.Name)<br /> @Model.Day.ToString("dddd") @Html.DisplayFor(m => m.Day) <br>
+  @Html.DisplayFor(m => m.StartTime)<br />
+   @Html.DisplayFor(m => m.CourtName)<br />  
+  @Html.ActionLink("Löschen", "DeleteBookingSeries", new { id = Model.Id })</p></li>
+  </ul>

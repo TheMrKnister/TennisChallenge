@@ -1,0 +1,1896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TennisChallengeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TennisChallengeModelStoreContainer">
+          <EntitySet Name="Advertisements" EntityType="TennisChallengeModel.Store.Advertisements" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AdvertisementShowings" EntityType="TennisChallengeModel.Store.AdvertisementShowings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Bank" EntityType="TennisChallengeModel.Store.Bank" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BookingBase" EntityType="TennisChallengeModel.Store.BookingBase" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BookingSeries" EntityType="TennisChallengeModel.Store.BookingSeries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Club" EntityType="TennisChallengeModel.Store.Club" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="TennisChallengeModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Court" EntityType="TennisChallengeModel.Store.Court" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Member" EntityType="TennisChallengeModel.Store.Member" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NewsFeeds" EntityType="TennisChallengeModel.Store.NewsFeeds" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NewsFeedShowings" EntityType="TennisChallengeModel.Store.NewsFeedShowings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RankedGame" EntityType="TennisChallengeModel.Store.RankedGame" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RankedMember" EntityType="TennisChallengeModel.Store.RankedMember" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rfid" EntityType="TennisChallengeModel.Store.Rfid" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="TennisChallengeModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Title" EntityType="TennisChallengeModel.Store.Title" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TournamentLadder" EntityType="TennisChallengeModel.Store.TournamentLadder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TournamentMember" EntityType="TennisChallengeModel.Store.TournamentMember" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tournaments" EntityType="TennisChallengeModel.Store.Tournaments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserAd" EntityType="TennisChallengeModel.Store.UserAd" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="TennisChallengeModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersInClubs" EntityType="TennisChallengeModel.Store.UsersInClubs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersInClubsInRoles" EntityType="TennisChallengeModel.Store.UsersInClubsInRoles" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Advertise__Adver__664B26CC" Association="TennisChallengeModel.Store.FK__Advertise__Adver__664B26CC">
+            <End Role="Advertisements" EntitySet="Advertisements" />
+            <End Role="AdvertisementShowings" EntitySet="AdvertisementShowings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Advertise__ClubK__5AD97420" Association="TennisChallengeModel.Store.FK__Advertise__ClubK__5AD97420">
+            <End Role="Club" EntitySet="Club" />
+            <End Role="Advertisements" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Bank__MemberFk__67C95AEA" Association="TennisChallengeModel.Store.FK__Bank__MemberFk__67C95AEA">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Bank" EntitySet="Bank" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BookingBa__Booki__10416098" Association="TennisChallengeModel.Store.FK__BookingBa__Booki__10416098">
+            <End Role="BookingSeries" EntitySet="BookingSeries" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BookingBa__Tourn__5B638405" Association="TennisChallengeModel.Store.FK__BookingBa__Tourn__5B638405">
+            <End Role="Tournaments" EntitySet="Tournaments" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Member__Tourname__5C57A83E" Association="TennisChallengeModel.Store.FK__Member__Tourname__5C57A83E">
+            <End Role="Tournaments" EntitySet="Tournaments" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Member__Users" Association="TennisChallengeModel.Store.FK__Member__Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NewsFeeds__ClubK__60924D76" Association="TennisChallengeModel.Store.FK__NewsFeeds__ClubK__60924D76">
+            <End Role="Club" EntitySet="Club" />
+            <End Role="NewsFeeds" EntitySet="NewsFeeds" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NewsFeedS__NewsF__6C040022" Association="TennisChallengeModel.Store.FK__NewsFeedS__NewsF__6C040022">
+            <End Role="NewsFeeds" EntitySet="NewsFeeds" />
+            <End Role="NewsFeedShowings" EntitySet="NewsFeedShowings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RankedGam__Booki__6EAB62A3" Association="TennisChallengeModel.Store.FK__RankedGam__Booki__6EAB62A3">
+            <End Role="BookingBase" EntitySet="BookingBase" />
+            <End Role="RankedGame" EntitySet="RankedGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RankedGam__Winne__6F9F86DC" Association="TennisChallengeModel.Store.FK__RankedGam__Winne__6F9F86DC">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="RankedGame" EntitySet="RankedGame" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RankedMem__Ranke__66161CA2" Association="TennisChallengeModel.Store.FK__RankedMem__Ranke__66161CA2">
+            <End Role="UsersInClubs" EntitySet="UsersInClubs" />
+            <End Role="RankedMember" EntitySet="RankedMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tournamen__Ladde__5A6F5FCC" Association="TennisChallengeModel.Store.FK__Tournamen__Ladde__5A6F5FCC">
+            <End Role="Tournaments" EntitySet="Tournaments" />
+            <End Role="TournamentLadder" EntitySet="TournamentLadder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tournamen__Membe__1F198FD4" Association="TennisChallengeModel.Store.FK__Tournamen__Membe__1F198FD4">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="TournamentMember" EntitySet="TournamentMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tournamen__Tourn__200DB40D" Association="TennisChallengeModel.Store.FK__Tournamen__Tourn__200DB40D">
+            <End Role="Tournaments" EntitySet="Tournaments" />
+            <End Role="TournamentMember" EntitySet="TournamentMember" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserAd__UserInCl__7246E95D" Association="TennisChallengeModel.Store.FK__UserAd__UserInCl__7246E95D">
+            <End Role="UsersInClubs" EntitySet="UsersInClubs" />
+            <End Role="UserAd" EntitySet="UserAd" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsersInCl__ClubF__278EDA44" Association="TennisChallengeModel.Store.FK__UsersInCl__ClubF__278EDA44">
+            <End Role="Club" EntitySet="Club" />
+            <End Role="UsersInClubs" EntitySet="UsersInClubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsersInCl__Roles__2E3BD7D3" Association="TennisChallengeModel.Store.FK__UsersInCl__Roles__2E3BD7D3">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UsersInClubsInRoles" EntitySet="UsersInClubsInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsersInCl__UserF__269AB60B" Association="TennisChallengeModel.Store.FK__UsersInCl__UserF__269AB60B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UsersInClubs" EntitySet="UsersInClubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsersInCl__Users__2D47B39A" Association="TennisChallengeModel.Store.FK__UsersInCl__Users__2D47B39A">
+            <End Role="UsersInClubs" EntitySet="UsersInClubs" />
+            <End Role="UsersInClubsInRoles" EntitySet="UsersInClubsInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Booking_Court" Association="TennisChallengeModel.Store.FK_Booking_Court">
+            <End Role="Court" EntitySet="Court" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_0" Association="TennisChallengeModel.Store.FK_BookingBase_Member_0">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_1" Association="TennisChallengeModel.Store.FK_BookingBase_Member_1">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_2" Association="TennisChallengeModel.Store.FK_BookingBase_Member_2">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_3" Association="TennisChallengeModel.Store.FK_BookingBase_Member_3">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="BookingBase" EntitySet="BookingBase" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Court_Club" Association="TennisChallengeModel.Store.FK_Court_Club">
+            <End Role="Club" EntitySet="Club" />
+            <End Role="Court" EntitySet="Court" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Member_Country" Association="TennisChallengeModel.Store.FK_Member_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Member_Title" Association="TennisChallengeModel.Store.FK_Member_Title">
+            <End Role="Title" EntitySet="Title" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rfid_Member" Association="TennisChallengeModel.Store.FK_Rfid_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Rfid" EntitySet="Rfid" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Advertisements">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+          <Property Name="ImageUrl" Type="varchar(max)" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="Monday" Type="bit" Nullable="false" />
+          <Property Name="Tuesday" Type="bit" Nullable="false" />
+          <Property Name="Wednesday" Type="bit" Nullable="false" />
+          <Property Name="Thursday" Type="bit" Nullable="false" />
+          <Property Name="Friday" Type="bit" Nullable="false" />
+          <Property Name="Saturday" Type="bit" Nullable="false" />
+          <Property Name="Sunday" Type="bit" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="EMail" Type="varchar(max)" />
+          <Property Name="Feedback" Type="bit" />
+          <Property Name="ClubKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdvertisementShowings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Showed" Type="datetime" Nullable="false" />
+          <Property Name="AdvertisementFk" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MemberFk" Type="uniqueidentifier" />
+          <Property Name="TransactionDate" Type="datetime" />
+          <Property Name="ValueAmount" Type="float" />
+        </EntityType>
+        <EntityType Name="BookingBase">
+          <Key>
+            <PropertyRef Name="BookingKey" />
+          </Key>
+          <Property Name="BookingKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+          <Property Name="CourtFk" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Member0Fk" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Member1Fk" Type="uniqueidentifier" />
+          <Property Name="Member2Fk" Type="uniqueidentifier" />
+          <Property Name="Member3Fk" Type="uniqueidentifier" />
+          <Property Name="BookingType" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" />
+          <Property Name="BookingSeriesFk" Type="uniqueidentifier" />
+          <Property Name="TournamentId" Type="uniqueidentifier" />
+          <Property Name="TournamentRound" Type="int" />
+        </EntityType>
+        <EntityType Name="BookingSeries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Club">
+          <Key>
+            <PropertyRef Name="ClubKey" />
+          </Key>
+          <Property Name="ClubKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="AdvertisementsPerNewsFeed" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryKey" />
+          </Key>
+          <Property Name="CountryKey" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Court">
+          <Key>
+            <PropertyRef Name="CourtKey" />
+          </Key>
+          <Property Name="CourtKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ClubFk" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="MemberKey" />
+          </Key>
+          <Property Name="MemberKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="TitleFk" Type="smallint" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="Street" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="10" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryFk" Type="smallint" />
+          <Property Name="PrivatePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="BusinessPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobilePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LicenseNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Classification" Type="nvarchar" MaxLength="10" />
+          <Property Name="ClassificationUpdate" Type="datetime" />
+          <Property Name="PictureUrl" Type="nvarchar" MaxLength="150" />
+          <Property Name="TournamentId" Type="uniqueidentifier" />
+          <Property Name="TournamentPoints" Type="int" />
+        </EntityType>
+        <EntityType Name="NewsFeeds">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar(max)" />
+          <Property Name="Url" Type="varchar(max)" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="ClubKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NewsFeedShowings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Showed" Type="datetime" Nullable="false" />
+          <Property Name="NewsFeedFk" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RankedGame">
+          <Key>
+            <PropertyRef Name="RankedGameKey" />
+          </Key>
+          <Property Name="RankedGameKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BookingFk" Type="uniqueidentifier" />
+          <Property Name="WinnerFk" Type="uniqueidentifier" />
+          <Property Name="Player1ScoreFirst" Type="int" />
+          <Property Name="Player2ScoreFirst" Type="int" />
+          <Property Name="Player1ScoreSecond" Type="int" />
+          <Property Name="Player2ScoreSecond" Type="int" />
+          <Property Name="Player1ScoreTie" Type="int" />
+          <Property Name="Player2ScoreTie" Type="int" />
+        </EntityType>
+        <EntityType Name="RankedMember">
+          <Key>
+            <PropertyRef Name="RankedMemberKey" />
+          </Key>
+          <Property Name="RankedMemberKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RankedMemberFk" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ClubRank" Type="int" />
+          <Property Name="FormerClubRank" Type="int" />
+          <Property Name="SwissTennisRank" Type="int" />
+        </EntityType>
+        <EntityType Name="Rfid">
+          <Key>
+            <PropertyRef Name="RfidKey" />
+          </Key>
+          <Property Name="RfidKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="MemberFk" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Description" Type="nvarchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Title">
+          <Key>
+            <PropertyRef Name="TitleKey" />
+          </Key>
+          <Property Name="TitleKey" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TournamentLadder">
+          <Key>
+            <PropertyRef Name="LadderId" />
+          </Key>
+          <Property Name="LadderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="List" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TournamentMember">
+          <Key>
+            <PropertyRef Name="TMemberId" />
+          </Key>
+          <Property Name="TMemberId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MemberFk" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TournamentFk" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TournamentPoints" Type="int" />
+          <Property Name="TeamId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Tournaments">
+          <Key>
+            <PropertyRef Name="TournamentId" />
+          </Key>
+          <Property Name="TournamentId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TournamentType" Type="int" />
+          <Property Name="TournamentOpen" Type="int" />
+          <Property Name="Mode" Type="int" />
+          <Property Name="TournComment" Type="varchar" MaxLength="200" />
+          <Property Name="Closed" Type="bit" Nullable="false" />
+          <Property Name="LinkUrl" Type="char" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="UserAd">
+          <Key>
+            <PropertyRef Name="UserAdId" />
+          </Key>
+          <Property Name="UserAdId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserInClubFk" Type="uniqueidentifier" />
+          <Property Name="AdText" Type="varchar(max)" />
+          <Property Name="AdType" Type="int" />
+          <Property Name="CreationTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+          <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsersInClubs">
+          <Key>
+            <PropertyRef Name="UsersInClubsKey" />
+          </Key>
+          <Property Name="UsersInClubsKey" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserFK" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ClubFK" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsersInClubsInRoles">
+          <Key>
+            <PropertyRef Name="UsersInClubsFK" />
+            <PropertyRef Name="RolesFK" />
+          </Key>
+          <Property Name="UsersInClubsFK" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RolesFK" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Advertise__Adver__664B26CC">
+          <End Role="Advertisements" Type="TennisChallengeModel.Store.Advertisements" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AdvertisementShowings" Type="TennisChallengeModel.Store.AdvertisementShowings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Advertisements">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdvertisementShowings">
+              <PropertyRef Name="AdvertisementFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Advertise__ClubK__5AD97420">
+          <End Role="Club" Type="TennisChallengeModel.Store.Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Advertisements" Type="TennisChallengeModel.Store.Advertisements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="Advertisements">
+              <PropertyRef Name="ClubKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Bank__MemberFk__67C95AEA">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <End Role="Bank" Type="TennisChallengeModel.Store.Bank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="Bank">
+              <PropertyRef Name="MemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BookingBa__Booki__10416098">
+          <End Role="BookingSeries" Type="TennisChallengeModel.Store.BookingSeries" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookingSeries">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="BookingSeriesFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BookingBa__Tourn__5B638405">
+          <End Role="Tournaments" Type="TennisChallengeModel.Store.Tournaments" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournaments">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="TournamentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Member__Tourname__5C57A83E">
+          <End Role="Tournaments" Type="TennisChallengeModel.Store.Tournaments" Multiplicity="0..1" />
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournaments">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="TournamentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Member__Users">
+          <End Role="Users" Type="TennisChallengeModel.Store.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NewsFeeds__ClubK__60924D76">
+          <End Role="Club" Type="TennisChallengeModel.Store.Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NewsFeeds" Type="TennisChallengeModel.Store.NewsFeeds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="NewsFeeds">
+              <PropertyRef Name="ClubKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NewsFeedS__NewsF__6C040022">
+          <End Role="NewsFeeds" Type="TennisChallengeModel.Store.NewsFeeds" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="NewsFeedShowings" Type="TennisChallengeModel.Store.NewsFeedShowings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewsFeeds">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewsFeedShowings">
+              <PropertyRef Name="NewsFeedFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RankedGam__Booki__6EAB62A3">
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="0..1" />
+          <End Role="RankedGame" Type="TennisChallengeModel.Store.RankedGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookingBase">
+              <PropertyRef Name="BookingKey" />
+            </Principal>
+            <Dependent Role="RankedGame">
+              <PropertyRef Name="BookingFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RankedGam__Winne__6F9F86DC">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <End Role="RankedGame" Type="TennisChallengeModel.Store.RankedGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="RankedGame">
+              <PropertyRef Name="WinnerFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RankedMem__Ranke__66161CA2">
+          <End Role="UsersInClubs" Type="TennisChallengeModel.Store.UsersInClubs" Multiplicity="1" />
+          <End Role="RankedMember" Type="TennisChallengeModel.Store.RankedMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersInClubs">
+              <PropertyRef Name="UsersInClubsKey" />
+            </Principal>
+            <Dependent Role="RankedMember">
+              <PropertyRef Name="RankedMemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tournamen__Ladde__5A6F5FCC">
+          <End Role="Tournaments" Type="TennisChallengeModel.Store.Tournaments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TournamentLadder" Type="TennisChallengeModel.Store.TournamentLadder" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Tournaments">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="TournamentLadder">
+              <PropertyRef Name="LadderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tournamen__Membe__1F198FD4">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="1" />
+          <End Role="TournamentMember" Type="TennisChallengeModel.Store.TournamentMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="TournamentMember">
+              <PropertyRef Name="MemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tournamen__Tourn__200DB40D">
+          <End Role="Tournaments" Type="TennisChallengeModel.Store.Tournaments" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TournamentMember" Type="TennisChallengeModel.Store.TournamentMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournaments">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="TournamentMember">
+              <PropertyRef Name="TournamentFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserAd__UserInCl__7246E95D">
+          <End Role="UsersInClubs" Type="TennisChallengeModel.Store.UsersInClubs" Multiplicity="0..1" />
+          <End Role="UserAd" Type="TennisChallengeModel.Store.UserAd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersInClubs">
+              <PropertyRef Name="UsersInClubsKey" />
+            </Principal>
+            <Dependent Role="UserAd">
+              <PropertyRef Name="UserInClubFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsersInCl__ClubF__278EDA44">
+          <End Role="Club" Type="TennisChallengeModel.Store.Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UsersInClubs" Type="TennisChallengeModel.Store.UsersInClubs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="UsersInClubs">
+              <PropertyRef Name="ClubFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsersInCl__Roles__2E3BD7D3">
+          <End Role="Roles" Type="TennisChallengeModel.Store.Roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UsersInClubsInRoles" Type="TennisChallengeModel.Store.UsersInClubsInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="UsersInClubsInRoles">
+              <PropertyRef Name="RolesFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsersInCl__UserF__269AB60B">
+          <End Role="Users" Type="TennisChallengeModel.Store.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UsersInClubs" Type="TennisChallengeModel.Store.UsersInClubs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UsersInClubs">
+              <PropertyRef Name="UserFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsersInCl__Users__2D47B39A">
+          <End Role="UsersInClubs" Type="TennisChallengeModel.Store.UsersInClubs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UsersInClubsInRoles" Type="TennisChallengeModel.Store.UsersInClubsInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersInClubs">
+              <PropertyRef Name="UsersInClubsKey" />
+            </Principal>
+            <Dependent Role="UsersInClubsInRoles">
+              <PropertyRef Name="UsersInClubsFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Booking_Court">
+          <End Role="Court" Type="TennisChallengeModel.Store.Court" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Court">
+              <PropertyRef Name="CourtKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="CourtFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_0">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="1" />
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member0Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_1">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member1Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_2">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member2Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_3">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <End Role="BookingBase" Type="TennisChallengeModel.Store.BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member3Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Court_Club">
+          <End Role="Club" Type="TennisChallengeModel.Store.Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Court" Type="TennisChallengeModel.Store.Court" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="Court">
+              <PropertyRef Name="ClubFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Member_Country">
+          <End Role="Country" Type="TennisChallengeModel.Store.Country" Multiplicity="0..1" />
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryKey" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="CountryFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Member_Title">
+          <End Role="Title" Type="TennisChallengeModel.Store.Title" Multiplicity="0..1" />
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Title">
+              <PropertyRef Name="TitleKey" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="TitleFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rfid_Member">
+          <End Role="Member" Type="TennisChallengeModel.Store.Member" Multiplicity="0..1" />
+          <End Role="Rfid" Type="TennisChallengeModel.Store.Rfid" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="Rfid">
+              <PropertyRef Name="MemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TennisChallengeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TennisChallengeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bookings" EntityType="TennisChallengeModel.Booking" />
+          <EntitySet Name="Clubs" EntityType="TennisChallengeModel.Club" />
+          <EntitySet Name="Countries" EntityType="TennisChallengeModel.Country" />
+          <EntitySet Name="Courts" EntityType="TennisChallengeModel.Court" />
+          <EntitySet Name="Members" EntityType="TennisChallengeModel.Member" />
+          <EntitySet Name="Rfids" EntityType="TennisChallengeModel.Rfid" />
+          <EntitySet Name="Titles" EntityType="TennisChallengeModel.Title" />
+          <EntitySet Name="Users" EntityType="TennisChallengeModel.User" />
+          <AssociationSet Name="FK_Booking_Court" Association="TennisChallengeModel.FK_Booking_Court">
+            <End Role="Court" EntitySet="Courts" />
+            <End Role="BookingBase" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_0" Association="TennisChallengeModel.FK_BookingBase_Member_0">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="BookingBase" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_1" Association="TennisChallengeModel.FK_BookingBase_Member_1">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="BookingBase" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_2" Association="TennisChallengeModel.FK_BookingBase_Member_2">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="BookingBase" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BookingBase_Member_3" Association="TennisChallengeModel.FK_BookingBase_Member_3">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="BookingBase" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Court_Club" Association="TennisChallengeModel.FK_Court_Club">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="Court" EntitySet="Courts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Member_Country" Association="TennisChallengeModel.FK_Member_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Member__Users" Association="TennisChallengeModel.FK__Member__Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Member_Title" Association="TennisChallengeModel.FK_Member_Title">
+            <End Role="Title" EntitySet="Titles" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rfid_Member" Association="TennisChallengeModel.FK_Rfid_Member">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="Rfid" EntitySet="Rfids" />
+          </AssociationSet>
+          <EntitySet Name="Roles" EntityType="TennisChallengeModel.Role" />
+          <EntitySet Name="UsersInClubs" EntityType="TennisChallengeModel.UsersInClub" />
+          <AssociationSet Name="FK__UsersInCl__ClubF__7E8CC4B1" Association="TennisChallengeModel.FK__UsersInCl__ClubF__7E8CC4B1">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="UsersInClub" EntitySet="UsersInClubs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsersInCl__UserF__7D98A078" Association="TennisChallengeModel.FK__UsersInCl__UserF__7D98A078">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UsersInClub" EntitySet="UsersInClubs" />
+          </AssociationSet>
+          <AssociationSet Name="UsersInClubRole" Association="TennisChallengeModel.UsersInClubRole">
+            <End Role="UsersInClub" EntitySet="UsersInClubs" />
+            <End Role="Role" EntitySet="Roles" />
+          </AssociationSet>
+          <EntitySet Name="Advertisements" EntityType="TennisChallengeModel.Advertisement" />
+          <EntitySet Name="NewsFeeds" EntityType="TennisChallengeModel.NewsFeed" />
+          <AssociationSet Name="FK__Advertise__ClubK__74CE504D" Association="TennisChallengeModel.FK__Advertise__ClubK__74CE504D">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="Advertisement" EntitySet="Advertisements" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NewsFeeds__ClubK__7A8729A3" Association="TennisChallengeModel.FK__NewsFeeds__ClubK__7A8729A3">
+            <End Role="Club" EntitySet="Clubs" />
+            <End Role="NewsFeed" EntitySet="NewsFeeds" />
+          </AssociationSet>
+          <EntitySet Name="AdvertisementShowings" EntityType="TennisChallengeModel.AdvertisementShowing" />
+          <AssociationSet Name="FK__Advertise__Adver__190BB0C3" Association="TennisChallengeModel.FK__Advertise__Adver__190BB0C3">
+            <End Role="Advertisement" EntitySet="Advertisements" />
+            <End Role="AdvertisementShowing" EntitySet="AdvertisementShowings" />
+          </AssociationSet>
+          <EntitySet Name="NewsFeedShowings" EntityType="TennisChallengeModel.NewsFeedShowing" />
+          <AssociationSet Name="FK__NewsFeedS__NewsF__2B2A60FE" Association="TennisChallengeModel.FK__NewsFeedS__NewsF__2B2A60FE">
+            <End Role="NewsFeed" EntitySet="NewsFeeds" />
+            <End Role="NewsFeedShowing" EntitySet="NewsFeedShowings" />
+          </AssociationSet>
+          <EntitySet Name="BookingSeries1" EntityType="TennisChallengeModel.BookingSeries" />
+          <AssociationSet Name="FK__BookingBa__Booki__45DE573A" Association="TennisChallengeModel.FK__BookingBa__Booki__45DE573A">
+            <End Role="BookingSery" EntitySet="BookingSeries1" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <EntitySet Name="RankedGames" EntityType="TennisChallengeModel.RankedGame" />
+          <EntitySet Name="RankedMembers" EntityType="TennisChallengeModel.RankedMember" />
+          <AssociationSet Name="FK__RankedGam__Booki__4E3E9311" Association="TennisChallengeModel.FK__RankedGam__Booki__4E3E9311">
+            <End Role="Booking" EntitySet="Bookings" />
+            <End Role="RankedGame" EntitySet="RankedGames" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RankedGam__Winne__4F32B74A" Association="TennisChallengeModel.FK__RankedGam__Winne__4F32B74A">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="RankedGame" EntitySet="RankedGames" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RankedMem__Ranke__45A94D10" Association="TennisChallengeModel.FK__RankedMem__Ranke__45A94D10">
+            <End Role="UsersInClub" EntitySet="UsersInClubs" />
+            <End Role="RankedMember" EntitySet="RankedMembers" />
+          </AssociationSet>
+          <EntitySet Name="TournamentLadders" EntityType="TennisChallengeModel.TournamentLadder" />
+          <EntitySet Name="Tournaments" EntityType="TennisChallengeModel.Tournament" />
+          <AssociationSet Name="FK__BookingBa__Tourn__770B9E7A" Association="TennisChallengeModel.FK__BookingBa__Tourn__770B9E7A">
+            <End Role="Tournament" EntitySet="Tournaments" />
+            <End Role="Booking" EntitySet="Bookings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Member__Tourname__77FFC2B3" Association="TennisChallengeModel.FK__Member__Tourname__77FFC2B3">
+            <End Role="Tournament" EntitySet="Tournaments" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tournamen__Ladde__76177A41" Association="TennisChallengeModel.FK__Tournamen__Ladde__76177A41">
+            <End Role="Tournament" EntitySet="Tournaments" />
+            <End Role="TournamentLadder" EntitySet="TournamentLadders" />
+          </AssociationSet>
+          <EntitySet Name="UserAds" EntityType="TennisChallengeModel.UserAd" />
+          <AssociationSet Name="FK__UserAd__UserInCl__7246E95D" Association="TennisChallengeModel.FK__UserAd__UserInCl__7246E95D">
+            <End Role="UsersInClub" EntitySet="UsersInClubs" />
+            <End Role="UserAd" EntitySet="UserAds" />
+          </AssociationSet>
+          <EntitySet Name="Banks" EntityType="TennisChallengeModel.Bank" />
+          <AssociationSet Name="FK__Bank__MemberFk__67C95AEA" Association="TennisChallengeModel.FK__Bank__MemberFk__67C95AEA">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="Bank" EntitySet="Banks" />
+          </AssociationSet>
+          <EntitySet Name="TournamentMembers" EntityType="TennisChallengeModel.TournamentMember" />
+          <AssociationSet Name="FK__Tournamen__Membe__186C9245" Association="TennisChallengeModel.FK__Tournamen__Membe__186C9245">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="TournamentMember" EntitySet="TournamentMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tournamen__Tourn__1960B67E" Association="TennisChallengeModel.FK__Tournamen__Tourn__1960B67E">
+            <End Role="Tournament" EntitySet="Tournaments" />
+            <End Role="TournamentMember" EntitySet="TournamentMembers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="BookingKey" />
+          </Key>
+          <Property Type="Guid" Name="BookingKey" Nullable="false" />
+          <Property Type="DateTime" Name="StartTime" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="EndTime" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="CourtFk" Nullable="false" />
+          <Property Type="Guid" Name="Member0Fk" Nullable="false" />
+          <Property Type="Guid" Name="Member1Fk" />
+          <Property Type="Guid" Name="Member2Fk" />
+          <Property Type="Guid" Name="Member3Fk" />
+          <Property Type="Int32" Name="BookingType" Nullable="false" />
+          <NavigationProperty Name="Court" Relationship="TennisChallengeModel.FK_Booking_Court" FromRole="BookingBase" ToRole="Court" />
+          <NavigationProperty Name="Member0" Relationship="TennisChallengeModel.FK_BookingBase_Member_0" FromRole="BookingBase" ToRole="Member" />
+          <NavigationProperty Name="Member1" Relationship="TennisChallengeModel.FK_BookingBase_Member_1" FromRole="BookingBase" ToRole="Member" />
+          <NavigationProperty Name="Member2" Relationship="TennisChallengeModel.FK_BookingBase_Member_2" FromRole="BookingBase" ToRole="Member" />
+          <NavigationProperty Name="Member3" Relationship="TennisChallengeModel.FK_BookingBase_Member_3" FromRole="BookingBase" ToRole="Member" />
+          <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="BookingSeriesFk" />
+          <NavigationProperty Name="BookingSeries" Relationship="TennisChallengeModel.FK__BookingBa__Booki__45DE573A" FromRole="Booking" ToRole="BookingSery" />
+          <NavigationProperty Name="RankedGames" Relationship="TennisChallengeModel.FK__RankedGam__Booki__4E3E9311" FromRole="Booking" ToRole="RankedGame" />
+          <Property Type="Guid" Name="TournamentId" />
+          <NavigationProperty Name="Tournament" Relationship="TennisChallengeModel.FK__BookingBa__Tourn__770B9E7A" FromRole="Booking" ToRole="Tournament" />
+          <Property Type="Int32" Name="TournamentRound" />
+        </EntityType>
+        <EntityType Name="Club">
+          <Key>
+            <PropertyRef Name="ClubKey" />
+          </Key>
+          <Property Type="Guid" Name="ClubKey" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Courts" Relationship="TennisChallengeModel.FK_Court_Club" FromRole="Club" ToRole="Court" />
+          <NavigationProperty Name="UsersInClubs" Relationship="TennisChallengeModel.FK__UsersInCl__ClubF__7E8CC4B1" FromRole="Club" ToRole="UsersInClub" />
+          <NavigationProperty Name="Advertisements" Relationship="TennisChallengeModel.FK__Advertise__ClubK__74CE504D" FromRole="Club" ToRole="Advertisement" />
+          <NavigationProperty Name="NewsFeeds" Relationship="TennisChallengeModel.FK__NewsFeeds__ClubK__7A8729A3" FromRole="Club" ToRole="NewsFeed" />
+          <Property Type="Int32" Name="AdvertisementsPerNewsFeed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryKey" />
+          </Key>
+          <Property Type="Int16" Name="CountryKey" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Members" Relationship="TennisChallengeModel.FK_Member_Country" FromRole="Country" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="Court">
+          <Key>
+            <PropertyRef Name="CourtKey" />
+          </Key>
+          <Property Type="Guid" Name="CourtKey" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Guid" Name="ClubFk" Nullable="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <NavigationProperty Name="Bookings" Relationship="TennisChallengeModel.FK_Booking_Court" FromRole="Court" ToRole="BookingBase" />
+          <NavigationProperty Name="Club" Relationship="TennisChallengeModel.FK_Court_Club" FromRole="Court" ToRole="Club" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="MemberKey" />
+          </Key>
+          <Property Type="Guid" Name="MemberKey" Nullable="false" />
+          <Property Type="String" Name="Lastname" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Firstname" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Int16" Name="TitleFk" />
+          <Property Type="DateTime" Name="Birthday" Precision="0" />
+          <Property Type="String" Name="Street" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Zip" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="CountryFk" />
+          <Property Type="String" Name="PrivatePhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BusinessPhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MobilePhone" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LicenseNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Classification" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ClassificationUpdate" Precision="3" />
+          <Property Type="String" Name="PictureUrl" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bookings0" Relationship="TennisChallengeModel.FK_BookingBase_Member_0" FromRole="Member" ToRole="BookingBase" />
+          <NavigationProperty Name="Bookings1" Relationship="TennisChallengeModel.FK_BookingBase_Member_1" FromRole="Member" ToRole="BookingBase" />
+          <NavigationProperty Name="Bookings2" Relationship="TennisChallengeModel.FK_BookingBase_Member_2" FromRole="Member" ToRole="BookingBase" />
+          <NavigationProperty Name="Bookings3" Relationship="TennisChallengeModel.FK_BookingBase_Member_3" FromRole="Member" ToRole="BookingBase" />
+          <NavigationProperty Name="Country" Relationship="TennisChallengeModel.FK_Member_Country" FromRole="Member" ToRole="Country" />
+          <NavigationProperty Name="User" Relationship="TennisChallengeModel.FK__Member__Users" FromRole="Member" ToRole="User" />
+          <NavigationProperty Name="Title" Relationship="TennisChallengeModel.FK_Member_Title" FromRole="Member" ToRole="Title" />
+          <NavigationProperty Name="Rfids" Relationship="TennisChallengeModel.FK_Rfid_Member" FromRole="Member" ToRole="Rfid" />
+          <NavigationProperty Name="RankedGames" Relationship="TennisChallengeModel.FK__RankedGam__Winne__4F32B74A" FromRole="Member" ToRole="RankedGame" />
+          <Property Type="Guid" Name="TournamentId" />
+          <NavigationProperty Name="Tournament" Relationship="TennisChallengeModel.FK__Member__Tourname__77FFC2B3" FromRole="Member" ToRole="Tournament" />
+          <Property Type="Int32" Name="TournamentPoints" />
+          <NavigationProperty Name="Banks" Relationship="TennisChallengeModel.FK__Bank__MemberFk__67C95AEA" FromRole="Member" ToRole="Bank" />
+          <NavigationProperty Name="TournamentMembers" Relationship="TennisChallengeModel.FK__Tournamen__Membe__186C9245" FromRole="Member" ToRole="TournamentMember" />
+        </EntityType>
+        <EntityType Name="Rfid">
+          <Key>
+            <PropertyRef Name="RfidKey" />
+          </Key>
+          <Property Type="Guid" Name="RfidKey" Nullable="false" />
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Guid" Name="MemberFk" />
+          <NavigationProperty Name="Member" Relationship="TennisChallengeModel.FK_Rfid_Member" FromRole="Rfid" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="Title">
+          <Key>
+            <PropertyRef Name="TitleKey" />
+          </Key>
+          <Property Type="Int16" Name="TitleKey" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Members" Relationship="TennisChallengeModel.FK_Member_Title" FromRole="Title" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsAnonymous" Nullable="false" />
+          <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Member" Relationship="TennisChallengeModel.FK__Member__Users" FromRole="User" ToRole="Member" />
+          <NavigationProperty Name="UsersInClubs" Relationship="TennisChallengeModel.FK__UsersInCl__UserF__7D98A078" FromRole="User" ToRole="UsersInClub" />
+        </EntityType>
+        <Association Name="FK_Booking_Court">
+          <End Type="TennisChallengeModel.Court" Role="Court" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.Booking" Role="BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Court">
+              <PropertyRef Name="CourtKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="CourtFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_0">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="1" />
+          <End Type="TennisChallengeModel.Booking" Role="BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member0Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_1">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Booking" Role="BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member1Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_2">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Booking" Role="BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member2Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BookingBase_Member_3">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Booking" Role="BookingBase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="BookingBase">
+              <PropertyRef Name="Member3Fk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Court_Club">
+          <End Type="TennisChallengeModel.Club" Role="Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.Court" Role="Court" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="Court">
+              <PropertyRef Name="ClubFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Member_Country">
+          <End Type="TennisChallengeModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryKey" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="CountryFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Member__Users">
+          <End Type="TennisChallengeModel.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Member_Title">
+          <End Type="TennisChallengeModel.Title" Role="Title" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Title">
+              <PropertyRef Name="TitleKey" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="TitleFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rfid_Member">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Rfid" Role="Rfid" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="Rfid">
+              <PropertyRef Name="MemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+          <Property Type="Guid" Name="RoleId" Nullable="false" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UsersInClub" Relationship="TennisChallengeModel.UsersInClubRole" FromRole="Role" ToRole="UsersInClub" />
+        </EntityType>
+        <EntityType Name="UsersInClub">
+          <Key>
+            <PropertyRef Name="UsersInClubsKey" />
+          </Key>
+          <Property Type="Guid" Name="UsersInClubsKey" Nullable="false" />
+          <Property Type="Guid" Name="UserFK" Nullable="false" />
+          <Property Type="Guid" Name="ClubFK" Nullable="false" />
+          <NavigationProperty Name="Club" Relationship="TennisChallengeModel.FK__UsersInCl__ClubF__7E8CC4B1" FromRole="UsersInClub" ToRole="Club" />
+          <NavigationProperty Name="User" Relationship="TennisChallengeModel.FK__UsersInCl__UserF__7D98A078" FromRole="UsersInClub" ToRole="User" />
+          <NavigationProperty Name="Roles" Relationship="TennisChallengeModel.UsersInClubRole" FromRole="UsersInClub" ToRole="Role" />
+          <NavigationProperty Name="RankedMembers" Relationship="TennisChallengeModel.FK__RankedMem__Ranke__45A94D10" FromRole="UsersInClub" ToRole="RankedMember" />
+          <NavigationProperty Name="UserAds" Relationship="TennisChallengeModel.FK__UserAd__UserInCl__7246E95D" FromRole="UsersInClub" ToRole="UserAd" />
+        </EntityType>
+        <Association Name="FK__UsersInCl__ClubF__7E8CC4B1">
+          <End Type="TennisChallengeModel.Club" Role="Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.UsersInClub" Role="UsersInClub" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="UsersInClub">
+              <PropertyRef Name="ClubFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsersInCl__UserF__7D98A078">
+          <End Type="TennisChallengeModel.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.UsersInClub" Role="UsersInClub" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UsersInClub">
+              <PropertyRef Name="UserFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UsersInClubRole">
+          <End Type="TennisChallengeModel.UsersInClub" Role="UsersInClub" Multiplicity="*" />
+          <End Type="TennisChallengeModel.Role" Role="Role" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Type="String" Name="ImageUrl" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Type="DateTime" Name="StartTime" Precision="3" Nullable="false" />
+          <Property Type="DateTime" Name="EndTime" Precision="3" Nullable="false" />
+          <Property Type="Boolean" Name="Monday" Nullable="false" />
+          <Property Type="Boolean" Name="Tuesday" Nullable="false" />
+          <Property Type="Boolean" Name="Wednesday" Nullable="false" />
+          <Property Type="Boolean" Name="Thursday" Nullable="false" />
+          <Property Type="Boolean" Name="Friday" Nullable="false" />
+          <Property Type="Boolean" Name="Saturday" Nullable="false" />
+          <Property Type="Boolean" Name="Sunday" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Guid" Name="ClubKey" Nullable="false" />
+          <NavigationProperty Name="Club" Relationship="TennisChallengeModel.FK__Advertise__ClubK__74CE504D" FromRole="Advertisement" ToRole="Club" />
+          <NavigationProperty Name="AdvertisementShowings" Relationship="TennisChallengeModel.FK__Advertise__Adver__190BB0C3" FromRole="Advertisement" ToRole="AdvertisementShowing" />
+          <Property Type="Int32" Name="Duration" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NewsFeed">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Url" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="Guid" Name="ClubKey" Nullable="false" />
+          <NavigationProperty Name="Club" Relationship="TennisChallengeModel.FK__NewsFeeds__ClubK__7A8729A3" FromRole="NewsFeed" ToRole="Club" />
+          <Property Type="Int32" Name="Duration" Nullable="false" />
+          <NavigationProperty Name="NewsFeedShowings" Relationship="TennisChallengeModel.FK__NewsFeedS__NewsF__2B2A60FE" FromRole="NewsFeed" ToRole="NewsFeedShowing" />
+        </EntityType>
+        <Association Name="FK__Advertise__ClubK__74CE504D">
+          <End Type="TennisChallengeModel.Club" Role="Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.Advertisement" Role="Advertisement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="Advertisement">
+              <PropertyRef Name="ClubKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NewsFeeds__ClubK__7A8729A3">
+          <End Type="TennisChallengeModel.Club" Role="Club" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.NewsFeed" Role="NewsFeed" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Club">
+              <PropertyRef Name="ClubKey" />
+            </Principal>
+            <Dependent Role="NewsFeed">
+              <PropertyRef Name="ClubKey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AdvertisementShowing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="Showed" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="AdvertisementFk" Nullable="false" />
+          <NavigationProperty Name="Advertisement" Relationship="TennisChallengeModel.FK__Advertise__Adver__190BB0C3" FromRole="AdvertisementShowing" ToRole="Advertisement" />
+        </EntityType>
+        <Association Name="FK__Advertise__Adver__190BB0C3">
+          <End Type="TennisChallengeModel.Advertisement" Role="Advertisement" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.AdvertisementShowing" Role="AdvertisementShowing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Advertisement">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AdvertisementShowing">
+              <PropertyRef Name="AdvertisementFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewsFeedShowing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="Showed" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="NewsFeedFk" Nullable="false" />
+          <NavigationProperty Name="NewsFeed" Relationship="TennisChallengeModel.FK__NewsFeedS__NewsF__2B2A60FE" FromRole="NewsFeedShowing" ToRole="NewsFeed" />
+        </EntityType>
+        <Association Name="FK__NewsFeedS__NewsF__2B2A60FE">
+          <End Type="TennisChallengeModel.NewsFeed" Role="NewsFeed" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.NewsFeedShowing" Role="NewsFeedShowing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NewsFeed">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="NewsFeedShowing">
+              <PropertyRef Name="NewsFeedFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BookingSeries">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <NavigationProperty Name="Bookings" Relationship="TennisChallengeModel.FK__BookingBa__Booki__45DE573A" FromRole="BookingSery" ToRole="Booking" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__BookingBa__Booki__45DE573A">
+          <End Type="TennisChallengeModel.BookingSeries" Role="BookingSery" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="TennisChallengeModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookingSery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="BookingSeriesFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="RankedGame">
+          <Key>
+            <PropertyRef Name="RankedGameKey" />
+          </Key>
+          <Property Type="Guid" Name="RankedGameKey" Nullable="false" />
+          <Property Type="Guid" Name="BookingFk" />
+          <Property Type="Guid" Name="WinnerFk" />
+          <Property Type="Int32" Name="Player1ScoreFirst" />
+          <Property Type="Int32" Name="Player2ScoreFirst" />
+          <Property Type="Int32" Name="Player1ScoreSecond" />
+          <Property Type="Int32" Name="Player2ScoreSecond" />
+          <Property Type="Int32" Name="Player1ScoreTie" />
+          <Property Type="Int32" Name="Player2ScoreTie" />
+          <NavigationProperty Name="BookingBase" Relationship="TennisChallengeModel.FK__RankedGam__Booki__4E3E9311" FromRole="RankedGame" ToRole="Booking" />
+          <NavigationProperty Name="Member" Relationship="TennisChallengeModel.FK__RankedGam__Winne__4F32B74A" FromRole="RankedGame" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="RankedMember">
+          <Key>
+            <PropertyRef Name="RankedMemberKey" />
+          </Key>
+          <Property Type="Guid" Name="RankedMemberKey" Nullable="false" />
+          <Property Type="Guid" Name="RankedMemberFk" Nullable="false" />
+          <Property Type="Int32" Name="ClubRank" />
+          <Property Type="Int32" Name="FormerClubRank" />
+          <Property Type="Int32" Name="SwissTennisRank" />
+          <NavigationProperty Name="UsersInClub" Relationship="TennisChallengeModel.FK__RankedMem__Ranke__45A94D10" FromRole="RankedMember" ToRole="UsersInClub" />
+        </EntityType>
+        <Association Name="FK__RankedGam__Booki__4E3E9311">
+          <End Type="TennisChallengeModel.Booking" Role="Booking" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.RankedGame" Role="RankedGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="BookingKey" />
+            </Principal>
+            <Dependent Role="RankedGame">
+              <PropertyRef Name="BookingFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RankedGam__Winne__4F32B74A">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.RankedGame" Role="RankedGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="RankedGame">
+              <PropertyRef Name="WinnerFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RankedMem__Ranke__45A94D10">
+          <End Type="TennisChallengeModel.UsersInClub" Role="UsersInClub" Multiplicity="1" />
+          <End Type="TennisChallengeModel.RankedMember" Role="RankedMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersInClub">
+              <PropertyRef Name="UsersInClubsKey" />
+            </Principal>
+            <Dependent Role="RankedMember">
+              <PropertyRef Name="RankedMemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TournamentLadder">
+          <Key>
+            <PropertyRef Name="LadderId" />
+          </Key>
+          <Property Type="Guid" Name="LadderId" Nullable="false" />
+          <Property Type="String" Name="List" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tournament" Relationship="TennisChallengeModel.FK__Tournamen__Ladde__76177A41" FromRole="TournamentLadder" ToRole="Tournament" />
+        </EntityType>
+        <EntityType Name="Tournament">
+          <Key>
+            <PropertyRef Name="TournamentId" />
+          </Key>
+          <Property Type="Guid" Name="TournamentId" Nullable="false" />
+          <Property Type="Int32" Name="TournamentType" />
+          <Property Type="Int32" Name="Mode" />
+          <NavigationProperty Name="BookingBases" Relationship="TennisChallengeModel.FK__BookingBa__Tourn__770B9E7A" FromRole="Tournament" ToRole="Booking" />
+          <NavigationProperty Name="Members" Relationship="TennisChallengeModel.FK__Member__Tourname__77FFC2B3" FromRole="Tournament" ToRole="Member" />
+          <NavigationProperty Name="TournamentLadder" Relationship="TennisChallengeModel.FK__Tournamen__Ladde__76177A41" FromRole="Tournament" ToRole="TournamentLadder" />
+          <Property Type="Int32" Name="TournamentOpen" />
+          <Property Type="String" Name="TournComment" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TournamentMembers" Relationship="TennisChallengeModel.FK__Tournamen__Tourn__1960B67E" FromRole="Tournament" ToRole="TournamentMember" />
+          <Property Type="Boolean" Name="Closed" Nullable="false" />
+          <Property Type="String" Name="LinkUrl" MaxLength="100" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__BookingBa__Tourn__770B9E7A">
+          <End Type="TennisChallengeModel.Tournament" Role="Tournament" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournament">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="TournamentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Member__Tourname__77FFC2B3">
+          <End Type="TennisChallengeModel.Tournament" Role="Tournament" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournament">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="TournamentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tournamen__Ladde__76177A41">
+          <End Type="TennisChallengeModel.Tournament" Role="Tournament" Multiplicity="1" />
+          <End Type="TennisChallengeModel.TournamentLadder" Role="TournamentLadder" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Tournament">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="TournamentLadder">
+              <PropertyRef Name="LadderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserAd">
+          <Key>
+            <PropertyRef Name="UserAdId" />
+          </Key>
+          <Property Type="Guid" Name="UserAdId" Nullable="false" />
+          <Property Type="Guid" Name="UserInClubFk" />
+          <Property Type="String" Name="AdText" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AdType" />
+          <Property Type="DateTime" Name="CreationTime" Precision="3" />
+          <NavigationProperty Name="UsersInClub" Relationship="TennisChallengeModel.FK__UserAd__UserInCl__7246E95D" FromRole="UserAd" ToRole="UsersInClub" />
+        </EntityType>
+        <Association Name="FK__UserAd__UserInCl__7246E95D">
+          <End Type="TennisChallengeModel.UsersInClub" Role="UsersInClub" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.UserAd" Role="UserAd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsersInClub">
+              <PropertyRef Name="UsersInClubsKey" />
+            </Principal>
+            <Dependent Role="UserAd">
+              <PropertyRef Name="UserInClubFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Type="Guid" Name="TransactionId" Nullable="false" />
+          <Property Type="Guid" Name="MemberFk" />
+          <Property Type="DateTime" Name="TransactionDate" Precision="3" />
+          <Property Type="Double" Name="ValueAmount" />
+          <NavigationProperty Name="Member" Relationship="TennisChallengeModel.FK__Bank__MemberFk__67C95AEA" FromRole="Bank" ToRole="Member" />
+        </EntityType>
+        <Association Name="FK__Bank__MemberFk__67C95AEA">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="0..1" />
+          <End Type="TennisChallengeModel.Bank" Role="Bank" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="Bank">
+              <PropertyRef Name="MemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TournamentMember">
+          <Key>
+            <PropertyRef Name="TMemberId" />
+          </Key>
+          <Property Type="Guid" Name="TMemberId" Nullable="false" />
+          <Property Type="Guid" Name="MemberFk" Nullable="false" />
+          <Property Type="Guid" Name="TournamentFk" Nullable="false" />
+          <NavigationProperty Name="Member" Relationship="TennisChallengeModel.FK__Tournamen__Membe__186C9245" FromRole="TournamentMember" ToRole="Member" />
+          <NavigationProperty Name="Tournament" Relationship="TennisChallengeModel.FK__Tournamen__Tourn__1960B67E" FromRole="TournamentMember" ToRole="Tournament" />
+          <Property Type="Int32" Name="TournamentPoints" />
+          <Property Type="Guid" Name="TeamId" />
+        </EntityType>
+        <Association Name="FK__Tournamen__Membe__186C9245">
+          <End Type="TennisChallengeModel.Member" Role="Member" Multiplicity="1" />
+          <End Type="TennisChallengeModel.TournamentMember" Role="TournamentMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberKey" />
+            </Principal>
+            <Dependent Role="TournamentMember">
+              <PropertyRef Name="MemberFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tournamen__Tourn__1960B67E">
+          <End Type="TennisChallengeModel.Tournament" Role="Tournament" Multiplicity="1" />
+          <End Type="TennisChallengeModel.TournamentMember" Role="TournamentMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournament">
+              <PropertyRef Name="TournamentId" />
+            </Principal>
+            <Dependent Role="TournamentMember">
+              <PropertyRef Name="TournamentFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TennisChallengeModelStoreContainer" CdmEntityContainer="TennisChallengeEntities">
+          <EntitySetMapping Name="Bookings">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Booking">
+              <MappingFragment StoreEntitySet="BookingBase">
+                <ScalarProperty Name="TournamentRound" ColumnName="TournamentRound" />
+                <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+                <ScalarProperty Name="BookingSeriesFk" ColumnName="BookingSeriesFk" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="BookingType" ColumnName="BookingType" />
+                <ScalarProperty Name="Member3Fk" ColumnName="Member3Fk" />
+                <ScalarProperty Name="Member2Fk" ColumnName="Member2Fk" />
+                <ScalarProperty Name="Member1Fk" ColumnName="Member1Fk" />
+                <ScalarProperty Name="Member0Fk" ColumnName="Member0Fk" />
+                <ScalarProperty Name="CourtFk" ColumnName="CourtFk" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="BookingKey" ColumnName="BookingKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clubs">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Club">
+              <MappingFragment StoreEntitySet="Club">
+                <ScalarProperty Name="AdvertisementsPerNewsFeed" ColumnName="AdvertisementsPerNewsFeed" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ClubKey" ColumnName="ClubKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CountryKey" ColumnName="CountryKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courts">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Court">
+              <MappingFragment StoreEntitySet="Court">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClubFk" ColumnName="ClubFk" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CourtKey" ColumnName="CourtKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="TournamentPoints" ColumnName="TournamentPoints" />
+                <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+                <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+                <ScalarProperty Name="ClassificationUpdate" ColumnName="ClassificationUpdate" />
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+                <ScalarProperty Name="LicenseNumber" ColumnName="LicenseNumber" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+                <ScalarProperty Name="BusinessPhone" ColumnName="BusinessPhone" />
+                <ScalarProperty Name="PrivatePhone" ColumnName="PrivatePhone" />
+                <ScalarProperty Name="CountryFk" ColumnName="CountryFk" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="TitleFk" ColumnName="TitleFk" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="MemberKey" ColumnName="MemberKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rfids">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Rfid">
+              <MappingFragment StoreEntitySet="Rfid">
+                <ScalarProperty Name="MemberFk" ColumnName="MemberFk" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RfidKey" ColumnName="RfidKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Titles">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Title">
+              <MappingFragment StoreEntitySet="Title">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TitleKey" ColumnName="TitleKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="TennisChallengeModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+                <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersInClubs">
+            <EntityTypeMapping TypeName="TennisChallengeModel.UsersInClub">
+              <MappingFragment StoreEntitySet="UsersInClubs">
+                <ScalarProperty Name="ClubFK" ColumnName="ClubFK" />
+                <ScalarProperty Name="UserFK" ColumnName="UserFK" />
+                <ScalarProperty Name="UsersInClubsKey" ColumnName="UsersInClubsKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="UsersInClubRole" TypeName="TennisChallengeModel.UsersInClubRole" StoreEntitySet="UsersInClubsInRoles" >
+            <EndProperty Name="Role">
+              <ScalarProperty Name="RoleId" ColumnName="RolesFK" />
+            </EndProperty>
+            <EndProperty Name="UsersInClub">
+              <ScalarProperty Name="UsersInClubsKey" ColumnName="UsersInClubsFK" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Advertisements">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Advertisement">
+              <MappingFragment StoreEntitySet="Advertisements">
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="ClubKey" ColumnName="ClubKey" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Sunday" ColumnName="Sunday" />
+                <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+                <ScalarProperty Name="Friday" ColumnName="Friday" />
+                <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+                <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+                <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+                <ScalarProperty Name="Monday" ColumnName="Monday" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsFeeds">
+            <EntityTypeMapping TypeName="TennisChallengeModel.NewsFeed">
+              <MappingFragment StoreEntitySet="NewsFeeds">
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="ClubKey" ColumnName="ClubKey" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AdvertisementShowings">
+            <EntityTypeMapping TypeName="TennisChallengeModel.AdvertisementShowing">
+              <MappingFragment StoreEntitySet="AdvertisementShowings">
+                <ScalarProperty Name="AdvertisementFk" ColumnName="AdvertisementFk" />
+                <ScalarProperty Name="Showed" ColumnName="Showed" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsFeedShowings">
+            <EntityTypeMapping TypeName="TennisChallengeModel.NewsFeedShowing">
+              <MappingFragment StoreEntitySet="NewsFeedShowings">
+                <ScalarProperty Name="NewsFeedFk" ColumnName="NewsFeedFk" />
+                <ScalarProperty Name="Showed" ColumnName="Showed" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingSeries1">
+            <EntityTypeMapping TypeName="TennisChallengeModel.BookingSeries">
+              <MappingFragment StoreEntitySet="BookingSeries">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RankedGames">
+            <EntityTypeMapping TypeName="TennisChallengeModel.RankedGame">
+              <MappingFragment StoreEntitySet="RankedGame">
+                <ScalarProperty Name="Player2ScoreTie" ColumnName="Player2ScoreTie" />
+                <ScalarProperty Name="Player1ScoreTie" ColumnName="Player1ScoreTie" />
+                <ScalarProperty Name="Player2ScoreSecond" ColumnName="Player2ScoreSecond" />
+                <ScalarProperty Name="Player1ScoreSecond" ColumnName="Player1ScoreSecond" />
+                <ScalarProperty Name="Player2ScoreFirst" ColumnName="Player2ScoreFirst" />
+                <ScalarProperty Name="Player1ScoreFirst" ColumnName="Player1ScoreFirst" />
+                <ScalarProperty Name="WinnerFk" ColumnName="WinnerFk" />
+                <ScalarProperty Name="BookingFk" ColumnName="BookingFk" />
+                <ScalarProperty Name="RankedGameKey" ColumnName="RankedGameKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RankedMembers">
+            <EntityTypeMapping TypeName="TennisChallengeModel.RankedMember">
+              <MappingFragment StoreEntitySet="RankedMember">
+                <ScalarProperty Name="SwissTennisRank" ColumnName="SwissTennisRank" />
+                <ScalarProperty Name="FormerClubRank" ColumnName="FormerClubRank" />
+                <ScalarProperty Name="ClubRank" ColumnName="ClubRank" />
+                <ScalarProperty Name="RankedMemberFk" ColumnName="RankedMemberFk" />
+                <ScalarProperty Name="RankedMemberKey" ColumnName="RankedMemberKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TournamentLadders">
+            <EntityTypeMapping TypeName="TennisChallengeModel.TournamentLadder">
+              <MappingFragment StoreEntitySet="TournamentLadder">
+                <ScalarProperty Name="List" ColumnName="List" />
+                <ScalarProperty Name="LadderId" ColumnName="LadderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tournaments">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Tournament">
+              <MappingFragment StoreEntitySet="Tournaments">
+                <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+                <ScalarProperty Name="Closed" ColumnName="Closed" />
+                <ScalarProperty Name="TournComment" ColumnName="TournComment" />
+                <ScalarProperty Name="TournamentOpen" ColumnName="TournamentOpen" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="TournamentType" ColumnName="TournamentType" />
+                <ScalarProperty Name="TournamentId" ColumnName="TournamentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAds">
+            <EntityTypeMapping TypeName="TennisChallengeModel.UserAd">
+              <MappingFragment StoreEntitySet="UserAd">
+                <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
+                <ScalarProperty Name="AdType" ColumnName="AdType" />
+                <ScalarProperty Name="AdText" ColumnName="AdText" />
+                <ScalarProperty Name="UserInClubFk" ColumnName="UserInClubFk" />
+                <ScalarProperty Name="UserAdId" ColumnName="UserAdId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banks">
+            <EntityTypeMapping TypeName="TennisChallengeModel.Bank">
+              <MappingFragment StoreEntitySet="Bank">
+                <ScalarProperty Name="ValueAmount" ColumnName="ValueAmount" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="MemberFk" ColumnName="MemberFk" />
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TournamentMembers">
+            <EntityTypeMapping TypeName="TennisChallengeModel.TournamentMember">
+              <MappingFragment StoreEntitySet="TournamentMember">
+                <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+                <ScalarProperty Name="TournamentPoints" ColumnName="TournamentPoints" />
+                <ScalarProperty Name="TournamentFk" ColumnName="TournamentFk" />
+                <ScalarProperty Name="MemberFk" ColumnName="MemberFk" />
+                <ScalarProperty Name="TMemberId" ColumnName="TMemberId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TennisChallengeModel" ZoomLevel="81" DisplayType="true">
+        <EntityTypeShape EntityType="TennisChallengeModel.Booking" Width="1.5" PointX="10.25" PointY="5.25" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Club" Width="1.5" PointX="3.5" PointY="12.625" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Country" Width="1.5" PointX="0.5" PointY="2.5" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Court" Width="1.5" PointX="6" PointY="12.75" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Member" Width="1.5" PointX="5.125" PointY="1.625" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Rfid" Width="1.5" PointX="7.375" PointY="8.625" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Title" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="TennisChallengeModel.User" Width="1.5" PointX="0.75" PointY="6.25" />
+        <AssociationConnector Association="TennisChallengeModel.FK_Booking_Court" />
+        <AssociationConnector Association="TennisChallengeModel.FK_BookingBase_Member_0" />
+        <AssociationConnector Association="TennisChallengeModel.FK_BookingBase_Member_1" />
+        <AssociationConnector Association="TennisChallengeModel.FK_BookingBase_Member_2" />
+        <AssociationConnector Association="TennisChallengeModel.FK_BookingBase_Member_3" />
+        <AssociationConnector Association="TennisChallengeModel.FK_Court_Club" />
+        <AssociationConnector Association="TennisChallengeModel.FK_Member_Country" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Member__Users" />
+        <AssociationConnector Association="TennisChallengeModel.FK_Member_Title" />
+        <AssociationConnector Association="TennisChallengeModel.FK_Rfid_Member" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Role" Width="1.5" PointX="5.125" PointY="10" />
+        <EntityTypeShape EntityType="TennisChallengeModel.UsersInClub" Width="1.5" PointX="3" PointY="6.25" />
+        <AssociationConnector Association="TennisChallengeModel.FK__UsersInCl__ClubF__7E8CC4B1" />
+        <AssociationConnector Association="TennisChallengeModel.FK__UsersInCl__UserF__7D98A078" />
+        <AssociationConnector Association="TennisChallengeModel.UsersInClubRole" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Advertisement" Width="1.5" PointX="5.75" PointY="15.5" />
+        <EntityTypeShape EntityType="TennisChallengeModel.NewsFeed" Width="1.5" PointX="3.625" PointY="19.25" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Advertise__ClubK__74CE504D" />
+        <AssociationConnector Association="TennisChallengeModel.FK__NewsFeeds__ClubK__7A8729A3" />
+        <EntityTypeShape EntityType="TennisChallengeModel.AdvertisementShowing" Width="1.5" PointX="8.125" PointY="16.375" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Advertise__Adver__190BB0C3" />
+        <EntityTypeShape EntityType="TennisChallengeModel.NewsFeedShowing" Width="1.5" PointX="8.125" PointY="18.875" />
+        <AssociationConnector Association="TennisChallengeModel.FK__NewsFeedS__NewsF__2B2A60FE" />
+        <EntityTypeShape EntityType="TennisChallengeModel.BookingSeries" Width="1.5" PointX="2.875" PointY="0.5" />
+        <AssociationConnector Association="TennisChallengeModel.FK__BookingBa__Booki__45DE573A" />
+        <EntityTypeShape EntityType="TennisChallengeModel.RankedGame" Width="1.5" PointX="10.125" PointY="16.625" />
+        <EntityTypeShape EntityType="TennisChallengeModel.RankedMember" Width="1.5" PointX="0.75" PointY="8.875" />
+        <AssociationConnector Association="TennisChallengeModel.FK__RankedGam__Booki__4E3E9311" />
+        <AssociationConnector Association="TennisChallengeModel.FK__RankedGam__Winne__4F32B74A" />
+        <AssociationConnector Association="TennisChallengeModel.FK__RankedMem__Ranke__45A94D10" />
+        <EntityTypeShape EntityType="TennisChallengeModel.TournamentLadder" Width="1.5" PointX="1" PointY="12.125" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Tournament" Width="1.5" PointX="8.625" PointY="12.75" />
+        <AssociationConnector Association="TennisChallengeModel.FK__BookingBa__Tourn__770B9E7A" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Member__Tourname__77FFC2B3" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Tournamen__Ladde__76177A41" />
+        <EntityTypeShape EntityType="TennisChallengeModel.UserAd" Width="1.5" PointX="5.5" PointY="20.625" />
+        <AssociationConnector Association="TennisChallengeModel.FK__UserAd__UserInCl__7246E95D" />
+        <EntityTypeShape EntityType="TennisChallengeModel.Bank" Width="1.5" PointX="1.125" PointY="16.25" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Bank__MemberFk__67C95AEA" />
+        <EntityTypeShape EntityType="TennisChallengeModel.TournamentMember" Width="1.5" PointX="3.375" PointY="15.5" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Tournamen__Membe__186C9245" />
+        <AssociationConnector Association="TennisChallengeModel.FK__Tournamen__Tourn__1960B67E" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

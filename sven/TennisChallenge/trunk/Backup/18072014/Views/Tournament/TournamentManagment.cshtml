@@ -1,0 +1,25 @@
+﻿@*IPA Relevant Beginn*@
+@{
+  ViewBag.Title = "TournamentManagment";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/tournamentstart")
+  <script type="text/javascript">
+    GetAllTournaments = '@Url.Action("GetAllTournaments")';
+    DeleteTournament = '@Url.Action("DeleteTournament")';
+    EndTournament = '@Url.Action("EndTournament")';
+    Site = "admin";
+  </script>
+}
+
+<h2>Turniere Verwalten</h2>
+
+@Html.Partial("_TournamentManageMenu")
+
+@if (User.IsInRoles(RoleNames.CasualTournamentOrganizer))
+{
+  <div id="tournament-container"></div>
+}
+@*IPA Relevant End*@

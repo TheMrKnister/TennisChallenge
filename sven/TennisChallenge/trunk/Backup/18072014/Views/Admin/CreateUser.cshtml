@@ -1,0 +1,121 @@
+﻿@model TennisWeb.Models.CreateUserModel
+@{
+  ViewBag.Title = "Benutzer Erstellen";
+}
+
+@section Header
+{
+  @Styles.Render("~/Content/themes/base/jqueryui", "~/Content/useredit")
+}
+
+@section scripts
+{
+  @Scripts.Render("~/bundles/jqueryui", "~/bundles/jqueryval", "~/bundles/useredit")
+}
+
+<h2>Benutzer Erstellen</h2>
+<p>
+  Dieser Registrationsassistent wird Sie durch die komplette Registration begleiten. Bitte beenden Sie diesen komplett, Danke.
+</p>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  @Html.ValidationSummary(true, "Das Konto konnte nicht erstellt werden. Bitte korrigieren Sie die Fehler und versuchen Sie es erneut.")
+  <div id="registerform">
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.UserName)</span>
+      <span class="editor-field">
+        @Html.TextBoxFor(m => m.UserName)
+        @Html.ValidationMessageFor(m => m.UserName)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">
+        @Html.LabelFor(m => m.Password)
+      </span>
+      <span class="editor-field">
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+        Das Passwort muss aus mindestens @TennisWeb.Utils.Parameters.MinPasswordLength Zeichen bestehen.
+      </span>
+
+      <span class="editor-label">
+        @Html.LabelFor(m => m.ConfirmPassword)
+      </span>
+      <span class="editor-field">
+        @Html.PasswordFor(m => m.ConfirmPassword)
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.TitleFk)</span>
+      <span class="editor-field">
+        @Html.DropDownListFor(m => m.TitleFk, new SelectList(Model.Titles, "TitleKey", "Name"), "Bitte auswählen...")
+        @Html.ValidationMessageFor(m => m.TitleFk)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.Firstname)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.Firstname)
+        @Html.ValidationMessageFor(m => m.Firstname)
+      </span>
+      <span class="editor-label">@Html.LabelFor(m => m.Lastname)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.Lastname)
+        @Html.ValidationMessageFor(m => m.Lastname)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.Birthday)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.Birthday, "EditDate")
+        @Html.ValidationMessageFor(m => m.Birthday)
+      </span>
+      <span class="editor-label">@Html.LabelFor(m => m.Street)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.Street)
+        @Html.ValidationMessageFor(m => m.Street)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.Zip)</span>
+      <span class="editor-field">
+        @Html.TextBoxFor(m => m.Zip)
+        @Html.ValidationMessageFor(m => m.Zip)
+      </span>
+      <span class="editor-label">@Html.LabelFor(m => m.City)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.City)
+        @Html.ValidationMessageFor(m => m.City)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.PrivatePhone)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.PrivatePhone)
+        @Html.ValidationMessageFor(m => m.PrivatePhone)
+      </span>
+      <span class="editor-label">@Html.LabelFor(m => m.BusinessPhone)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.BusinessPhone)
+        @Html.ValidationMessageFor(m => m.BusinessPhone)
+      </span>
+    </div>
+    <div class="display-row">
+      <span class="editor-label">@Html.LabelFor(m => m.MobilePhone)</span>
+      <span class="editor-field">
+        @Html.EditorFor(m => m.MobilePhone)
+        @Html.ValidationMessageFor(m => m.MobilePhone)
+      </span>
+      <span class="editor-label">@Html.LabelFor(m => m.ClubFks)</span>
+      <span class="editor-field">
+        @Html.ListBoxFor(m => m.ClubFks, new MultiSelectList(Model.AllClubs, "ClubKey", "Name", Model.ClubFks))
+        @Html.ValidationMessageFor(m => m.ClubFks)
+      </span>
+    </div>
+    <p>
+      <input type="submit" value="Erstellen" />
+    </p>
+  </div>
+}

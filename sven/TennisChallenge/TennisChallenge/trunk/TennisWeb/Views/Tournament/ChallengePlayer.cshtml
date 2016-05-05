@@ -1,0 +1,42 @@
+﻿@{
+  ViewBag.Title = "ChallengePlayer";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts {
+  @Scripts.Render("~/bundle/challengeplayer")
+  <script type="text/javascript">
+    GetPlayers = '@Url.Action("GetChalPlayers")';
+  </script>
+}
+<div id="list-title-chall">
+  <h2>Welchen Spieler willst du fordern?</h2>
+</div>
+<h2 id="title-name" data-user="@User.Identity.Name" data-gender="@User.GetGender()">Spieler fordern</h2>
+@Html.Partial("_TournamentMenu")
+
+<div id="ranking-list-wrap" class="challenge-player">
+  <ul id="rankning-list">
+  </ul>
+</div>
+
+<div id="steps">
+  <p>Vorgehen</p>
+
+  <p>1) Spieler via E-Mail oder Telefon über Deine Forderung informieren und einen Termin vereinbaren.</p>
+  <p>2) Terminabklärung und Platzreservation via Stefan Holzer, <a href="mailto:ss.holzer@bluewin.ch">ss.holzer@bluewin.ch</a> oder 079 286 21 17.</p>
+  <p>3) Der Gewinner meldet das Spielergebnis raschmöglichst an Stefan Holzer.</p>
+
+</div>
+
+@if (User.IsInRoles(RoleNames.CasualTournamentOrganizer)){
+<div id="admin" class="chall-player">
+  <a href="@Url.Action("ChallengeAdmin", "Tournament")">
+  <p>Admin</p>
+  </a>
+</div>
+}
+
+<div id="back-ranked" class="chall-player">
+  <p>zurück</p>
+</div>

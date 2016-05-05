@@ -1,0 +1,17 @@
+﻿@model TennisWeb.Models.StandbyModel
+@{
+  Layout = null;
+}
+<!doctype html>
+<html class="standby">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Werbung</title>
+  @Styles.Render("~/Content/infoboard")
+  @Scripts.Render("~/bundle/standby")
+</head>
+<body>
+  <div id="standby-container" data-standby-url="@Url.HttpRouteUrl("StandbyApi", new { controller = "Standby", id = Model.ClubKey })"></div>
+  <div id="standby-overlay"></div>
+</body>
+</html>

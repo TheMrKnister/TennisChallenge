@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="bdde95c0-8157-481e-8dfa-139786a9ebb1" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="bce69efd-6b51-4c06-9c9b-9d3b3c1dfa58" name="Comment1">
+      <body>InfoBoard</body>
+    </comment>
+    <comment Id="eb04edae-d2e8-4de7-a8b4-88662b98ddb9" name="Comment2">
+      <body>TennisWeb
+</body>
+    </comment>
+    <comment Id="64c8687c-339b-4b0f-9951-d180b21fc926" name="Comment3">
+      <body>TennisChallenge.Dal</body>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="cb4cb077-906c-4d8e-865d-c940870fcf09" name="FrmMain">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5afa9678-d7f2-4afd-aef8-0e626788948c" direction="Forward">
+          <layerMoniker Id="c18cf5d2-5124-46c9-8a1d-43fcc260f90c" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="58b16fc9-a7c2-412e-8841-4f2b6f4068b6" name="FrmMain">
+          <ArtifactNode Label="FrmMain" Category="CodeSchema_Class" Id="(Assembly=../InfoBoard/bin/Debug/InfoBoard.exe Namespace=TennisChallenge.InfoBoard Type=FrmMain)" />
+          <ExpandedNode Id="(Assembly=InfoBoard Namespace=TennisChallenge.InfoBoard Type=FrmMain)" Label="FrmMain" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c18cf5d2-5124-46c9-8a1d-43fcc260f90c" name="mainBrowser : WebBrowser">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="76f82db6-3086-4fd8-873c-61d82c539e0a" direction="Forward">
+          <layerMoniker Id="1b69e093-e9f5-4ac0-bcf9-29d96fd709e9" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="e9d7b57c-b0ac-4233-a81b-a3fb5ff7a3f6" name="mainBrowser : WebBrowser">
+          <ArtifactNode Label="mainBrowser : WebBrowser" Category="CodeSchema_Field" Id="(Assembly=../InfoBoard/bin/Debug/InfoBoard.exe Namespace=TennisChallenge.InfoBoard Type=FrmMain Member=mainBrowser)" />
+          <ExpandedNode Id="(Assembly=InfoBoard Namespace=TennisChallenge.InfoBoard Type=FrmMain Member=mainBrowser)" Label="mainBrowser : WebBrowser" Category="CodeSchema_Field">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="1b69e093-e9f5-4ac0-bcf9-29d96fd709e9" name="Index.cshtml">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="e526d383-2813-4e4e-b5f2-a9fe206ebe50" direction="Forward">
+          <layerMoniker Id="ff4ee7f8-b4aa-4c64-ae1b-03b1d24e1a7d" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="a567be07-94ce-43ca-bfb0-965e02d6eba8" direction="Forward">
+          <layerMoniker Id="22c65ad7-e000-4b43-926c-6b5c559c87a7" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="bb66ba82-6c4f-47db-84b6-5170941dee89" name="Index.cshtml">
+          <ArtifactNode Label="Index.cshtml" Category="CodeSchema_ProjectItem" Id="(Assembly=../TennisWeb/TennisWeb.csproj File=../TennisWeb/Views/InfoBoard/Index.cshtml)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="ba7856a9-5881-40e0-a485-50206ffa8224" name="MemberController">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="bd65d230-ce52-4e98-86d4-642484c64779" direction="Forward">
+          <layerMoniker Id="950f1e8d-d108-422f-bad9-625a62bbb576" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="1ff5cf54-6ba0-48cb-b0fc-472bca3fe7e9" name="MemberController">
+          <ArtifactNode Label="MemberController" Category="CodeSchema_Class" Id="(Assembly=../TennisWeb/bin/TennisWeb.dll Namespace=TennisWeb.Controllers Type=MemberController)" />
+          <ExpandedNode Id="(Assembly=TennisWeb Namespace=TennisWeb.Controllers Type=MemberController)" Label="MemberController" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="ff4ee7f8-b4aa-4c64-ae1b-03b1d24e1a7d" name="tennis-challenge.js">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="7d4696af-b111-47d6-97e8-5f1163a515f3" direction="Forward">
+          <layerMoniker Id="ba7856a9-5881-40e0-a485-50206ffa8224" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d8016d8c-1e93-496a-a147-c7ff00424c52" direction="Forward">
+          <layerMoniker Id="c4b8b0dd-abbb-4fb4-b52e-9056e78ebc52" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="75faa62a-49af-49c3-8a1c-c1ea9a811205" name="tennis-challenge.js">
+          <ArtifactNode Label="tennis-challenge.js" Category="CodeSchema_ProjectItem" Id="(Assembly=../TennisWeb/TennisWeb.csproj File=../TennisWeb/Scripts/tennis-challenge.js)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c4b8b0dd-abbb-4fb4-b52e-9056e78ebc52" name="InfoBoardController">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="0fed19c2-2a79-419b-bd0e-6abd331db53c" direction="Forward">
+          <layerMoniker Id="950f1e8d-d108-422f-bad9-625a62bbb576" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="127eb050-b22b-49b2-82b1-cdb72d3ff223" name="InfoBoardController">
+          <ArtifactNode Label="InfoBoardController" Category="CodeSchema_Class" Id="(Assembly=../TennisWeb/bin/TennisWeb.dll Namespace=TennisWeb.Controllers Type=InfoBoardController)" />
+          <ExpandedNode Id="(Assembly=TennisWeb Namespace=TennisWeb.Controllers Type=InfoBoardController)" Label="InfoBoardController" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="950f1e8d-d108-422f-bad9-625a62bbb576" name="AccessorBase.cs">
+      <references>
+        <reference Id="133b34c3-a7b8-4831-9ad9-3bced07fbc27" name="AccessorBase.cs">
+          <ArtifactNode Label="AccessorBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=../TennisChallenge.Dal/TennisChallenge.Dal.csproj File=../TennisChallenge.Dal/AccessorBase.cs)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TennisChallenge.Dal Namespace=TennisChallenge.Dal Type=(Name=AccessorBase GenericParameterCount=1))" Label="AccessorBase&lt;TEntityType&gt;" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="22c65ad7-e000-4b43-926c-6b5c559c87a7" name="ResourcesController">
+      <references>
+        <reference Id="f84f2ae9-60e4-40df-abdf-784fb98446a5" name="ResourcesController">
+          <ArtifactNode Label="ResourcesController" Category="CodeSchema_Class" Id="(Assembly=../TennisWeb/bin/TennisWeb.dll Namespace=TennisWeb.Controllers Type=ResourcesController)" />
+          <ExpandedNode Id="(Assembly=TennisWeb Namespace=TennisWeb.Controllers Type=ResourcesController)" Label="ResourcesController" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

@@ -1,0 +1,747 @@
+﻿@using System.Configuration
+@using TennisWeb.Utils
+@model IEnumerable<TennisWeb.Models.CourtVm>
+
+@{
+  Layout = "~/Views/Shared/_InfoBoardLayout.cshtml";
+}
+
+@section Header
+{
+  @Styles.Render("~/Content/themes/base/jqueryui", "~/Content/infoboard")
+}
+
+@section scripts
+{
+  @Scripts.Render("~/bundles/jqueryui", "~/bundles/infoboard")
+
+  <script type="text/javascript">
+    var TennisChallenge = TennisChallenge || {};
+    TennisChallenge.Constants = TennisChallenge.Constants || {};
+    TennisChallenge.Constants.getCurrentBookingsUrl = '@Url.Action("GetCurrentBookings")';
+    TennisChallenge.Constants.memberListUrl = '@Url.Action("MemberList", "Member")';
+    TennisChallenge.Constants.getNextAvailableTime = '@Url.Action("GetNextAvailableTime")';
+    TennisChallenge.Constants.bookTennisCourt = '@Url.Action("BookTennisCourt")';
+    TennisChallenge.Constants.verifyMember = '@Url.Action("VerifyMember", "Member")';
+    TennisChallenge.Constants.verifyMemberRanked = '@Url.Action("VerifyMemberRanked", "Member")';
+    TennisChallenge.Constants.assignRfid = '@Url.Action("AssignRfid", "Member")';
+    TennisChallenge.Constants.FindByRfId = '@Url.Action("FindByRfId", "Member")';
+    TennisChallenge.Constants.InfoBoardLogOff = '@Url.Action("InfoBoardLogOff")'
+    TennisChallenge.Constants.cancelBooking = '@Url.Action("CancelBooking")';
+    TennisChallenge.Constants.getNextSeven = '@Url.Action("GetNextSevenBookings")';
+    TennisChallenge.Constants.goToRankedMember = '@Url.Action("RankedStart")';
+    TennisChallenge.Constants.getRankedMember = '@Url.Action("GetRankedMember")';
+    TennisChallenge.Constants.getRankedGames = '@Url.Action("GetRankedGames", "Tournament")';
+    TennisChallenge.Constants.guestGuid = '@TennisChallenge.Dal.Parameters.GuestPlayerKey';
+    TennisChallenge.Constants.uploadImagePath = '@Url.Content(Picture.UploadImagePath)';
+    TennisChallenge.Constants.defaultPlayerImage = '@Url.Content("~/Content/images/default_player_image.png")';
+    TennisChallenge.Constants.adminUrl = '@Request.Url.GetLeftPart(UriPartial.Authority)@Url.Action("Index", "Admin")';
+    TennisChallenge.Constants.getNextTournaments = '@Url.Action("GetNextTournaments", "Tournament")';
+    TennisChallenge.Constants.randomizePlayers = '@Url.Action("RandomizePlayers", "Tournament")';
+    TennisChallenge.Constants.endTournament = '@Url.Action("EndTournament", "Tournament")';
+    TennisChallenge.Constants.getTournamentGames = '@Url.Action("GetGames", "Tournament")';
+    TennisChallenge.Constants.verifyAdmin = '@Url.Action("VerifyAdmin", "Member")';
+    TennisChallenge.Constants.addToTournament = '@Url.Action("VerifyAndAddTournament", "Member")';
+    TennisChallenge.Constants.removeFromTournament = '@Url.Action("DeleteFromTournament", "Member")';
+    TennisChallenge.Constants.selectWinner = '@Url.Action("WinnerDist", "Tournament")';
+    TennisChallenge.Constants.notInBooking = '@Url.Action("GetNotSetPlayers", "Tournament")';
+    TennisChallenge.Constants.getTournPlayers = '@Url.Action("GetTournamentPlayers", "Tournament")';
+    TennisChallenge.Constants.getAssigncourts = '@Url.Action("GetAssignCourts", "Tournament")';
+    TennisChallenge.Constants.AssignPlayers = '@Url.Action("AssignPlayer", "Tournament")';
+    TennisChallenge.Constants.AddToBank = '@Url.Action("AddToBank")';
+    TennisChallenge.Constants.getNotInTournament = '@Url.Action("GetNotInTournament", "Tournament")';
+    TennisChallenge.Constants.addMemberToTourn = '@Url.Action("AddToMemberToTournament", "Tournament")';
+    TennisChallenge.Constants.getInterclub = '@Url.Action("GetInterclubTournament", "Tournament")';
+    TennisChallenge.Constants.getPastBookings = '@Url.Action("GetPastBookings")'
+    TennisChallenge.Constants.swipeTeams = '@Url.Action("DeleteSoloTeam", "Member")'
+  </script>
+
+  <script type="text/javascript">
+    function onRfidRead(rfid) {
+      TennisChallenge.InfoBoard.Model.onRfidRead(rfid);
+    }
+
+  </script>
+}
+
+<div id="club_site_map">
+  <img id="club_logo" src="@Url.Content("~/Content/images/tct_logo.png")" alt="Klub Logo" style="position: absolute; top: 200px; left: 562px;" />
+
+  <div id="clock_id"></div>
+
+  @*  IPA Relevant Begin*@
+  <div id="current-events">
+    <div class="title-bar">AKTUELLES UND NACHRICHTEN</div>
+    <div id="first-steps" class="white-back">
+      <div class="news-headline">ERSTE SCHRITTE AM INFOBOARD</div>
+      <br />
+      <div class="news-text">1. Platz auswählen<br />2. Namen auswählen oder ID-Karte auf Leser<br />3. Partner auswählen und bestätigen
+</div>
+    </div>
+    <div id="important-news" class="grey-back" hidden>
+      <div class="news-headline" style="color: red;">WICHTIG</div>
+      <br />
+      <div class="news-text">Um mit dem Infoboard arbeiten zu können, musst Du unbedingt auf www.tennis-challenge.ch eingetragen sein.</div>
+    </div>
+    <div id="tournament-title" class="title-bar">TURNIERE</div>
+    <div id="ranked-news" class="white-back">
+      <div id="ranked-news-inside">
+        <div class="news-headline">RANGLISTENSPIELE</div>
+        <div class="news-ranked-buttons">
+          <button type="button" id="ranked-men" class="news-button" name="ranked-men" value="MÄNNER">MÄNNER</button>
+          <button type="button" id="ranked-women" class="news-button" name="ranked-women">FRAUEN</button>
+        </div>
+      </div>
+    </div>
+    <div id="tournament-news" class="grey-back">
+      <div id="tournament-fun">
+        <div id="single-fun" class="tournament-display" style="display: none;">
+          <div class="news-headline">EINZEL-PLAUSCHTURNIER</div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="news-tournament-buttons fun">
+            <button type="button" id="single-fun-play" class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" id="single-fun-plan" class="news-button left-button">TEILNEHMER</button>
+            <button type="button" id="single-fun-admin" class="news-button admin-button"></button>
+          </div>
+        </div>
+        <div id="double-fun" class="tournament-display" style="display: none;">
+          <div class="news-headline">DOPPEL-PLAUSCHTURNIER</div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="news-tournament-buttons fun">
+            <button type="button" id="double-fun-play" class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" id="double-fun-plan" class="news-button left-button">TEILNEHMER</button>
+            <button type="button" id="double-fun-admin" class="news-button admin-button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="tournament-seperator tourn"></div>
+      <div id="tournament-sirius">
+        <div id="single-tourn" class="tournament-display" hidden>
+          <div class="news-headline">EINZEL-TURNIER</div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="news-tournament-buttons sirius">
+            <button type="button" id="single-tourn-play" class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" id="single-tourn-plan" class="news-button left-button">TEILNEHMER</button>
+            <button type="button" id="single-tourn-admin" class="news-button admin-button"></button>
+          </div>
+        </div>
+        <div id="double-tourn" class="tournament-display" style="display: none;">
+          <div class="news-headline">DOPPEL-TURNIER</div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="news-tournament-buttons sirius">
+            <button type="button" id="double-tourn-play" class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" id="double-tourn-plan" class="news-button left-button">TEILNEHMER</button>
+            <button type="button" id="double-tourn-admin" class="news-button admin-button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="tournament-seperator end"></div>
+      <div id="tournament-interclub-0">
+        <div id="single-interclub-0" class="tournament-display" style="display: none;">
+          <div class="news-headline"><section>EINZEL-CLUBMEISTERSCHAFT</section></div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="tourn-comment"><section>Kein Kommentar</section></div>
+          <div class="news-tournament-buttons interclub">
+            <button type="button" @*class="single-interc-play"*@ class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" class="news-button left-button single-interc-plan">TEILNEHMER</button>
+            <button type="button" @*class="single-interc-admin*@" class="news-button admin-button interclub"></button>
+          </div>
+        </div>
+        <div id="double-interclub-0" class="tournament-display" style="display: none;">
+          <div class="news-headline"><section>DOPPEL-CLUBMEISTERSCHAFT</section></div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="tourn-comment"><section>Kein Kommentar</section></div>
+          <div class="news-tournament-buttons interclub">
+            <button type="button" @*class="double-interc-play"*@ class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" class="news-button left-button double-interc-plan">TEILNEHMER</button>
+            <button type="button" @*class="double-interc-admin"*@ class="news-button admin-button interclub"></button>
+          </div>
+        </div>
+      </div>
+      <div class="tournament-seperator interclub"></div>
+      <div id="tournament-interclub-1">
+        <div id="single-interclub-1" class="tournament-display" style="display: none;">
+          <div class="news-headline"><section>EINZEL-CLUBMEISTERSCHAFT</section></div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="tourn-comment"><section>Kein Kommentar</section></div>
+          <div class="news-tournament-buttons interclub">
+            <button type="button" @*class="single-interc-play"*@ class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" class="news-button left-button single-interc-plan">TEILNEHMER</button>
+            <button type="button" @*class="single-interc-admin*@" class="news-button admin-button interclub"></button>
+          </div>
+        </div>
+        <div id="double-interclub-1" class="tournament-display" style="display: none;">
+          <div class="news-headline"><section>DOPPEL-CLUBMEISTERSCHAFT</section></div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="tourn-comment"><section>Kein Kommentar</section></div>
+          <div class="news-tournament-buttons interclub">
+            <button type="button" @*class="double-interc-play"*@ class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" class="news-button left-button double-interc-plan">TEILNEHMER</button>
+            <button type="button" @*class="double-interc-admin"*@ class="news-button admin-button interclub"></button>
+          </div>
+        </div>
+      </div>
+      <div id="tournament-interclub-2">
+        <div id="single-interclub-2" class="tournament-display" style="display: none;">
+          <div class="news-headline"><section>EINZEL-CLUBMEISTERSCHAFT</section></div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="tourn-comment"><section>Kein Kommentar</section></div>
+          <div class="news-tournament-buttons interclub">
+            <button type="button" @*class="single-interc-play"*@ class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" class="news-button left-button single-interc-plan">TEILNEHMER</button>
+            <button type="button" @*class="single-interc-admin*@" class="news-button admin-button interclub"></button>
+          </div>
+        </div>
+        <div id="double-interclub-2" class="tournament-display" style="display: none;">
+          <div class="news-headline"><section>DOPPEL-CLUBMEISTERSCHAFT</section></div>
+          <div class="tourn-date"><section>XX.XX.XXXX</section></div>
+          <div class="tourn-comment"><section>Kein Kommentar</section></div>
+          <div class="news-tournament-buttons interclub">
+            <button type="button" @*class="double-interc-play"*@ class="news-button add-to-game">AN/ ABMELDEN</button>
+            <button type="button" class="news-button left-button double-interc-plan">TEILNEHMER</button>
+            <button type="button" @*class="double-interc-admin"*@ class="news-button admin-button interclub"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tournament-admin-menu" class="fullscreen-view overlay">
+    <div id="admin-menu">
+      <div class="title-bar">ADMIN</div>
+      <div id="tourn-admin-buttons">
+        <button type="button" id="set-players" class="admin-menu-button">SPIELER SETZEN</button>
+        <button type="button" id="randomise-players" class="admin-menu-button">SPIELER MISCHEN</button>
+        <button type="button" id="select-winner" class="admin-menu-button">GEWINNER WÄHLEN</button>
+        <button type="button" id="end-tournament" class="admin-menu-button">TURNIER ABSCHLIESSEN</button>           
+        <button type="button" id="close-menu" class="admin-menu-button">SCHLIESSEN</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="gameplan-view" class="fullscreen-view overlay">
+    <div id="gameplan">
+      <div class="title-bar">TEILNEHMER</div>
+      <div id="games-view"></div>
+      <button type="button" id="close-gameplan" class="gameplan-button">SCHLIESSEN</button>
+    </div>
+  </div>
+
+
+
+  <div id="already-tournament-view" class="fullscreen-view overlay">
+  <img src="@Url.Content("~/Content/images/rfid_card_icon.png")" alt="Symbol für Rfid-Karte." class="rfid-icon"/>
+  <div id="already-tournament-dialog">
+    <div class="title-bar">Fehlermeldung</div>
+    <p>Du bist bereits an einem Turnier angemeldet, willst du dich abmelden?</p>
+    <div class="buttons">
+      <button type="button" id="cancel-tournament-view">Abbrechen</button>
+      <button type="button" id="cancel-tournament">Abmelden</button>
+    </div>
+  </div>
+</div>
+
+@*  IPA Relevant End*@
+
+  @foreach (var court in Model)
+  {
+    <div id="court_@court.Id" class="court-container" style="top: @court.PosY; left: @court.PosX;">
+      <div class="available-time">
+        <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+        <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>
+        <span class="time">15:00 Uhr</span>
+      </div>
+      <div class="tennis-court">
+        <div class="caption">TENNISPLATZ #@court.Id</div>
+        <div class="player-name player-0"></div>
+        <div class="player-name player-1"></div>
+        <div class="player-name player-2"></div>
+        <div class="player-name player-3"></div>
+        <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange" />
+      </div>
+      <div class="show-booking-infos">
+        <div class="title-bar show-infos-title">Reservationsinformation</div>
+        <div class="past-button scroll-button"><button data-count="0" data-courtid="@court.CourtKey"></button></div>
+        <div class="present-button scroll-button"><button></button></div>
+        <div class="info-marker"></div>
+      </div>
+      <ul class="booking-bar">
+        <li class="free"></li>
+        <li class="free"></li>
+        <li class="free"></li>
+        <li class="free"></li>
+        <li class="free"></li>
+        <li class="free"></li>
+        <li class="free"></li>
+      </ul>
+    </div>
+  }
+
+<div id="court_0" class="court-container" style="top: 41px; left: 1259px;">
+    <div class="available-time">
+      <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+      <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>
+      <span class="time">15:00 Uhr</span>
+    </div>
+    <div class="tennis-court">
+      <div class="caption">TENNISPLATZ #1</div>
+      <div class="player-name player-0"></div>
+      <div class="player-name player-1"></div>
+      <div class="player-name player-2"></div>
+      <div class="player-name player-3"></div>
+        <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange" />
+    </div>
+    <div class="show-booking-infos">
+      <div class="title-bar show-infos-title">Reservationsinformation</div>
+      <div class="past-button scroll-button"><button data-count="0" data-courtid="622c7b29-1136-4abe-bfd4-76b40ecf4e1d"></button></div>
+      <div class="present-button scroll-button"><button></button></div>
+      <div class="info-marker"></div>
+    </div>
+    <ul class="booking-bar">
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+    </ul>
+  </div>
+  <div id="court_1" class="court-container" style="top: 313px; left: 1259px;">
+    <div class="available-time">
+      <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+      <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>
+      <span class="time">15:00 Uhr</span>
+    </div>
+    <div class="tennis-court">
+      <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange" />
+      <div class="caption">TENNISPLATZ #2</div>
+      <div class="player-name player-0"></div>
+      <div class="player-name player-1"></div>
+      <div class="player-name player-2"></div>
+      <div class="player-name player-3"></div>
+    </div>
+    <div class="show-booking-infos">
+      <div class="title-bar show-infos-title">Reservationsinformation</div>
+      <div class="past-button scroll-button"><button data-count="0" data-courtid="136825fc-db79-4d4b-bfbe-fb5849b2829e"></button></div>
+      <div class="present-button scroll-button"><button></button></div>
+      <div class="info-marker"></div>
+    </div>
+    <ul class="booking-bar">
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+    </ul>
+  </div>
+  <div id="court_2" class="court-container" style="top: 555px; left: 652px;">
+    <div class="available-time">
+      <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+      <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>
+      <span class="time">15:00 Uhr</span>
+    </div>
+    <div class="tennis-court">
+      <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange" />
+      <div class="caption">TENNISPLATZ #3</div>
+      <div class="player-name player-0"></div>
+      <div class="player-name player-1"></div>
+      <div class="player-name player-2"></div>
+      <div class="player-name player-3"></div>
+    </div>
+    <div class="show-booking-infos">
+      <div class="title-bar show-infos-title">Reservationsinformation</div>
+      <div class="past-button scroll-button"><button data-courtid="03548353-fb80-402f-8f18-641d9bb025f7"></button></div>
+      <div class="present-button scroll-button"><button></button></div>
+      <div class="info-marker"></div>
+    </div>
+    <ul class="booking-bar">
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+    </ul>
+  </div>
+  <div id="court_3" class="court-container" style="top: 823px; left: 652px;">
+    <div class="available-time">
+      <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+      <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>      
+      <span class="time">15:00 Uhr</span>
+    </div>
+    <div class="tennis-court">
+      <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange" />
+      <div class="caption">TENNISPLATZ #4</div>
+      <div class="player-name player-0"></div>
+      <div class="player-name player-1"></div>
+      <div class="player-name player-2"></div>
+      <div class="player-name player-3"></div>
+    </div>
+    <div class="show-booking-infos">
+      <div class="title-bar show-infos-title">Reservationsinformation</div>
+      <div class="past-button scroll-button"><button data-count="0" data-courtid="7199d6b4-c5ee-4e34-b571-8fb7e1706a6e"></button></div>
+      <div class="present-button scroll-button"><button></button></div>
+      <div class="info-marker"></div>
+    </div>
+    <ul class="booking-bar">
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+    </ul>
+  </div>
+  <div id="court_4" class="court-container" style="top: 555px; left: 32px;">
+    <div class="available-time" style="display: none;">
+      <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+      <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>
+      <span class="time">15:00 Uhr</span>
+    </div>
+    <div class="tennis-court">
+      <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange"/>
+      @*<div class="icon"></div>*@
+      <div class="caption">TENNISPLATZ #5</div>
+      <div class="player-name player-0"></div>
+      <div class="player-name player-1"></div>
+      <div class="player-name player-2"></div>
+      <div class="player-name player-3"></div>
+    </div>
+    <div class="show-booking-infos">
+      <div class="title-bar show-infos-title">Reservationsinformation</div>
+      <div class="past-button scroll-button"><button data-count="0" data-courtid="6122d3c7-9981-4110-88d7-e7fbde791dbe"></button></div>
+      <div class="present-button scroll-button"><button></button></div>
+      <div class="info-marker"></div>
+    </div>
+    <ul class="booking-bar">
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+      <li class="free"></li>
+    </ul>
+  </div>
+  
+    <div id="court_5" class="court-container" style="top: 823px; left: 32px;">
+        <div class="available-time" style="display: none;">
+            <img class="info-icon" src="@Url.Content("~/Content/images/info_icon_blue_white.png")" alt="Info Icon" />
+            <span class="time-declare">NÄCHSTE RESERVATIONSMÖGLICHKEIT: </span>
+            <span class="time">15:00 Uhr</span>
+        </div>
+        <div class="tennis-court">
+            <img class="ongoing-game" src="@Url.Content("~/Content/images/ongoing_game.png")" alt="Spiel im Gange"/>
+            @*<div class="icon"></div>*@
+            <div class="caption">TENNISPLATZ #6</div>
+            <div class="player-name player-0"></div>
+            <div class="player-name player-1"></div>
+            <div class="player-name player-2"></div>
+            <div class="player-name player-3"></div>
+        </div>
+        <div class="show-booking-infos">
+            <div class="title-bar show-infos-title">Reservationsinformation</div>
+            <div class="past-button scroll-button"><button data-count="0" data-courtid="c2a78c2a-2cec-4eef-b734-7a6b0a6d25c0"></button></div>
+            <div class="present-button scroll-button"><button></button></div>
+            <div class="info-marker"></div>
+        </div>
+        <ul class="booking-bar">
+            <li class="free"></li>
+            <li class="free"></li>
+            <li class="free"></li>
+            <li class="free"></li>
+            <li class="free"></li>
+            <li class="free"></li>
+            <li class="free"></li>
+        </ul>
+    </div>
+
+  <div id="error-bar"></div>
+  @* error-bar: Kann mit Fehlermeldungen gefüllt werden.*@
+</div>
+
+<div id="window-overlay" class="fullscreen-view overlay"></div>
+  
+<div id="login-view" class="fullscreen-view overlay">
+  <img src="@Url.Content("~/Content/images/rfid_card_icon.png")" alt="Symbol für Rfid-Karte." class="rfid-icon"/>
+  <div id="login-dialog">
+    <div class="title-bar">
+      MELDE DICH BITTE MIT DEINER MITGLIEDKARTE ODER DEINEM BENUTZER AN.
+    </div>
+    <div class="row">
+      <input type="text" name="email-address" placeholder="E-Mail-Adresse" />
+      <button type="button" id="login-button" class="normal ranked verify-admin add-to-tourn" name="login">Anmelden</button>
+    </div>
+    <div class="row">
+      <input type="password" name="password" placeholder="Passwort" />
+      <button type="button" name="cancel">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<div id="booking-view" class="fullscreen-view">
+  <img src="@Url.Content("~/Content/images/rfid_card_icon.png")" alt="Symbol für Rfid-Karte." class="rfid-icon"/>
+  <div id="booking-dialog">    
+    <div class="title-bar">
+      Tennisplatz Reservieren
+    </div>    
+    <div id="member-list">
+      <input type="text" id="member-search" placeholder="Suchen..."/>
+      <ul>
+        <li data-user-id="94e13f9a-823d-4217-932d-c57465cbacb4" data-user-info="#">Gast Spieler</li>
+        <li data-user-id="b7efbc61-407d-475f-bcd2-778d7df0b4ca" data-user-info="N1#TC Old Boys">Roger Federer</li>
+        <li data-user-id="4da07095-d54d-4df9-a637-67a76a7f278d" data-user-info="N1#Great Britain">Andy Murray</li>
+      </ul>
+    </div>
+    <div id="booking-info">
+      <div class="info-icon">i</div>
+      <span class="content">
+        AB: 15:00 UHR<br/>
+        ENDE: 15:45 UHR<br/>
+        DAUER: 45 MINUTEN      
+      </span>
+    </div>    
+    <div id="match-configuration">
+      <div class="number one">1</div>
+      <div class="number two">2</div>
+      <div class="single-double"></div>
+      <div id="player-1" class="player-box">
+        <img src="" alt="Spielerbild" id="bild1" />
+        <h4>Roger Deuber</h4>
+        <div><span>Klassierung</span><span class="classification">R8</span></div>
+        <div><span>Stammklub</span><span class="club">TC Burgmoos</span></div>
+      </div>
+      <div id="player-2" class="player-box">
+        <img src="" alt="Spielerbild" id="bild2" />
+        <h4>Novak Djokovic</h4>
+        <div><span>Klassierung</span><span class="classification">N1</span></div>
+        <div><span>Stammklub</span><span class="club">TC Burgmoos</span></div>
+      </div>
+      <div id="player-3" class="player-box highlight empty">
+        <img src="" alt="Spielerbild" id="bild3" />
+        <h4></h4>
+        <div><span>Klassierung</span><span class="classification"></span></div>
+        <div><span>Stammklub</span><span class="club"></span></div>
+      </div>
+      <div id="player-4" class="player-box empty">
+        <img src="" alt="Spielerbild" id="bild4" />
+        <h4></h4>
+        <div><span>Klassierung</span><span class="classification"></span></div>
+        <div><span>Stammklub</span><span class="club"></span></div>
+      </div>
+    </div>
+    <div id="footer">
+      <button type="button" name="book">Reservieren</button>
+      <button type="button" name="cancel">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<div id="assign-rfid-view" class="fullscreen-view overlay">
+  <img src="@Url.Content("~/Content/images/rfid_card_icon.png")" alt="Symbol für Rfid-Karte." class="rfid-icon"/>
+  <div id="assign-rfid-dialog">
+    <div class="title-bar"></div>
+    <p>
+      Diese Karte ist mit keinem Benutzerkonto verknüpft. Bitte melde dich mit deinem Benutzernamen und dem Passwort 
+      an. Danach ist diese Karte mit deinem Benutzerkonto verknüpft.
+    </p>
+    <div class="row">
+      <input type="text" name="rfid-email-address" placeholder="E-Mail-Adresse" />
+      <button type="button" name="login">Anmelden</button>
+    </div>
+    <div class="row">
+      <input type="password" name="rfid-password" placeholder="Passwort" />
+      <button type="button" name="cancel">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<div id="already-booked-view" class="fullscreen-view overlay">
+  <img src="@Url.Content("~/Content/images/rfid_card_icon.png")" alt="Symbol für Rfid-Karte." class="rfid-icon"/>
+  <div id="already-booked-dialog">
+    <div class="title-bar">Fehlermeldung</div>
+    <p>Du bist bereits auf Platz 99 für ein Spiel von 0:00 Uhr bis 0:45 Uhr registriert.</p>
+    <div class="buttons">
+      <button type="button" name="cancel">Abbrechen</button>
+      <button type="button" name="cancelBooking">Reservierung stornieren</button>
+    </div>
+  </div>
+</div>
+
+<div id="ranking-view" class="fullscreen-view overlay">
+  <div id="ranked-dialog">
+    <div class="title-bar">Ranglistenspiel</div>    
+    <div class="challenge-player">
+      <button type="button" name="chall-player">Spieler fordern</button>
+    </div>
+    <div class="ranked-games">
+      <button type="button" name="chall-player">Vereinbarte Spiele</button>
+    </div>
+    <div id="ranked-games-view">
+      <div class="game-chall">Forderer: <input type="text" value="" readonly="true"/></div>
+      <div class="game-def">Geforderter: <input type="text" value="" readonly="true"/></div>
+      <div class="game-start">Start: <input type="text" value="" readonly="true"/></div>
+      <div class="game-end">Ende: <input type="text" value="" readonly="true"/></div>
+      <div class="game-court">Platz: <input type="text" value="" readonly="true"/></div>
+      <div class="game-rank">Umspielter Rang: <input type="text" value="" readonly="true"/></div>
+      <div id="nav-buttons">
+        <div id="next"><input type="button" value=">" /></div>
+        <div id="ranked-index"></div>
+        <div id="previous"><input type="button" value="<" /></div>
+      </div>
+    </div>    
+    <div id="ranking-list-wrap">
+      <h3>Aktuelle Rangliste</h3>
+      <ul id="ranking-list"></ul>
+    </div>
+    <div id="close-ranked">
+      <button type="button" name="close-ranked">Schliessen</button>
+    </div>
+  </div>
+</div>
+
+<div id="tournament-members-view" class="fullscreen-view overlay">
+  <div id="tournament-members-dialog">
+    <div class="title-bar">Teilnehmer</div>    
+    <div id="tournament-member-list">
+      <ul>
+        <li data-user-id="b7efbc61-407d-475f-bcd2-778d7df0b4ca" data-user-info="N1#TC Old Boys">Roger Federer</li>
+        <li data-user-id="4da07095-d54d-4df9-a637-67a76a7f278d" data-user-info="N1#Great Britain">Andy Murray</li>
+      </ul>
+    </div>
+    <div id="in-tourn-memb-count">
+      Anzahl Spieler im Turnier: <label id="in-tourn-count"></label>
+    </div>
+    <div id="tourn-arrow-left" class="arrow-img">
+      <div class="arrow-text">Dem Turnier hinzufügen</div>
+      <img id="arrow-img-left" src="@Url.Content("~/Content/images/Arrows-Left-icon.png")" />
+    </div>
+    <div id="tourn-arrow-right" class="arrow-img">      
+      <img id="arrow-img-right" src="@Url.Content("~/Content/images/Arrows-Left-icon.png")" />
+      <div class="arrow-text">Vom Turnier entfernen</div>
+    </div>
+    <div id="not-tournament-member-list">
+      <input type="text" id="not-member-search" placeholder="Suchen..."/>
+      <ul>
+        <li data-user-id="b7efbc61-407d-475f-bcd2-778d7df0b4ca" data-user-info="N1#TC Old Boys">Roger Federer</li>
+        <li data-user-id="4da07095-d54d-4df9-a637-67a76a7f278d" data-user-info="N1#Great Britain">Andy Murray</li>
+      </ul>
+    </div>
+    <button type="button" class="news-button admin-button" id="admin-tournament-members"></button>
+    <button type="button" id="close-tournament-members">Schliessen</button>
+  </div>
+</div>
+
+<div id="assign-players-view" class="fullscreen-view overlay">
+  <div id="assign-player-dialog">
+    <div class="title-bar">Spieler setzen</div>
+    <div id="assign-member-list">
+      <ul>
+        <li data-user-id="94e13f9a-823d-4217-932d-c57465cbacb4" data-user-info="#">Gast Spieler</li>
+        <li data-user-id="b7efbc61-407d-475f-bcd2-778d7df0b4ca" data-user-info="N1#TC Old Boys">Roger Federer</li>
+        <li data-user-id="4da07095-d54d-4df9-a637-67a76a7f278d" data-user-info="N1#Great Britain">Andy Murray</li>
+      </ul>
+    </div>
+    <div id="tourn-memb-count">
+      <label id="memb-count"></label> Spieler in Liste, <label id="memb-court-count"></label> Spieler zu setzen.
+    </div>
+    <div id="assign-player-courts">
+      <div id="assign-player-court-wrapper">
+        <div id="assign-player-court-bsp">
+          <div class="assign-court-"></div>
+          <div class="assign-player-1 assign-input"><input type="text" /></div>
+          <div class="assign-player-2 assign-input"><input type="text" /></div>
+          <div class="assign-player-3 assign-input"><input type="text" /></div>
+          <div class="assign-player-4 assign-input"><input type="text" /></div>
+        </div>
+      </div>
+    </div>
+    <div id="fill-assign">
+      <button type="button" id="fill-assign-player">Rest füllen</button>
+    </div>
+    <div id="delete-assign">
+      <button type="button" id="delete-assign-player">Spieler lösen</button>
+    </div>
+    <div id="assign-legend">
+      <div class="assign-color-box men">
+        <div class="legend-label men">Männer</div>
+      </div>
+      <div class="assign-color-box women">
+        <div class="legend-label women">Frauen</div>
+      </div>
+      <div class="assign-color-box reserved">
+        <div class="legend-label reserve">Auf der Pausenbank</div>
+      </div>
+    </div>
+    <div id="assign-player-reserve">
+      <button type="button" id="assign-reserve">Pausenbank</button>
+    </div>    
+  <button type="button" id="close-assign-player">Abbrechen</button>
+  <button type="button" id="save-assign-player">Speichern</button>
+</div>
+</div>
+
+<div id="challenge-view" class="fullscreen-view overlay">  
+  <div id="challenge-dialog">
+    <div class="title-bar">Spieler fordern</div>    
+    <div id="challenge-list-wrap">
+      <h3>Welchen Spieler willst du fordern?</h3>
+      <ul id="challenge-list"></ul>
+    </div>
+    <div id="steps">
+      <p>Vorgehen</p>
+      1) Spieler via E-Mail oder Telefon über Deine Forderung informieren und einen Termin vereinbaren.<br />
+      2) Terminabklärung und Platzreservation via Stefan Holzer, ss.holzer@bluewin.ch oder 079 286 21 17.<br />
+      3) Der Gewinner meldet das Spielergebnis raschmöglichst an Stefan Holzer.<br />
+    </div>
+    <div id="back-ranked">
+      <button type="button" name="back-ranked">Zurück</button>
+    </div>
+  </div>
+</div>
+
+<div id="guest-cost" class="fullscreen-view overlay">
+  <div class="dialog-box">
+    <div class="title-bar">
+      Anfallende Kosten
+    </div>
+    <p class="error-text">ACHTUNG: Für einen Gastspieler fallen dir 12.- zu Lasten. Wird auf dein Konto belastet.</p>
+    <button type="button" id="ok-guest">Ok</button>
+    <button type="button" id="cancel-guest">Abbrechen</button>
+  </div>
+</div>
+
+<div id="error-window" class="fullscreen-view overlay">
+  <div class="dialog-box">
+    <div class="title-bar">
+      Fehler
+    </div>
+    <p class="error-text">Fehlermeldung.</p>
+    <button type="button" name="ok">Ok</button>
+  </div>
+</div>
+
+<div id="team-login" class="fullscreen-view overlay">
+  <div class="dialog-box">
+    <div class="title-bar">
+      Anmeldung
+    </div>
+    <p class="error-text">Spieler erfolgreich angemeldet</p>
+    <button type="button" id="ok-button" name="ok">Ok</button>
+  </div>
+</div>
+
+<div id="pdf-view" class="fullscreen-view overlay">
+  <div id="pdf-container-dialog">
+    <div class="title-bar">
+      Spielplan
+    </div>
+      <iframe id="plane-frame"></iframe>
+    <button type="button" id="close-frame">Schliessen</button>
+  </div>
+</div>

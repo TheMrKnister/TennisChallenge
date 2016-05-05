@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "ViewRankedGames";
+    ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/viewrankedgames")
+  <script type="text/javascript">
+    PlayerGames = '@Url.Action("GetPlayedGames")';
+  </script>
+  }
+
+<h2>Gespielte Spiele</h2>
+@Html.Partial("_TournamentMenu")
+
+<div id="ranked-games-list"></div>

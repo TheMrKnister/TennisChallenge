@@ -1,0 +1,51 @@
+﻿@{
+  ViewBag.Title = "TennisMarket";
+  ViewBag.NavTopCat = NavigationTopCat.LookinngForPlayer;
+}
+
+@section scripts {
+  @Scripts.Render("~/bundle/userads")
+  <script type="text/javascript">
+    GetAds = '@Url.Action("GetUserAds")';
+    CreateAd = '@Url.Action("CreateUserAd")'
+    DeleteAd = '@Url.Action("DeleteUserAd")'
+    FilterAds = '@Url.Action("FilterAds")'
+  </script>
+}
+
+<div id="open-add-ad">
+  <input type="button" value="+" />
+</div>
+<div id="titel-ads">
+  <h2>Spielersuche</h2>
+</div>
+
+<div id="create-ad" class="hidden" data-user="@User.Identity.Name" data-isadmin="@User.IsInRoles(RoleNames.ClubAdmin)">
+  <div id="ad-title">
+    <textarea id="ad-title-input" placeholder="Titel eingeben"></textarea>
+  </div>
+  <div id="create-ad-text" class="looking-for-player">
+    <textarea id="ad-text-input" data-id="2" placeholder="Text eingeben"></textarea>
+  </div>
+  @*@Html.ActionLink("Anzeige erstellen", "CreateUserAd", new { userName  = User.Identity.Name, text = "Es wurde Kein text angegeben", type = 2 }, new { @class = "CreateAd" })*@
+  <div id="add-ad-button" class="looking-for-player">
+    <input id="create-ad-button" type="button" value="Anzeige erstellen" />
+  </div>
+
+  <div id="ad-filters">
+    <div id="filter-ranking">
+      <input id="ranking-input" type="checkbox" />Ist Spieler in Rangliste</div>
+    <div id="filter-age">Alter zwischen:
+      <input id="age-input-min" type="text" />
+      -
+      <input id="age-input-max" type="text" /></div>
+    <div id="filter-male">
+      <input id="male-input" type="checkbox" checked />Mann
+      <input id="female-input" type="checkbox" checked />Frau
+    </div>
+    @*<div id="filter-rating">Spielerrating: <input id="rating-input" type="text" /></div>*@
+  </div>
+
+</div>
+
+<div id="ads-wrapper" class="collapsed"></div>

@@ -1,0 +1,57 @@
+﻿@using TennisWeb.Properties
+@model TennisWeb.Models.EditUserInClubModel
+@{
+  ViewBag.Title = "Edit";
+}
+
+@section scripts {
+  <script type="text/javascript">
+    $(function () {
+      window.tc = window.tc || {}
+      $.extend(window.tc, {
+        UserAPI: '@Url.RouteUrl("UserApi", new { httproute = "", controller = "User" })'
+      })
+    })
+  </script>
+  @Scripts.Render("~/bundles/edituser")
+}
+
+@Html.Action("AdminMenu", new { adminNavigationCat = AdminNavigationCat.EditUser })
+
+<div id="edit-user-links">
+  @Html.ActionLink("Neuer Benutzer", "CreateUser")<br />
+  @Html.ActionLink("Passwort Zurücksetzen", "EditUserPassword", new { id = Guid.Empty }, new { id = "reset-password" })
+</div>
+
+<div id="delete-links">
+  @Html.ActionLink("Benutzer löschen", "DeleteUser", new { id = Guid.Empty }, new { id = "delete-user" })<br />
+  @Html.ActionLink("Verbundene Karten lösen", "DeleteConnectedCards", new { id = Guid.Empty }, new { id = "delete-cards" })
+</div>
+
+<div id="edit-user">
+  <input type="text" name="user-name-input" />
+  <div id="user-list">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+
+  <h3 class="selected-user">Kein User ausgewählt</h3>
+
+  @using (Html.BeginForm())
+  {
+    <ul class="plain-list">
+      @foreach (var role in Model.AllRoles)
+      {
+        <li>
+          @(Resources.ResourceManager.GetString(role.RoleName) ?? role.RoleName)
+          <input type="checkbox" name="Roles" value="@role.RoleId" @(Model.Roles.Contains(role.RoleId) ? "checked" : "") />
+        </li>
+      }
+    </ul>
+    
+    @Html.HiddenFor(m => m.UsersInClubsKey)
+  
+    <button type="submit">Speichern</button>
+  }
+</div>

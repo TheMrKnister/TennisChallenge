@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "RankedAdmin";
+    ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/rankedgamesadmin")
+  <script type="text/javascript">
+    GetGames = '@Url.Action("GetRankedGames")';
+    EditGame = '@Url.Action("EditRanked")';
+    DeleteGame = '@Url.Action("DeleteGame")';
+  </script>
+}
+
+<h2>Spiele Verwalten</h2>
+@Html.Partial("_TournamentMenu")
+
+<div id="ranked-games-list"></div>

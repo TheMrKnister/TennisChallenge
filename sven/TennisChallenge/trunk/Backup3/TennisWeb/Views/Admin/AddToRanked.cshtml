@@ -1,0 +1,62 @@
+﻿@{
+  ViewBag.Title = "AddToRanked";
+}
+
+@section scripts {
+  <script type="text/javascript">
+    $(function () {
+      window.tc = window.tc || {}
+      $.extend(window.tc, {
+        UserAPI: '@Url.RouteUrl("UserApi", new { httproute = "", controller = "User" })',
+        GetRankedPlayers: '@Url.Action("GetRankedPlayers", "Admin")'
+      })
+    })
+  </script>
+  @Scripts.Render("~/bundles/edituser")
+}
+
+<h2>Spieler hinzufügen</h2>
+<h3 id="club-member-caption">Clubmitglieder</h3>
+<h3 id="ranked-member-caption">Spieler im Ranglistenspiel</h3>
+
+
+<div id="ranked-edit-user">
+  <div id="edit-user">
+    <input type="text" name="user-name-input" />
+    <div id="user-list">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="ranked-member-list">
+  <div id="member-list">
+    <input type="text" name="user-name-input" />
+    <div id="user-list">
+      <ul id="ranked-members">
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="ranked-selected">
+  <h3 class="selected-user" id="selected-user-rank">Kein Spieler ausgewählt</h3>
+</div>
+<div id="edit-ranked-user">
+  <div id="club-rank">
+    Clubrang:
+  <input type="text" id="rank-value" />
+  </div>
+  @Html.ActionLink("Spieler hinzufügen", "AddPlayerToRanked", new { id = Guid.Empty, clubRank = 0 }, new { id = "add-player" })
+</div>
+@Html.ActionLink("Spieler entfernen", "DeletePlayerFromRanked", new { id = Guid.Empty }, new { id = "delete-ranked-player" })
+<div id="gender-filters">
+  <div id="filter-women">
+    <input type="button" value="Nur Frauen" id="filter-women-input"/></div>
+  <div id="filter-men">
+    <input type="button" value="Nur Männer" /></div>
+  <div id="filter-all">
+    <input type="button" value="Alle Spieler" /></div>
+</div>

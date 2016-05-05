@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9839ee7f-130d-45b9-af4b-708c8d1782f8" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="74886acc-77e5-4bdf-87a4-072aee996afd" name="TennisChallenge.Dal">
+      <references>
+        <reference Id="9090edec-d527-4871-b738-bb1829808c6d" name="TennisChallenge.Dal">
+          <ArtifactNode Label="TennisChallenge.Dal" Category="CodeSchema_Project" Id="(Assembly=../TennisChallenge.Dal/TennisChallenge.Dal.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TennisChallenge.Dal)" Label="TennisChallenge.Dal.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="994c8e32-8c39-40a4-ac8d-0fdbc4bcf06a" name="TennisWeb">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="6531efed-b766-402a-9cc3-1c20d28b619e" direction="Forward">
+          <layerMoniker Id="74886acc-77e5-4bdf-87a4-072aee996afd" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="418a8b26-458a-452f-8ada-9a827fc87f51" name="TennisWeb">
+          <ArtifactNode Label="TennisWeb" Category="CodeSchema_Project" Id="(Assembly=../TennisWeb/TennisWeb.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TennisWeb)" Label="TennisWeb.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="491b6952-31b5-44f0-8357-8a42c9ad84b1" name="InfoBoard">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5b2a3660-1c2a-440f-b3d7-ac6b4fd92dcf" direction="Forward">
+          <layerMoniker Id="994c8e32-8c39-40a4-ac8d-0fdbc4bcf06a" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="698ccf22-09a6-4946-b772-937f5e18593e" name="InfoBoard">
+          <ArtifactNode Label="InfoBoard" Category="CodeSchema_Project" Id="(Assembly=../InfoBoard/InfoBoard.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=InfoBoard)" Label="InfoBoard.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

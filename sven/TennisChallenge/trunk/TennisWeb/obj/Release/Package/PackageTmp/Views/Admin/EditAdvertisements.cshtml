@@ -1,0 +1,26 @@
+﻿@model IEnumerable<TennisWeb.Models.AdvertisementModel>
+
+@{
+  ViewBag.Title = "Werbung";
+}
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval", "~/bundles/editadvertisements")
+}
+
+@Html.Action("AdminMenu", new { adminNavigationCat = AdminNavigationCat.Advertisement })
+
+<div id="ads-admin">
+  <input type="button" value="Neu" id="new-advertisement" data-new-advertisement-url="@Url.Action("CreateAdvertisement")" />
+
+  @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+  {
+    @Html.ValidationSummary(true)
+    <div id="advertisements">
+      @Html.EditorForModel()
+    </div>
+    <p id="save-ads">
+      <input type="submit" value="Speichern" />
+    </p>
+  }
+</div>

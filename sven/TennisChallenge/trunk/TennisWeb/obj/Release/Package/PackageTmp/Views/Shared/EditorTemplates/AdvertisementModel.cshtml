@@ -1,0 +1,108 @@
+﻿@model TennisWeb.Models.AdvertisementModel
+
+@{
+  ViewData.TemplateInfo.HtmlFieldPrefix =
+    System.Text.RegularExpressions.Regex.Replace(ViewData.TemplateInfo.HtmlFieldPrefix, @"\[\d+\]$", "[" + Model.Id.ToString() + "]");
+}
+
+<div class="advertisement" data-advertisement-id="@Model.Id">
+
+  <fieldset>
+    <legend>Werbung</legend>
+
+    @* This allows for non-sequential lists that are still correctly bound to the model *@
+    <input type="hidden" name="Index" value="@Model.Id" />
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.ClubKey)
+    @Html.HiddenFor(m => m.Delete, new { @class = "delete" })
+
+    <div class="editor-label">
+      @Html.LabelFor(m => m.Name)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(m => m.Name)
+      @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div class="editor-label">
+      @Html.LabelFor(m => m.Image)
+      @if (!String.IsNullOrWhiteSpace(Model.ImageUrl))
+      {
+        <img class="advertisement-edit-image" src="@Url.Content(Model.ImageUrl)" alt="Bild" />
+      }
+    </div>
+    <div class="editor-field">
+      @Html.HiddenFor(m => m.ImageUrl)
+      <input type="file" name="[@Model.Id].Image" accept="image/*" />
+      @Html.ValidationMessageFor(m => m.ImageUrl)
+    </div>
+
+    <div class="editor-label">
+      @Html.LabelFor(m => m.StartTime)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(m => m.StartTime)
+      @Html.ValidationMessageFor(m => m.StartTime)
+    </div>
+
+    <div class="editor-label">
+      @Html.LabelFor(m => m.EndTime)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(m => m.EndTime)
+      @Html.ValidationMessageFor(m => m.EndTime)
+    </div>
+
+    <div class="editor-label">
+      @Html.LabelFor(m => m.Duration)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(m => m.Duration)
+      @Html.ValidationMessageFor(m => m.Duration)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Monday)
+      @Html.LabelFor(m => m.Monday)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Tuesday)
+      @Html.LabelFor(m => m.Tuesday)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Wednesday)
+      @Html.LabelFor(m => m.Wednesday)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Thursday)
+      @Html.LabelFor(m => m.Thursday)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Friday)
+      @Html.LabelFor(m => m.Friday)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Saturday)
+      @Html.LabelFor(m => m.Saturday)
+    </div>
+
+    <div class="editor-field">
+      @Html.CheckBoxFor(m => m.Sunday)
+      @Html.LabelFor(m => m.Sunday)
+    </div>
+
+    <div class="editor-field">
+      @Html.LabelFor(m => m.Active)
+      @Html.CheckBoxFor(m => m.Active)
+    </div>
+
+    <input type="button" name="delete-advertisement" value="Löschen"  class="delete-advertisment" data-advertisement-id="@Model.Id" />
+
+  </fieldset>
+</div>

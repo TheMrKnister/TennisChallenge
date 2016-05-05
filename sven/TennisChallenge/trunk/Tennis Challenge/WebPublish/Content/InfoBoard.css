@@ -1,0 +1,2315 @@
+﻿/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+  audio:not([controls]) {
+    display: none;
+  }
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea {
+  font-family: sans-serif;
+  color: #888888;
+}
+
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0);
+  color: #888;
+  text-shadow: none;
+}
+
+a {
+  color: #00e;
+}
+
+  a:visited {
+    color: #551a8b;
+  }
+
+  a:hover {
+    color: #06e;
+  }
+
+  a:focus {
+    outline: thin dotted;
+  }
+
+  a:hover, a:active {
+    outline: 0;
+  }
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: none;
+}
+
+  q:before, q:after {
+    content: "";
+    content: none;
+  }
+
+small {
+  font-size: 85%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button, input {
+  line-height: normal;
+}
+
+  button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+  }
+
+    button[disabled], input[disabled] {
+      cursor: default;
+    }
+
+  input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *width: 13px;
+    *height: 13px;
+  }
+
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+    input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+
+  button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+  input:valid, textarea:valid {
+  }
+
+  input:invalid, textarea:invalid {
+    background-color: #f0dddd;
+  }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: top;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: black;
+  padding: 0.2em 0;
+}
+
+
+
+/* ===== Primary Styles ========================================================
+   Author: Inspectron AG
+   ========================================================================== */
+body {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  background: url(images/bg_button.jpg) repeat-x;
+  height: 49px;
+  border: solid 1px #888888;
+  padding: 0px 1em;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+input[type="text"], input[type="password"] {
+  font-size: 1.4em;
+  height: 38px;
+  padding: 4px;
+  border: solid 1px #888888;
+}
+
+div.title-bar {
+  background: url(images/bg_titlebar.jpg) repeat-x #CCCCCC;
+  line-height: 41px;
+  text-align: center;
+  border-bottom: solid 1px #888888;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+div#club_site_map {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+
+  div#club_site_map div, div#club_site_map ul {
+    position: absolute;
+  }
+
+  div#club_site_map #clock_id {
+    top: 280px;
+    left: 120px;
+  }
+
+  div#club_site_map #error-bar {
+    bottom: 5px;
+    left: 20px;
+    right: 20px;
+    color: red;
+    text-align: center;
+  }
+
+  div#club_site_map div.court-container {
+    width: 605px;
+    height: 325px;
+  }
+
+    div#club_site_map div.court-container .show-booking-infos {
+      width: 580px;
+      height: 330px;
+      background-color: rgb(255, 255, 255);
+      margin: -20px 0px 0px 33px;
+      border: solid;
+      display: none;
+      overflow-y: hidden;
+      z-index: 1;
+    }
+
+      div#club_site_map div.court-container .show-booking-infos .infos {
+        margin-left: 35px;
+        background-color: white;
+      }
+
+.past-button {
+  z-index: 100;
+}
+
+  .past-button > button {
+    margin: 9px 0 0 5px;
+  }
+
+.present-button > button {
+  margin-top: 9px;
+  margin-left: 65px;
+  display: none;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.present-button {
+  z-index: 99;
+}
+
+.scroll-button > button {
+  background: url(images/arrow_sans_up-128.png) no-repeat;
+  background-size: 25px auto;
+  background-position: center;
+  height: 25px;
+  width: 25px;
+}
+
+.show-booking-infos .row-infos {
+  width: 580px;
+  background-color: white;
+  width: 520px;
+  height: 53px;
+}
+
+  .show-booking-infos .row-infos > div {
+    background-color: white;
+  }
+
+.start-time-infos {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.start-time-uhr {
+  margin-left: 65px;
+  margin-top: -4px;
+}
+
+.end-time-infos {
+  font-weight: bold;
+  margin-left: 80px;
+}
+
+.end-time-uhr {
+  margin-left: 125px;
+  margin-top: -1px;
+}
+
+.player0-infos {
+  font-weight: bold;
+  margin-left: 170px;
+  max-width: 120px;
+  max-height: 22px;
+  overflow: hidden;
+}
+
+.player1-infos {
+  font-weight: bold;
+  margin-left: 325px;
+}
+
+.player2-infos {
+  font-weight: bold;
+  margin-left: 170px;
+  margin-top: 30px;
+  max-width: 120px;
+  max-height: 22px;
+  overflow: hidden;
+}
+
+.player3-infos {
+  font-weight: bold;
+  margin-left: 325px;
+  margin-top: 30px;
+}
+
+.gametype-infos {
+  margin-left: 325px;
+}
+
+div#club_site_map div.court-container .show-booking-infos .show-infos-title {
+  width: 580px;
+  z-index: 1;
+}
+
+div#club_site_map div.court-container .show-booking-infos .info-marker {
+  -webkit-transform: rotate(45deg);
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  margin-top: 63px;
+  margin-left: -15px;
+  border-bottom: solid;
+  border-left: solid;
+}
+
+div#club_site_map div.court-container .available-time {
+  top: 2px;
+  left: 24px;
+  width: 580px;
+  font-size: 14px;
+}
+
+div#club_site_map div.court-container .info-icon {
+  margin-right: 2px;
+}
+
+div#club_site_map div.court-container .time {
+  font-weight: bold;
+}
+
+div#club_site_map div.court-container .tennis-court {
+  top: 24px;
+  left: 24px;
+  width: 580px;
+  height: 300px;
+  background: url(images/tennis_court_empty.jpg) no-repeat;
+  cursor: pointer;
+}
+
+  div#club_site_map div.court-container .tennis-court .player-name {
+    position: absolute;
+    width: 200px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #635636;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  div#club_site_map div.court-container .tennis-court .player-0 {
+    top: 43px;
+    left: 60px;
+  }
+
+  div#club_site_map div.court-container .tennis-court .player-1 {
+    top: 43px;
+    left: 320px;
+  }
+
+  div#club_site_map div.court-container .tennis-court .player-2 {
+    top: 236px;
+    left: 60px;
+  }
+
+  div#club_site_map div.court-container .tennis-court .player-3 {
+    top: 236px;
+    left: 320px;
+  }
+
+  div#club_site_map div.court-container .tennis-court.school {
+    background: url(images/tennis_court_blue.jpg) no-repeat;
+  }
+
+  div#club_site_map div.court-container .tennis-court.tournament {
+    background: url(images/tennis_court_yellow.jpg) no-repeat;
+  }
+
+  div#club_site_map div.court-container .tennis-court.tournamentFun {
+    background: url(images/tennis_court_yellow.jpg) no-repeat;
+  }
+
+  div#club_site_map div.court-container .tennis-court .icon {
+    top: 6px;
+    left: 50%;
+    width: 120px;
+    height: 130px;
+    margin-left: -60px;
+    display: none;
+  }
+
+  div#club_site_map div.court-container .tennis-court .icon-school-1 {
+    top: 50%;
+    left: 25%;
+    width: 120px;
+    height: 130px;
+    margin-top: -65px;
+    margin-left: -90px;
+    display: none;
+  }
+
+  div#club_site_map div.court-container .tennis-court .icon-school-2 {
+    top: 50%;
+    left: 75%;
+    width: 120px;
+    height: 130px;
+    margin-top: -65px;
+    margin-left: -30px;
+    display: none;
+  }
+
+  div#club_site_map div.court-container .tennis-court.locked .icon {
+    background: url(images/gesperrt-platz.png) no-repeat 2px 2px;
+    display: block;
+  }
+
+  div#club_site_map div.court-container .tennis-court.school .icon-school-1 {
+    background: url(images/tennisschule_platz.png) no-repeat 2px 5px;
+    display: block;
+  }
+
+  div#club_site_map div.court-container .tennis-court.school .icon-school-2 {
+    background: url(images/tennisschule_platz.png) no-repeat 2px 5px;
+    display: block;
+  }
+
+  div#club_site_map div.court-container .tennis-court.tournamentFun .icon {
+    background: url(images/turnier_platz.png) no-repeat 6px 0px;
+    display: block;
+  }
+
+div#club_site_map div.court-container .booking-bar {
+  top: 24px;
+  left: 0px;
+  width: 20px;
+  height: 299px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#close-click-helper {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  margin-top: -1080px;
+}
+
+div#club_site_map div.court-container .booking-bar li {
+  position: static;
+  width: 12px;
+  height: 48px;
+  border: solid 1px #CCCCCC;
+}
+
+  div#club_site_map div.court-container .booking-bar li.free {
+    background-color: #2BA617;
+  }
+
+  div#club_site_map div.court-container .booking-bar li.booked {
+    background-color: #DE1D1E;
+  }
+
+  div#club_site_map div.court-container .booking-bar li.school {
+    background-color: #33689C;
+  }
+
+  div#club_site_map div.court-container .booking-bar li.tournament {
+    background-color: #dda11c;
+  }
+
+div#club_site_map div.court-container .ongoing-game {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+
+div#club_site_map div.court-container .caption {
+  background: url(images/bg_court_caption.jpg) repeat-x;
+  text-align: center;
+  top: 50%;
+  margin-top: -15px;
+  left: 50%;
+  margin-left: -114px;
+  height: 26px;
+  width: 226px;
+  padding-top: 4px;
+  border: solid 1px #888888;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+div#club_site_map div.court-container .tennis-court.closed .caption {
+  color: #d01818;
+}
+
+div#club_site_map div.court-container .next-court {
+  background-color: yellow;
+}
+
+div.fullscreen-view {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+div.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#window-overlay {
+  display: none;
+}
+
+img.rfid-icon {
+  position: absolute;
+  left: 130px;
+  top: 180px;
+}
+
+/* error-window */
+
+div#error-window {
+  z-index: 3000;
+  display: none;
+}
+
+  div#error-window .dialog-box {
+    position: relative;
+    top: 400px;
+    left: 639px;
+    width: 640px;
+    background-color: white;
+    border: solid 1px #888;
+  }
+
+  div#error-window .error-text {
+    padding: 5px 20px 76px 20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  div#error-window button[name="ok"] {
+    position: absolute;
+    width: 90px;
+    bottom: 20px;
+    left: 274px;
+  }
+
+/* Login view */
+
+#login-view {
+  z-index: 1000;
+  display: none;
+}
+
+  #login-view #login-dialog div {
+    position: static;
+  }
+
+  #login-view #login-dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 820px;
+    margin-left: -410px;
+    height: 180px;
+    margin-top: -90px;
+  }
+
+    #login-view #login-dialog div.row {
+      margin: 10px 15px;
+    }
+
+    #login-view #login-dialog input[type="text"], #login-view #login-dialog input[type="password"] {
+      width: 540px;
+      margin-right: 30px;
+    }
+
+    #login-view #login-dialog button {
+      width: 180px;
+    }
+
+/* assign-rfid-view */
+
+#assign-rfid-view {
+  z-index: 1020;
+  display: none;
+}
+
+#assign-rfid-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 820px;
+  margin-left: -410px;
+  height: 300px;
+  margin-top: -150px;
+  background-color: rgb(255, 255, 255);
+}
+
+  #assign-rfid-dialog .title-bar {
+    height: 41px;
+  }
+
+  #assign-rfid-dialog p {
+    color: #CC0000;
+    font-size: 1.4em;
+    padding: 0px 15px;
+  }
+
+  #assign-rfid-dialog div.row {
+    margin: 10px 15px;
+  }
+
+  #assign-rfid-dialog input[type="text"], #assign-rfid-dialog input[type="password"] {
+    width: 540px;
+    margin-right: 30px;
+  }
+
+  #assign-rfid-dialog button {
+    width: 180px;
+  }
+
+/* already-booked-view */
+
+#already-booked-view {
+  z-index: 1030;
+  display: none;
+}
+
+#already-booked-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 820px;
+  margin-left: -410px;
+  height: 220px;
+  margin-top: -110px;
+  background-color: #fff;
+}
+
+  #already-booked-dialog p {
+    color: #CC0000;
+    font-size: 2em;
+    padding: 0px 25px;
+    margin: 0px;
+  }
+
+  #already-booked-dialog div.buttons {
+    text-align: center;
+    margin: 15px 25px;
+  }
+
+  #already-booked-dialog button {
+    margin: 0px 10px;
+  }
+
+/* Booking view */
+
+#booking-view {
+  z-index: 1010;
+  display: none;
+}
+
+#booking-dialog {
+  position: absolute;
+  top: 30px;
+  left: 400px;
+  width: 865px;
+  height: 900px;
+  background-color: white;
+  border: solid 1px #888888;
+  /*overflow: hidden;*/
+}
+
+#booking-view div.title-bar {
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+#booking-view #member-list {
+  position: absolute;
+  top: 42px;
+  bottom: 0px;
+  width: 280px;
+  overflow: hidden;
+  border-right: solid 1px #888888;
+}
+
+  #booking-view #member-list input {
+    display: block;
+    width: 280px;
+    height: 2em;
+    font-size: 1.2em;
+    border: none;
+    outline: #dda11c solid;
+  }
+
+  #booking-view #member-list ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-top: solid 1px #888888;
+  }
+
+  #booking-view #member-list li {
+    padding: 5px 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px dotted black;
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+    #booking-view #member-list li.selected {
+      color: #ccc;
+      cursor: default;
+    }
+
+
+#booking-view #booking-info {
+  position: absolute;
+  background-color: #c0f0bb;
+  border: 3px solid #28991c;
+  color: #28991c;
+  font-weight: bold;
+  top: 62px;
+  left: 302px;
+  right: 20px;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+  #booking-view #booking-info .info-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: #28991c;
+    color: #c0f0bb;
+    line-height: 1.3em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  #booking-view #booking-info span.content {
+    display: inline-block;
+    margin-left: 40px;
+    text-transform: uppercase;
+  }
+
+#booking-dialog #match-configuration {
+  position: absolute;
+  left: 282px;
+  top: 160px;
+  bottom: 80px;
+  right: 0px;
+  /*overflow: hidden;*/
+}
+
+#booking-dialog div.player-box {
+  position: absolute;
+  left: 50%;
+  margin-left: -155px;
+  width: 310px;
+  height: 100px;
+  border: 2px dotted #888888;
+}
+
+  #booking-dialog div.player-box#player-1 {
+    top: 22%;
+    margin-top: -110px;
+  }
+
+  #booking-dialog div.player-box#player-2 {
+    top: 22%;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  #booking-dialog div.player-box#player-3 {
+    top: 78%;
+    margin-top: -110px;
+    cursor: pointer;
+  }
+
+  #booking-dialog div.player-box#player-4 {
+    top: 78%;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  #booking-dialog div.player-box.highlight {
+    box-shadow: 0px 0px 3px 3px rgba(250, 220, 200, 0.9), inset 0px 0px 2px 2px rgba(250, 220, 200, 0.9);
+  }
+
+#booking-dialog .player-box img {
+  float: left;
+  width: 75px;
+  height: 75px;
+  border: solid 3px #888888;
+  border-radius: 3px;
+  margin: 9px 15px 9px 8px;
+}
+
+#booking-dialog .player-box.empty img, #booking-dialog .player-box.empty div {
+  display: none;
+}
+
+#booking-dialog .player-box h4 {
+  margin: 20px 0px 0px 0px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+#booking-dialog .player-box div {
+  line-height: 1.1;
+}
+
+  #booking-dialog .player-box div span {
+    display: inline-block;
+    width: 100px;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+#booking-dialog div.number {
+  position: absolute;
+  left: 50%;
+  width: 26px;
+  margin-left: -230px;
+  height: 26px;
+  margin-top: -13px;
+  color: white;
+  font-size: 1.4em;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+}
+
+#booking-dialog div.single-double {
+  position: absolute;
+  left: 50%;
+  width: 90px;
+  margin-left: -45px;
+  top: 50%;
+  height: 110px;
+  margin-top: -55px;
+  background: url('images/single.png') no-repeat center;
+  cursor: pointer;
+}
+
+  #booking-dialog div.single-double.double {
+    background: url('images/double.png') no-repeat center;
+  }
+
+#booking-dialog div.number.one {
+  background-color: #fac57c;
+  border: solid 1px #e8c25b;
+  top: 22%;
+}
+
+#booking-dialog div.number.two {
+  background-color: #7dadbd;
+  border: solid 1px #496d5f;
+  top: 78%;
+}
+
+#booking-view #footer {
+  position: absolute;
+  bottom: 0px;
+  left: 281px;
+  height: 50px;
+  right: 0px;
+  padding: 12px 14px;
+  background-color: #eeeeee;
+  border-top: solid 1px #888888;
+}
+
+#booking-dialog #footer button {
+  position: absolute;
+  width: 220px;
+}
+
+  #booking-dialog #footer button[name="book"] {
+    left: 50%;
+    margin-left: -230px;
+  }
+
+  #booking-dialog #footer button[name="cancel"] {
+    left: 50%;
+    margin-left: 10px;
+  }
+
+/*Ranked View*/
+
+#ranking-view {
+  display: none;
+}
+
+#ranked-dialog {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  width: 865px;
+  height: 600px;
+  margin-left: -432px;
+  background-color: white;
+  border: solid 1px #888888;
+  z-index: 101;
+}
+
+  #ranked-dialog .challenge-player {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+
+  #ranked-dialog .challenge-player button {
+    width: 224px;
+  }
+
+  #ranked-dialog .ranked-games {
+    position: absolute;
+    margin-left: 5.75%;
+    margin-top: 12%
+  }
+
+#ranked-games-view {
+  display: none;
+  position: absolute;
+  margin-left: 45%;
+  width: 420px;  
+    height: 450px;  
+  overflow: auto;
+}
+
+  #ranked-games-view > div {
+    padding-left: 5px;
+    padding-bottom: 2px;
+  }
+
+#nav-buttons #next {
+  padding-left: 75%;
+  margin-top: 5%;
+}
+
+#nav-buttons #previous {
+  margin-top: -12%;
+}
+
+#nav-buttons #ranked-index {
+  position: absolute;
+  margin-left: 43%;
+  margin-top: -7.5%;
+}
+
+#ranking-list-wrap {
+  position: absolute;
+  margin-left: 500px;
+}
+
+#ranking-list {
+  list-style: none;
+  padding: 0 0 0 0;
+  height: 375px;
+  width: 200px;
+  overflow: auto;
+}
+
+#close-ranked {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 455px;
+}
+
+.rGame > div{
+  padding-bottom: 5px;
+}
+
+.game-chall input{
+  margin-left: 15%;
+}
+
+.game-def input{
+  margin-left: 10.5%;
+}
+
+.game-date input{
+  margin-left: 19%;
+  width: 75px;
+}
+
+.game-start input{
+  margin-left: 22%;
+  width: 55px;
+}
+
+.game-end input{
+  margin-left: 21%;
+  width: 55px;
+}
+
+.game-court input{
+  width: 75px;
+  margin-left: 21.7%;
+}
+
+.game-rank input{
+  margin-left: 2.4%;
+  width: 75px;
+}
+
+/*end Ranked View*/
+/*challenge View*/
+
+#challenge-view {
+  display: none;
+}
+
+#challenge-dialog {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  width: 865px;
+  height: 600px;
+  margin-left: -432px;
+  background-color: white;
+  border: solid 1px #888888;
+}
+
+  #challenge-dialog .challenge-player {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+
+#challenge-list-wrap {
+  position: absolute;
+  margin-left: 100px;
+}
+
+#challenge-list {
+  list-style: none;
+  padding: 0 0 0 0;
+  height: 375px;
+  width: 700px;
+  height: 250px;
+  overflow: auto;
+}
+
+  #challenge-list li {
+    float: left;
+    display: inline;
+    width: 33.333%;
+  }
+
+#back-ranked {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 455px;
+}
+
+#steps {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 320px;
+}
+
+/*End Challenege player*/
+
+html.standby, html.standby > body, #standby-container, #standby-overlay {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+  html.standby > body {
+    position: relative;
+  }
+
+#standby-overlay, #standby-container {
+  position: absolute;
+}
+
+#standby-container {
+  z-index: 0;
+}
+
+#standby-overlay {
+  /* Because apparently if the color is transparent it isn't clickable */
+  background-color: white;
+  opacity: 0.0;
+  z-index: 1;
+}
+
+#standby-container > iframe, #standby-container > img {
+  width: 100%;
+  height: 100%;
+}
+
+#adminButton {
+  position: relative;
+  width: 650px;
+}
+
+  #adminButton #admin {
+    background: url(images/adminEdit.png);
+    width: 75px;
+    height: 75px;
+    margin: 50px 0px 0px 475px;
+  }
+
+#rightsList {
+  position: absolute;
+  margin-top: -75px;
+  margin-left: 549px;
+}
+
+  #rightsList ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    visibility: hidden;
+  }
+
+  #rightsList li {
+    list-style: none;
+    height: 48px;
+  }
+
+    #rightsList li button {
+      list-style: none;
+      height: 48px;
+      width: 250px;
+    }
+
+#iframe {
+  margin-top: 120px;
+  margin-left: 175px;
+  width: 686px;
+  height: 630px;
+  overflow: hidden;
+  position: relative;
+}
+
+#frame {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  margin-left: -302px;
+  margin-top: -215px;
+}
+
+.closeIframe {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: 460px;
+}
+
+.execute {
+  position: absolute;
+  margin-left: 460px;
+  margin-top: 563px;
+}
+
+/*ranked-iframe*/
+#ranked-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 800px;
+  width: 1000px;
+  margin-top: -323px;
+  margin-left: -500px;
+  overflow: hidden;
+}
+
+#ranked-frame {
+  position: absolute;
+  width: 1000px;
+  height: 850px;
+  margin-top: -197px;
+}
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+}
+
+  .ir br {
+    display: none;
+  }
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/*IPA Relevant Begin*/
+/* =============================================================================
+   News auf Infoboard
+   ========================================================================== */
+
+#current-events {
+  height: 651px;
+  width: 603px;
+  margin-top: 39px;
+  margin-left: 647px;
+}
+
+#current-events > div{
+  font-family: 'Droid Sans';
+  width: inherit;
+  border: solid 1px;
+}
+
+#first-steps {
+  margin-top: 41px;
+  height: 108px;
+}
+
+#important-news {
+  margin-top: 150px;
+  height: 95px;
+}
+
+#tournament-title {
+  margin-top: 246px;
+}
+
+#ranked-news {
+  margin-top: 150px;
+  height: 95px;
+}
+
+#ranked-news-inside {
+  margin-top: 27px;
+}
+
+#tournament-news {
+  margin-top: 288px;
+  height: 358px;
+}
+
+.news-tournament-buttons {
+  margin-top: 7px;
+  margin-left: 50px;
+}
+
+#tournament-fun {
+  margin-top: 2px;
+}
+
+#tournament-sirius {
+  margin-top: 115px;
+}
+
+#tournament-interclub-0 {
+  margin-top: 60px;
+}
+
+#tournament-interclub-1 {
+margin-top: 160px;
+}
+
+#tournament-interclub-2 {
+  margin-top: 260px;
+}
+
+
+.tourn-date {
+  padding-left: 10px;
+  margin-top: 30px;
+}
+.tourn-comment {
+  padding-left: 10px;
+  margin-top: 50px;
+  width: 500px;
+}
+
+.news-headline {  
+  color: black;
+  font-weight: bold;
+  padding: 10px 0 0 10px;
+  width: 260px;
+}
+
+.news-text {
+  color: grey;
+  padding: 10px 0 0 10px;
+}
+
+.news-button {
+  width: 130px;
+  height: 35px;
+  font-size: 75%;
+  margin-left: 210px;
+}
+
+.left-button {
+  position: absolute;
+  margin-left: 5px;
+  /*margin-top: -35px;*/
+}
+
+#ranked-men {
+  margin-left: 260px;
+}
+
+#ranked-women {
+  position: absolute;
+  margin-left: 5px;
+}
+
+.admin-button {
+  background: url(images/adminEdit.png);  
+  background-size: auto 35px;
+  background-repeat: no-repeat;
+  width: 35px;
+  margin-left: 145px;
+  /*margin-top: -35px;*/
+  position: absolute;
+}
+
+.tournament-seperator {  
+  height: 1px;
+  width: 604px;
+  border-bottom: solid 1px;
+}
+
+  .tournament-seperator.tourn {
+    margin-top: 60px;
+  }
+
+  .tournament-seperator.end {
+    margin-top: 160px;
+  }
+
+  .tournament-seperator.interclub {
+    margin-top: 260px;
+  }
+
+
+
+#current-events > div.white-back {
+  background-color: white;
+}
+
+#current-events > div.grey-back {
+  background-color: rgb(247, 255, 255);
+}
+
+/* =============================================================================
+   Tournament Menu
+   ========================================================================== */
+
+#tournament-admin-menu {
+  display: none;
+}
+
+#tourn-admin-buttons {
+  margin-top: 41px;
+}
+
+#admin-menu {
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 346px;
+  margin-left: -125px;
+  margin-top: -250px;
+  background-color: white;
+}
+
+#admin-menu .title-bar{
+  width: inherit;
+}
+
+.admin-menu-button {
+  font-size: 75%;
+  width: 230px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* =============================================================================
+   Spielplan / Select Winner
+   ========================================================================== */
+
+#gameplan-view {
+  display: none;
+}
+
+#gameplan {
+  left: 50%;
+  top: 50%;
+  width: 750px;
+  height: 750px;
+  margin-top: -375px;
+  margin-left: -375px;
+  background-color: white;
+  z-index: 1000;
+}
+
+  #gameplan .title-bar {
+    width: inherit;
+  }
+
+#save-winners {
+  position: absolute;
+  margin-top: 620px;
+  margin-left: 270px;
+}
+
+.gameplan-button {
+  font-size: 75%;
+  width: 230px;  
+  
+}
+
+#close-gameplan {
+  position: absolute;
+  margin-left: 270px;
+  margin-top: 680px;
+}
+
+#not-set-players {
+margin-top: 515px;
+margin-left: 25px;
+width: 700px;
+overflow-y: auto;
+}
+
+.tournament-game {
+  margin-top: 50px;
+  margin-left: 10px;
+  height: 150px;
+  width: 560px;
+  border: solid 1px;
+
+}
+#games-view {
+  margin-top: 60px;
+  margin-left: 25px;
+  width: 670px;
+  height: 441px;
+  overflow: auto;
+}
+
+#game-1 {
+  margin-top: 250px;
+}
+
+#game-2 {
+  margin-top: 500px;
+}
+
+#game-3 {
+  margin-top: 750px;
+}
+
+#game-4 {
+  margin-top: 1000px;
+}
+
+.vs-sing {
+  margin-left: 306px;
+}
+
+.vs-sing.double {
+  margin-top: 65px;
+}
+
+.tournament-game > div{
+  margin-top: 7.5%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px; 
+}
+
+.game-court {
+  margin-left: 2.5%;
+}
+
+.player {
+  width: 150px;  
+}
+
+.tournament-game .double {
+  height: 25px;
+  line-height: 12px;
+}
+
+.game-player1 {
+  margin-left: 150px;
+}
+
+.game-player1.double {
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.game-player2 {
+  margin-left: 332px;
+}
+
+  .game-player2.double {
+    margin-left: 0px;
+  margin-top: 35px;
+  }
+
+.game-player3 {
+  margin-left: 150px;
+  margin-top: 25px;
+}
+
+.game-player3.double {
+    margin-left: 0px;
+    margin-top: 11px;
+  }
+
+.game-player4 {
+  margin-left: 300px;
+  margin-top: 25px;
+}
+
+.game-player4.double {
+  margin-left: 0px;
+  margin-top: 35px;
+}
+
+.double-container {
+  width: 150px;
+  height: 50px;
+}
+
+.double1 {
+  margin-left: 140px;
+}
+
+.double2 {
+  margin-left: 340px;
+}
+
+.selected {
+  background-color: #c0f0bb;
+}
+
+.double.selected {
+  background-color: transparent;
+}
+
+/* =============================================================================
+   already in tournament Dialog
+   ========================================================================== */
+
+#already-tournament-view {
+  z-index: 1030;
+  display: none;
+}
+
+#already-tournament-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 820px;
+  margin-left: -410px;
+  height: 220px;
+  margin-top: -110px;
+  background-color: white;
+}
+
+#already-tournament-dialog .title-bar{
+  width: inherit;
+}
+
+  #already-tournament-dialog p {
+    color: red;
+    margin: 70px;
+  }
+
+  #already-tournament-dialog div.buttons {
+    text-align: center;
+    margin: -37px 240px;
+  }
+
+  #already-tournament-dialog button {
+    margin: 0px 8px;
+  }
+
+/*IPA Relevant End*/
+
+#assign-players-view {
+  display: none;
+}
+
+#assign-player-dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 846px;
+  margin-left: -423px;
+  height: 1000px;
+  margin-top: -500px;
+  background-color: white;
+}
+
+#close-assign-player {
+  margin-top: 23px;
+  position: absolute;
+  margin-left: -88px;
+  left: 50%;
+  width: 178px;
+}
+
+#delete-assign-player {
+  width: 178px;
+  margin-left: 335px;
+  margin-top: 87px;
+}
+
+#fill-assign-player {
+  position: absolute;
+  width: 178px;
+  margin-left: 619px;
+  margin-top: 87px;
+}
+
+#assign-member-list {
+  position: absolute;
+  top: 42px;
+  bottom: 0px;
+  width: 280px;
+  overflow: hidden;
+  border-right: solid 1px #888888;
+  height: 910px;
+  border-bottom: solid 1px #888888;
+}
+
+#assign-member-list ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-top: solid 1px #888888;
+  }
+
+#assign-member-list li {
+    padding: 5px 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px dotted black;
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+#assign-player-courts {
+  overflow: hidden;
+  height: 566px;
+}
+
+#assign-player-court-wrapper {
+  margin-left: 314px;
+  height: 566px;
+}
+
+.assign-input {
+  padding-top: 5px;
+  margin-left: 63px;
+}
+
+.assign-input .assign-input-inp {  
+  color: black;
+  width: 200px;
+  height: 34px;
+}
+
+/*.assign-input .assign-input-inp*/.gender-1 {  
+  background-color: #ff5a5a;
+}
+
+/*.assign-input .assign-input-inp*/.gender-2 {  
+  background-color: #00c1ff;
+}
+
+
+.assing-player-3 {
+  margin-top: -90px;
+  margin-left: 283px;
+}
+
+.assing-player-4 {
+  margin-left: 283px;
+}
+
+.assign-court {
+  padding-bottom: 25px;
+}
+
+.assign-court-name {
+  position: absolute;
+  margin-top: -55px;
+}
+
+.assign-color-box {
+  height:20px;
+  width: 50px;
+}
+
+.assign-color-box.men {
+  margin-left: 336px;
+  background-color: #00c1ff;
+}
+
+.assign-color-box.women {
+  background-color: #ff5a5a;
+  margin-left: 467px;
+  margin-top: -20px;
+}
+
+.assign-color-box.reserved {
+  background-color: #ff0;
+  margin-left: 595px;
+  margin-top: -20px;
+}
+
+#assign-legend {
+  margin-top: 40px;
+}
+
+#tourn-memb-count {
+  position: absolute;
+  margin-top: 908px;
+  margin-left: 15px;
+}
+
+#in-tourn-memb-count {
+  margin-top: 653px;
+  margin-left: 20px;
+  position: absolute;
+}
+
+.legend-label {
+  margin-left: 55px;
+  margin-top: -10px;
+}
+
+.legend-label.reserve {
+  width: 150px;
+}
+
+#assign-player-dialog #assign-member-list li.selected {
+      color: #ccc;
+      cursor: default;
+    }
+
+#assign-player-dialog #assign-member-list li.reserve {
+      color: #000 !important;
+      background-color: #ff0 !important; 
+      cursor: default;
+    }
+
+
+#assign-player-dialog #assign-member-list li.gender-1 {
+      background-color: #ff5a5a;
+      cursor: default;
+    }
+
+#assign-player-dialog #assign-member-list li.gender-2 {
+      background-color: #00c1ff;
+      cursor: default;
+    }
+
+#assign-player-dialog #assign-member-list li.reserve {
+      background-color: #0e6ae9;
+      cursor: default;
+    }
+
+#save-assign-player {
+  margin-top: 23px;
+  margin-left: 619px;
+  width: 178px;
+}
+
+#assign-reserve {
+  width: 460px;
+  margin-left: 336px;
+  margin-top: 20px;
+}
+
+.reserve-selected {
+  box-shadow: 0px 0px 10px 8px rgba(250, 220, 200, 0.9);
+}
+
+.placeholder
+{
+  color: #aaa;
+}
+
+/* =============================================================================
+   Gastspieler cost warning
+   ========================================================================== */
+
+
+  div#guest-cost {
+  z-index: 3000;
+  display: none;
+}
+
+  div#guest-cost .dialog-box {
+    position: relative;
+    top: 400px;
+    left: 639px;
+    width: 640px;
+    background-color: white;
+    border: solid 1px #888;
+  }
+
+  div#guest-cost .error-text {
+    padding: 5px 20px 76px 20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  div#guest-cost #ok-guest {
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    left: 150px;
+  }
+
+  div#guest-cost #cancel-guest {
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    left: 335px;
+  }
+
+  /* =============================================================================
+   Tournament Members
+   ========================================================================== */
+
+#tournament-members-view {
+  display: none;
+}
+
+#tournament-members-dialog {
+    position: relative;
+    top: 165px;
+    left: 585px;
+    width: 750px;
+    height: 750px;
+    background-color: white;
+    border: solid 1px #888;
+}
+
+#tournament-members-dialog.admin{
+  width: 915px;
+  left: 501px;
+}
+
+#tournament-member-list {
+  position: absolute;
+  top: 42px;
+  bottom: 0px;
+  width: 280px;
+  overflow: hidden;
+  border-right: solid 1px #888888;
+  height: 647px;
+  border-bottom: solid 1px #888888;
+}
+
+#tournament-member-list ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-top: solid 1px #888888;
+  }
+
+#tournament-member-list li {
+    padding: 5px 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px dotted black;
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+#not-tournament-member-list {
+  display: none;
+  position: absolute;
+  top: 42px;
+  bottom: 0px;
+  width: 280px;
+  overflow: hidden;
+  border-right: solid 1px #888888;
+  left: 635px;
+}
+
+#not-tournament-member-list ul {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border-top: solid 1px #888888;
+  }
+
+#not-tournament-member-list li {
+    padding: 5px 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px dotted black;
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+#close-tournament-members {
+  margin-top: 617px;
+  margin-left: 375px;
+}
+
+#admin-tournament-members {
+  background-size: auto 49px;
+  width: 49px;
+  height: 49px;
+  margin-top: 617px;
+  margin-left: 306px;
+}
+
+#not-tournament-member-list input {
+    display: block;
+    width: 280px;
+    height: 2em;
+    font-size: 1.2em;
+    border: none;
+    outline: #dda11c solid;
+    border-left: solid 1px #888888;
+}
+
+.arrow-img {
+  margin-left: 380px;
+  height: 150px;
+  width: 150px;
+}
+
+#tourn-arrow-right {
+  display: none;
+  position: absolute;
+  margin-top: 50px;
+}
+
+#arrow-img-right {
+  width: inherit;
+  height: inherit;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#arrow-img-left {
+  width: inherit;
+  height: inherit;
+}
+
+#tourn-arrow-left {
+  display: none;
+  position: absolute;
+  margin-top: 390px;
+}
+
+.arrow-text {
+  width: 300px;
+}
+
+#admin-tournament-members {
+  background-size: auto 49px;
+  width: 49px;
+  height: 49px;
+}
+
+ /* =============================================================================
+   pdf display
+   ========================================================================== */
+
+/*margin-left: -930px;
+  margin-top: 500px;*/
+
+#pdf-view {
+  display: none;
+}
+
+#pdf-container-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 824px;
+  height: 920px;
+  margin-top: -460px;
+  margin-left: -412px;
+  background-color: white;
+}
+
+#plane-frame {
+  width: 820px;
+  height: 800px;
+}
+
+#close-frame {
+  margin-left: 335px;
+}
+
+/* =============================================================================
+   Team Anmeldung
+   ========================================================================== */
+
+div#team-login {
+  z-index: 3000;
+  display: none;
+}
+
+  div#team-login .dialog-box {
+    position: relative;
+    top: 400px;
+    left: 639px;
+    width: 640px;
+    background-color: white;
+    border: solid 1px #888;
+  }
+
+  div#team-login .error-text {
+    padding: 5px 20px 76px 20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+/* =============================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: h5bp.com/s */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+  /* h5bp.com/t */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

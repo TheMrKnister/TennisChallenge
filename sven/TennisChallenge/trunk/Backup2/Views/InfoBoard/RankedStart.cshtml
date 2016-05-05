@@ -1,0 +1,39 @@
+﻿@model TennisWeb.Models.RankedStartModel
+@{
+  ViewBag.Title = "RankedStart";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts {
+  @Scripts.Render("~/bundle/rankedmembers")
+<script type="text/javascript">
+  GetMembers = '@Url.Action("GetRankedMember")';
+  </script>
+}
+
+
+@{
+  var genderString = "";
+}
+
+@if (Model.gender == 2)
+{
+  genderString = "Herren";
+}
+else if (Model.gender == 1)
+{
+  genderString = "Damen";
+}
+
+<h2>Ranglistenspiel @genderString</h2>
+<div id="current-ranking"><h2>Aktuelle Rangliste</h2></div>
+
+<div id="ranking-list-wrap" data-user="@User.Identity.Name" data-gender="@Model.gender">
+  <ul id="rankning-list">
+  </ul>
+</div>
+
+@Html.Partial("_TournamentMenu")
+
+<div id="back-ranked" class="start"><p>zurück</p></div>
+<div id="close-ranked"><p>zurück</p></div>

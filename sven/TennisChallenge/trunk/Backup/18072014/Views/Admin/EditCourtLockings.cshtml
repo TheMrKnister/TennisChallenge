@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TennisWeb.Models.CourtSimple>
+
+@section scripts {
+  @Scripts.Render("~/bundles/underscore", "~/bundles/courtlocking")
+
+  <script type="text/javascript">
+    (function () {
+      window.tc = window.tc || {}
+      $.extend(window.tc, {
+        CourtLockingAPI: "@Url.HttpRouteUrl("CourtLockingApi", new { controller = "CourtLocking" })"
+      })
+    })()
+  </script>
+}
+
+@Html.Action("AdminMenu", new { adminNavigationCat = AdminNavigationCat.Janitor })
+
+<div id="court-input">
+  <input name="lock-all-courts" type="checkbox" />
+  Alle Plätze sperren
+</div>
+<div id="court-images">
+  @foreach (var court in Model)
+  {    
+    <div class="court-name">@court.Name</div>
+    <div data-court-id="@court.CourtKey" class="court-image"></div>
+  }
+</div>

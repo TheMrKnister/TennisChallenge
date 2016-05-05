@@ -1,0 +1,13 @@
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\InfoBoard.csprojResolveAssemblyReference.cache
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\TennisChallenge.InfoBoard.FrmMain.resources
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\TennisChallenge.InfoBoard.Properties.Resources.resources
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\InfoBoard.csproj.GenerateResource.Cache
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\bin\Debug\InfoBoard.exe.config
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\bin\Debug\InfoBoard.exe.manifest
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\bin\Debug\InfoBoard.application
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\bin\Debug\InfoBoard.exe
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\bin\Debug\InfoBoard.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\InfoBoard.exe.manifest
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\InfoBoard.application
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\InfoBoard.exe
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\InfoBoard\obj\x86\Debug\InfoBoard.pdb

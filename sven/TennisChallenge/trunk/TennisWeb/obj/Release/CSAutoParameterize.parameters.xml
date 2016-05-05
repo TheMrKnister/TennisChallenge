@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=tcp:tenn1schallenge.database.windows.net,1433;Initial Catalog=tennis_challenge;User Id=dbadmin@tenn1schallenge;Password=Inspectron123;;integrated security=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\imandic\\Documents\\Visual\ Studio\ 2015\\Projects\\TennisChallenge\\TennisChallenge\\TennisWeb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="TennisChallengeEntities-Web.config Connection String" description="TennisChallengeEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/TennisChallengeModel.csdl|res://*/TennisChallengeModel.ssdl|res://*/TennisChallengeModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDb)\v11.0;initial catalog=TennisChallenge;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\imandic\\Documents\\Visual\ Studio\ 2015\\Projects\\TennisChallenge\\TennisChallenge\\TennisWeb\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TennisChallengeEntities']/@connectionString" />
+  </parameter>
+</parameters>

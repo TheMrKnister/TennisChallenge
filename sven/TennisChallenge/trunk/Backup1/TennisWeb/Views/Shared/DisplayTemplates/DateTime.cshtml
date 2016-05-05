@@ -1,0 +1,4 @@
+﻿@* We're aware that this partial view will display DateTime? objects as Dates without times
+   We'll have to fix this if the requirements change one day. *@
+@model DateTime?
+@Model.Value.ToShortDateString()

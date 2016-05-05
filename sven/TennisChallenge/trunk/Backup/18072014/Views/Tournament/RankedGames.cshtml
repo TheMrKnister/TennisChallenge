@@ -1,0 +1,17 @@
+﻿@{
+  ViewBag.Title = "RankedGames";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/rankedgameslist")
+  <script type="text/javascript">
+    GetGames = '@Url.Action("GetRankedGames")';
+  </script>
+}
+
+<h2>Vereinbarte Spiele</h2>
+
+@Html.Partial("_TournamentMenu")
+
+<div id="ranked-games-list"></div>

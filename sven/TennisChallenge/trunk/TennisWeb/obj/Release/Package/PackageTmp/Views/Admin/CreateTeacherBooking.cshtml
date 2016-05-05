@@ -1,0 +1,26 @@
+﻿@model TennisWeb.Models.FullcalendarEventEditModel
+@{
+  ViewBag.Title = "Tennistunden Bearbeiten.";
+}
+
+@section header
+{
+  @Styles.Render("~/Content/themes/base/jqueryui", "~/Content/fullcalendar")
+}
+
+@section scripts
+{
+  <script type="text/javascript">
+    (function ($) {
+      window.tc = window.tc || {}
+      $.extend(window.tc, {
+        calenderAPI: '@Url.RouteUrl("EventFeedApi", new { httproute = "", controller = "EventFeed" })'
+      })
+    })(jQuery)
+  </script>
+  @Scripts.Render("~/bundles/underscore", "~/bundles/jqueryui", "~/bundles/jqueryval", "~/bundles/fullcalendar")
+}
+
+@Html.Action("AdminMenu", new { adminNavigationCat = AdminNavigationCat.Teacher })
+
+@Html.Partial("_CreateBooking", Model, ViewData)

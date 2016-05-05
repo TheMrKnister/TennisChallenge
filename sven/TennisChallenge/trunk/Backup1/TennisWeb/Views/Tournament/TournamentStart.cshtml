@@ -1,0 +1,29 @@
+﻿@{
+  ViewBag.Title = "TournamentStart";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+<h2>Turniere</h2>
+
+<div id="rank-women" class="ranked-button">
+  <a href="@Url.Action("RankedStart", "Infoboard", new { gender = 1 })">
+    <p>Ranglistenspiel Damen</p>
+  </a>
+</div>
+<div id="rank-men" class="ranked-button">
+  <a href="@Url.Action("RankedStart", "Infoboard", new { gender = 2 })">
+    <p>Ranglistespiel Herren</p>
+  </a>
+</div>
+<div id="club-turney" class="ranked-button">
+  <a href="@Url.Action("ClubTournStart", "ClubTourn")">
+    <p>Clubmeisterschaft</p>
+  </a>
+</div>
+@*IPA Relevant Begin*@
+<div id="tournament" class="ranked-button">
+  <a href="@Url.Action("TournamentBeginn", "Tournament")">
+    <p>Turniere</p>
+  </a>
+</div>
+@*IPA Relevant End*@

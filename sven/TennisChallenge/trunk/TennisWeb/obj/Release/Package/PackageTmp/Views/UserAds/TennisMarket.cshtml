@@ -1,0 +1,34 @@
+﻿@{
+  ViewBag.Title = "TennisMarket";
+  ViewBag.NavTopCat = NavigationTopCat.TennisMarket;
+}
+
+@section scripts {
+  @Scripts.Render("~/bundle/userads")
+  <script type="text/javascript">
+    GetAds = '@Url.Action("GetUserAds")';
+    CreateAd = '@Url.Action("CreateUserAd")'
+    DeleteAd = '@Url.Action("DeleteUserAd")'
+  </script>
+}
+
+<div id="open-add-ad"><input type="button" value="+" /></div>
+<div id="titel-ads"><h2>Tennisbörse</h2></div>
+
+<div id="create-ad" class="hidden" data-user="@User.Identity.Name" data-isadmin="@User.IsInRoles(RoleNames.ClubAdmin)">
+  <div id="ad-title">
+    <textarea id="ad-title-input" placeholder="Titel eingeben"></textarea>
+  </div>
+  <div id="create-ad-text">
+    <textarea id="ad-text-input" data-id="1" placeholder="Text eingeben"></textarea>
+  </div>
+  <div id="ad-price">
+    <textarea id="ad-price-input" data-id="1" placeholder="Preis eingeben"></textarea>
+  </div>
+  @*@Html.ActionLink("Anzeige erstellen", "CreateUserAd", new { userName  = User.Identity.Name, text = "Es wurde Kein text angegeben", type = 1 }, new { @class = "CreateAd" })*@
+  <div id="add-ad-button">
+    <input id="create-ad-button" type="button" value="Anzeige erstellen" />
+  </div>
+</div>
+
+<div id="ads-wrapper" class="collapsed"></div>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "EnterResult";
+    ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts {
+  @Scripts.Render("~/bundle/enterresult")
+<script type="text/javascript">
+  GetPlayers = '@Url.Action("GetPlayers")';
+  </script>
+}
+
+<h2 id="title-name" data-user="@User.Identity.Name" data-gender="@User.GetGender()">Resultat eingeben</h2>
+
+<div id="ranking-list-wrap" class="enter-result">
+  <ul id="rankning-list">
+  </ul>
+</div>
+
+<div id="rank-edit">
+  <div id="selected-player"><h3>Kein Spieler ausgewählt</h3></div>
+  <div id="former-rank">Aktueller Rang: <input id="former-rank-input" class="rank-input" type="text" readonly/></div>
+  <div id="new-rank">Neuer Rang: <input id="new-rank-input" class="rank-input" type="text" /></div>  
+  <div id="rank-link">@Html.ActionLink("Rang speichern", "ChangeRank", new { id = Guid.Empty, clubRank = 0 }, new { id = "change-rank" })</div>
+</div>
+
+@Html.Partial("_TournamentMenu")
+
+<div id="back-ranked" class="chall-player"><p>zurück</p></div>

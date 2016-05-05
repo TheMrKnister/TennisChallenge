@@ -1,0 +1,29 @@
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\InfoBoard.exe.config
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\InfoBoard.exe
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\InfoBoard.pdb
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\CodeCollection.ApplicationBasics.dll
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\CodeCollection.RFID.dll
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\CodeCollection.ApplicationBasics.pdb
+E:\Projekte\TennisChallenge\InfoBoard\bin\Release\CodeCollection.RFID.pdb
+E:\Projekte\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.csprojResolveAssemblyReference.cache
+E:\Projekte\TennisChallenge\InfoBoard\obj\x86\Release\TennisChallenge.InfoBoard.FrmMain.resources
+E:\Projekte\TennisChallenge\InfoBoard\obj\x86\Release\TennisChallenge.InfoBoard.Properties.Resources.resources
+E:\Projekte\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.csproj.GenerateResource.Cache
+E:\Projekte\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.exe
+E:\Projekte\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.pdb
+Z:\External Developer\TennisChallenge\InfoBoard\bin\Release\InfoBoard.exe.config
+Z:\External Developer\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.exe
+Z:\External Developer\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.pdb
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\InfoBoard.exe.config
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.exe
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.pdb
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.csprojResolveAssemblyReference.cache
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\obj\x86\Release\TennisChallenge.InfoBoard.FrmMain.resources
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\obj\x86\Release\TennisChallenge.InfoBoard.Properties.Resources.resources
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\obj\x86\Release\InfoBoard.csproj.GenerateResource.Cache
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\InfoBoard.exe
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\InfoBoard.pdb
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\CodeCollection.ApplicationBasics.dll
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\CodeCollection.RFID.dll
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\CodeCollection.ApplicationBasics.pdb
+E:\Projects\TennisChallenge\TennisChallenge\InfoBoard\bin\Release\CodeCollection.RFID.pdb

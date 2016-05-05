@@ -1,0 +1,24 @@
+﻿@using TennisWeb.Utils
+
+@{
+  ViewBag.Title = "Tennis-Challenge";
+  ViewBag.NavTopCat = NavigationTopCat.Index;
+}
+
+@section scripts
+{
+
+}
+
+<h1 class="start">Tennis-Challenge</h1>
+
+<div class="einleitung2">
+  Tennis-Challenge bietet für alle Tennisspieler über die <span style="color: blue;">App</span> den geeigneten Tennispartner zu finden. Gleichzeitig kannst du über das Infoboard
+  die Reservationen deines Klubs einsehen.
+ 
+</div>
+<div class="short"><span class="short-one">Eine <strong>geniale</strong> Lösung,</span><br /><span class="short-two">um <strong>nahe</strong>liegend</span><span class="short-three"> und auf <strong>bequeme</strong> Art</span><br /><span class="short-four">deinen Tennispartner </span><br /><span class="short-five">zu finden<strong> und einen</strong></span><br /><span class="short-six"> <strong>Platz</strong> zu reservieren.</span></div>
+<div class="test"><img src="@Url.Content("~/Content/images/layout/startseite.png")" alt="Test" /></div>
+<div class="einleitung">
+  In wenigen Schritten <a href="@Url.Action("LogOn", "Account")">registrieren und anmelden</a> und dann<br />geht's schon los.
+</div>

@@ -1,0 +1,91 @@
+﻿@using TennisWeb.Utils
+@model TennisWeb.Models.MemberModel
+@{
+  ViewBag.Title = "Ihr Konto bei Tennis-Challenge";
+  ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+<h2>Kontodetails</h2>
+
+<fieldset id="personalInfo">
+  <legend><span>Persönliche Informationen</span></legend>
+  <div class="long">
+    <div class="display-row">
+      <span class="display-field">@Html.DisplayFor(model => model.PictureUrl)</span>
+    </div>
+    <h4>Name</h4>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.TitleName):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.TitleName)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.Firstname):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.Firstname)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.Lastname):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.Lastname)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.Birthday):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.Birthday)</span>
+    </div>
+
+    <h4>Adresse</h4>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.Street):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.Street)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.Zip):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.Zip)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.City):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.City)</span>
+    </div>
+
+    <h4>Telefon / E-Mail</h4>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.PrivatePhone):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.PrivatePhone)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.MobilePhone):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.MobilePhone)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.BusinessPhone):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.BusinessPhone)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">E-Mail: </span>
+      <span class="display-field">@User.Identity.Name</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label"></span>
+      <span class="display-field"></span>
+    </div>
+
+    <h4>Tennis</h4>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.LicenseNumber):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.LicenseNumber)</span>
+    </div>
+    <div class="display-row">
+      <span class="display-label">@Html.LabelFor(model => model.Clubs):</span>
+      <span class="display-field">@Html.DisplayFor(model => model.Clubs)</span>
+    </div>
+
+
+    <p style="margin-bottom: 0px;">
+      @Html.ActionLink("Bearbeiten", "Edit") |
+      @Html.ActionLink("Passwort ändern", "ChangePassword", "Account") |
+      @Html.ActionLink("Konto löschen", "Delete")
+    </p>
+  </div>
+
+</fieldset>
+
+<div class="logoff">@Html.ActionLink("Abmelden", "LogOff", "Account")</div>
+

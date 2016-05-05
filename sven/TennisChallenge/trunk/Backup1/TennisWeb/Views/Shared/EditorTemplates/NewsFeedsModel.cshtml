@@ -1,0 +1,15 @@
+﻿@model TennisWeb.Models.NewsFeedsModel
+
+@Html.HiddenFor(m => m.ClubKey)
+<div id="newsfeeds">
+  @Html.EditorFor(m => m.NewsFeeds)
+</div>
+<div class="editor-label">
+  @Html.LabelFor(m => m.AdvertisementsPerNewsFeed)
+</div>
+<div class="editor-field">
+
+  @Html.EditorFor(m => m.AdvertisementsPerNewsFeed)
+
+  @Html.ValidationMessageFor(m => m.AdvertisementsPerNewsFeed)
+</div>

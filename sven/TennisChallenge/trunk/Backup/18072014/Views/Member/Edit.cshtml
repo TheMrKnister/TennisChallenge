@@ -1,0 +1,29 @@
+﻿@using TennisWeb.Utils
+@model TennisWeb.Models.MemberModel
+@{
+  ViewBag.Title = "Konto bei Tennis-Challenge Bearbeiten";
+  ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+@section Header
+{
+  @Styles.Render("~/Content/useredit", "~/Content/themes/base/jqueryui")
+}
+
+@section scripts
+{
+  @Scripts.Render("~/bundles/jqueryui", "~/bundles/jqueryval", "~/bundles/useredit")
+}
+
+<h2>Konto Bearbeiten</h2>
+
+@using (Html.BeginForm("Edit", "Member", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  @Html.ValidationSummary(true, "Das Konto konnte nicht geändert werden. Bitte korrigieren Sie die Fehler und versuchen Sie es erneut.")
+  <div id="editform">
+    @Html.Partial("_CreateOrEditMember", Model)
+    <p>
+      <input type="submit" value="Akzeptieren" />
+    </p>
+  </div>
+}

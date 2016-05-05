@@ -1,0 +1,26 @@
+﻿@using TennisWeb.Utils
+@model dynamic
+
+@{
+  ViewBag.Title = "Konto erstellen";
+  ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+<h2>Neues Konto erstellen</h2>
+
+<p>
+  Damit wir dich erfolgreich Authentifizieren können, hast du soeben eine E-Mail mit einem Aktivierungslink erhalten. <br/>
+  Um die Registrierung fortzusetzen klicke bitte auf den Link in dieser E-Mail.
+</p>
+<p>
+  Hinweis: Solltest du innert fünf Minuten keine E-Mail erhalten, prüfe bitte deinen Spamordner.
+</p>
+
+<div class="registration-steps">
+  <span class="step-number-border"><span class="step-number">1</span></span>
+  <span class="step-label">Persönliche Informationen</span>
+  <span class="step-number-border"><span class="step-number active">2</span></span>
+  <span class="step-label">Aktivierung</span>
+  <span class="step-number-border"><span class="step-number">3</span></span>
+  <span class="step-label">Abschluss</span>
+</div>

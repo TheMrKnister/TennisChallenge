@@ -1,0 +1,6 @@
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\RFID\bin\Debug\CodeCollection.RFID.dll.config
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\RFID\bin\Debug\CodeCollection.RFID.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\RFID\bin\Debug\CodeCollection.RFID.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\RFID\obj\Debug\CodeCollection.RFID.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\RFID\obj\Debug\CodeCollection.RFID.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\CodeCollection\RFID\obj\Debug\RFID.csprojResolveAssemblyReference.cache

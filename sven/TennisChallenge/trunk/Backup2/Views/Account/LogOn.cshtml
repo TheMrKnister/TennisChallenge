@@ -1,0 +1,56 @@
+﻿@using TennisWeb.Utils
+@model TennisWeb.Models.LogOnModel
+
+@{
+    ViewBag.Title = "Anmelden";
+    ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+@section scripts
+{
+  @Scripts.Render("~/bundles/jqueryval")
+}
+
+<h2>Login</h2>
+<p>
+  Um sich einzuloggen, geben Sie bitte Ihre E-Mail-Adresse und Ihr Passwort ein und klicken dann auf "Login". 
+  Sind Sie noch kein Mitglied, können Sie sich @Html.ActionLink("kostenlos registrieren", "Register").
+</p>
+
+<div id="login-error">
+@Html.ValidationSummary(true, "Anmeldung nicht erfolgreich. Korrigieren Sie Ihre Eingabe und versuchen Sie nochmals.")
+  </div>
+
+@using (Html.BeginForm()) {
+    <div>
+        <fieldset>
+            <legend>Bereits registriert</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.UserName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+
+            <div class="editor-label">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </div>
+
+            <p>
+                <input type="submit" value="Login" />
+                @Html.ActionLink("Passwort vergessen?", "Recovery")
+            </p>
+        </fieldset>
+    </div>
+}

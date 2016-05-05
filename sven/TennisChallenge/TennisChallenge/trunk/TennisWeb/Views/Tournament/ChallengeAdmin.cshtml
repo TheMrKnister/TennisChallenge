@@ -1,0 +1,57 @@
+﻿@{
+  ViewBag.Title = "ChallengeAdmin";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section header
+{
+  @Styles.Render("~/Content/themes/base/jqueryui")
+}
+
+@section scripts {
+  @Scripts.Render("~/bundles/jqueryui", "~/bundle/challadmin")
+  <script type="text/javascript">
+    GetPlayers = '@Url.Action("GetPlayers")';
+    CreateRankedGame = '@Url.Action("CreateRankedGame")';
+    GetCourts = '@Url.Action("GetCourts")';
+    ConvertDate = '@Url.Action("ConvertDate")'
+    GetChallPlayers = '@Url.Action("GetChallFromName")'
+  </script>
+}
+
+<h2>Ranglistenspiel aufnehmen</h2>
+@Html.Partial("_TournamentMenu")
+
+<div id="send-game">
+  @*<p>Neues Ranglistenspiel</p>*@
+  <input type="button" value="Neues Ranglistenspiel" />
+</div>
+
+<div id="challenge-player-mask" data-user="@User.Identity.Name" data-gender="@User.GetGender()">
+  <div id="challenge-date">
+    <p>
+      Datum:
+      <input type="text" id="challenge-date-pick" />
+    </p>
+  </div>
+  <div id="challenge-start">
+    <p>
+      Startzeit:
+      <input type="text" class="timepicker" />
+    </p>
+  </div>
+  <div id="challenge-court">
+    <p>
+      Platz:
+    <select id="select-court"></select>
+    </p>
+  </div>
+  <div id="challenge-challenger">
+    Forderer:
+    <select id="select-challenger"></select>
+  </div>
+  <div id="challenge-defender">
+    Geforderter:
+    <select id="select-defender"></select>
+  </div>
+</div>

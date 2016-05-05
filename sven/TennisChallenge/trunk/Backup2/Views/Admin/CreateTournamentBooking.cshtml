@@ -1,0 +1,35 @@
+﻿@model TennisWeb.Models.FullcalendarEventEditModel
+
+@{
+  ViewBag.Title = "Turnier erstellen";
+}
+
+@section header
+{
+  @Styles.Render("~/Content/themes/base/jqueryui", "~/Content/fullcalendar")
+}
+
+@section scripts
+{
+  <script type="text/javascript">
+    (function ($) {
+      window.tc = window.tc || {}
+      $.extend(window.tc, {
+        calenderAPI: '@Url.HttpRouteUrl("EventFeedApi", new { controller = "EventFeed" })'
+      })
+    })(jQuery)
+  </script>
+  @Scripts.Render("~/bundles/interclub", "~/bundles/underscore", "~/bundles/jqueryui", "~/bundles/jqueryval", "~/bundles/fullcalendar")
+}
+
+@Html.Action("AdminMenu", new { adminNavigationCat = AdminNavigationCat.Tournament })
+
+<div id="add-to-ranked">@Html.ActionLink("Ranglistespieler", "AddToRanked")</div>
+
+<div id="delete-current-tournament">
+  @Html.ActionLink("Platz freigeben", "DeleteCurrentTournamentOnCourt", new { id = Guid.Empty }, new { id = "selected-court" })
+</div>
+
+@*IPA Relevant Beginn Nur den Pfad ersetzt*@
+@Html.Partial("_CreateTournamentBooking", Model, ViewData)
+@*IPA Relevant End*@

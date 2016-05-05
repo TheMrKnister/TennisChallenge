@@ -1,0 +1,24 @@
+﻿@*IPA Relevant Beginn*@
+@{
+  ViewBag.Title = "TournamentBeginn";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/tournamentstart")
+  <script type="text/javascript">
+    GetAllTournaments = '@Url.Action("GetNextTournaments")';
+    Site = "beginn";
+  </script>
+}
+
+<h2>Turniere</h2>
+
+<div class="description-tourn">
+  <p>Die nächsten Turniere, der Spielmodi Klassisch und Plauschturnier</p>
+</div>
+
+@Html.Partial("_TournamentManageMenu")
+
+<div id="tournament-container"></div>
+@*IPA Relevant End*@

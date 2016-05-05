@@ -1,0 +1,16 @@
+﻿@model TennisWeb.Models.AdminDeleteViewModel
+@{
+  ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm("Delete", "Admin", FormMethod.Post))
+{
+  <p>Willst du @Html.DisplayFor(m => m.Name) wirklich löschen?</p>
+  @Html.HiddenFor(m => m.UserKey)
+  @Html.HiddenFor(m => m.ClubKey)
+  @Html.HiddenFor(m => m.Name)
+  <button type="submit" id="submit" value="submit">Ja</button>
+}
+@Html.ActionLink("Zurück", "Index")

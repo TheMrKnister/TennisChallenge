@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" >
+
+  <title>@ViewBag.Title</title>
+
+  @Styles.Render("~/Content/themes/base/jqueryui", "~/Content/infoboard")
+  @RenderSection("Header", required: false)
+  @Scripts.Render("~/bundles/jquery", "~/bundles/modernizr")
+</head>
+<body id="infoBoard">
+  <div class="page">
+    @RenderBody()
+  </div>
+
+  @RenderSection("scripts", required: false)
+</body>
+</html>
+

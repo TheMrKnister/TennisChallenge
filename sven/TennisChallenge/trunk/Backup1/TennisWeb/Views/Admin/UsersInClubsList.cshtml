@@ -1,0 +1,32 @@
+﻿@model TennisWeb.Models.UserListModel
+@{
+  ViewBag.Title = "List von Benutzern in Clubs";
+}
+
+<h2>List von Benutzern in Clubs</h2>
+<ul class="plain-list">
+  <li>@Html.ActionLink("Benutzer Erstellen", "CreateUser")</li>
+  @foreach (var c in Model.Clubs)
+  {
+    <li>
+      @Html.DisplayFor(_ => c.Name)
+      <ul class="plain-list">
+        @foreach (var u in c.UsersInClubs)
+        {
+          <li>
+            @if (u.User.Member == null)
+            {
+              @Html.DisplayFor(_ => u.User.UserName)
+            }
+            else
+            {
+              @Html.Raw(String.Concat(u.User.Member.Title.Name, " ", u.User.Member.FullName))
+            }
+            @Html.ActionLink("Bearbeiten", "EditUser", new { id = u.UsersInClubsKey })
+            @Html.ActionLink("Löschen", "DeleteUser", new { id = u.UsersInClubsKey })
+          </li>
+        }
+      </ul>
+    </li>
+  }
+</ul>

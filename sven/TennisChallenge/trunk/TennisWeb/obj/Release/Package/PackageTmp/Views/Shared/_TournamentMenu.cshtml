@@ -1,0 +1,33 @@
+﻿<div id="ranked-game-options">
+  <div id="chal-player" class="ranked-button">
+    <a href="@Url.Action("ChallengePlayer", "Tournament")">
+      <p>Spieler fordern</p>
+    </a>
+  </div>
+  <div id="ranked-games" class="ranked-button">
+    <a href="@Url.Action("RankedGames", "Tournament")">
+      <p>Vereinbarte Spiele</p>
+    </a>
+  </div>
+  @if (User.IsInRoles(RoleNames.CasualTournamentOrganizer))
+  {
+    <div id="enter-result" class="ranked-button">
+      <a href="@Url.Action("RankedAdmin", "Tournament")">
+        <p>Resultat eingeben</p>
+      </a>
+    </div>
+  }
+  <div id="all-results" class="ranked-button">
+    <a href="@Url.Action("ViewRankedGames", "Tournament")">
+      <p>Alle Resultate</p>
+    </a>
+  </div>
+  <div id="-player-stats" class="ranked-button">
+    <p>Spielerauswertung</p>
+  </div>
+  <div id="ranked-rules" class="ranked-button">
+    <a href="@Url.Action("Rules", "Tournament")">
+      <p>Reglement</p>
+    </a>
+  </div>
+</div>

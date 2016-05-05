@@ -1,0 +1,3 @@
+﻿@using TennisWeb.Utils
+@model string
+<img id="profilePicture" src="@Html.Raw(String.IsNullOrWhiteSpace(Model) ? Url.Content("~/Content/images/default_player_image.png") : @Url.Content(Picture.UploadImagePath + Model))" alt="@Model" />

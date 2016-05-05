@@ -1,0 +1,2090 @@
+﻿/* Body */
+
+body {
+  font-size: 16px;
+  font-family: 'Asap', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #696969;
+}
+
+/* Wrapper */
+
+#wrapper {
+  width: 1000px;
+  margin: 0px auto 0 auto;
+}
+
+/* Header */
+
+/* Container */
+
+/* Main */
+#main {
+  background: #fff;
+  opacity: .9;
+  min-height: 638px;
+  position: relative;
+}
+
+/* Footer */
+
+#footer {
+  opacity: .9;
+}
+
+/* Main Navigation */
+
+/* Layout Startseite */
+
+.einleitung {
+  font-size: 22px;
+  width: 640px;
+  float: left;
+  margin: 20px 0px 0px 30px;
+}
+
+.einleitung2 {
+  font-size: 22px;
+  margin: 0px 0px 30px 0px;
+}
+
+
+.short {
+  width: 210px;
+  /* padding: 20px 30px 20px 20px; */
+  padding: 0px;
+  float: left;
+}
+
+.short-one {
+  font-size: 35px;
+}
+
+.short-two, .short-four, .short-five {
+  font-size: 20px;
+}
+
+.short-three {
+  font-size: 40px;
+}
+
+.short-six {
+  font-size: 30px;
+}
+
+.loginbutton {
+  background: #000;
+  width: 50px;
+  height: 30px;
+}
+
+.logoff {
+  float: right;
+}
+
+.warning {
+  color: red;
+}
+
+#map_canvas #content {
+  width: 280px;
+}
+
+
+/* Background Fullscreen Image */
+
+#background-image {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -100;
+}
+
+  #background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+  }
+
+/* Layout */
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 0px;
+  color: #000;
+}
+
+/* Layout Footer */
+
+#footer .inside .kontakt-faq {
+  float: right;
+}
+
+
+div.display-row {
+  padding-left: 50px;
+  margin: 6px 0px;
+  vertical-align: top;
+}
+
+span.display-label {
+  display: inline-block;
+  width: 150px;
+  padding-top: 5px;
+  vertical-align: top;
+}
+
+span.editor-field {
+  display: inline-block;
+  margin-right: 10px;
+  width: 202px;
+  vertical-align: top;
+}
+
+.plain-list {
+  list-style-type: none;
+  -webkit-padding-start: 0px;
+  -moz-padding-start: 0px;
+}
+
+/* Änderung */
+
+#editform select {
+  width: 206px;
+}
+
+#editform div.display-row {
+  padding-left: 0px;
+}
+
+/* Registrierung */
+#registerform select {
+  width: 206px;
+}
+
+#registerform div.display-row {
+  padding-left: 0px;
+}
+
+div.registration-steps {
+  text-align: center;
+  margin-top: 50px;
+}
+
+  div.registration-steps span.step-label {
+    display: inline-block;
+    width: 140px;
+    vertical-align: middle;
+  }
+
+  div.registration-steps span.step-number-border {
+    display: inline-block;
+    vertical-align: middle;
+    width: 34px;
+    height: 31px;
+    padding-top: 3px;
+    border: black solid 1px;
+    border-radius: 50%;
+    behavior: url(_CONTENT_PATH/PIE.htc);
+  }
+
+  div.registration-steps span.step-number {
+    display: inline-block;
+    width: 28px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding-top: 4px;
+    border-radius: 50%;
+    behavior: url(_CONTENT_PATH/PIE.htc);
+  }
+
+  div.registration-steps span.active {
+    background-color: red;
+  }
+
+#continue-link {
+  float: right;
+  margin-top: 50px;
+  margin-right: 125px;
+}
+
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+
+
+.text {
+  font-size: 16px;
+  font-family: 'Asap', sans-serif;
+}
+
+a:link {
+  color: #034af3;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #505abc;
+}
+
+a:hover {
+  color: #1d60ff;
+  text-decoration: none;
+}
+
+a:active {
+  color: #12eb87;
+}
+
+p, ul {
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+
+header,
+footer,
+nav,
+section {
+  display: block;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+}
+
+
+
+h2 {
+  padding: 0 0 10px 0;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5, h6 {
+  font-size: 1em;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header, #header {
+  position: relative;
+  margin-bottom: 0px;
+  color: #000;
+  padding: 0;
+}
+
+  header h1, #header h1 {
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 0;
+    color: #fff;
+    border: none;
+    line-height: 2em;
+    font-size: 32px !important;
+    text-shadow: 1px 1px 2px #111;
+  }
+
+#main {
+  padding: 30px 30px 15px 30px;
+  background-color: #fff;
+  border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  behavior: url(_CONTENT_PATH/PIE.htc);
+}
+
+footer,
+#footer {
+  background-color: #fff;
+  color: #999;
+  padding: 10px 30px;
+  text-align: left;
+  line-height: normal;
+  margin: 0 0 30px 0;
+  font-size: .9em;
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  behavior: url(_CONTENT_PATH/PIE.htc);
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+nav,
+#menucontainer {
+  margin-top: 150px;
+}
+
+#menu {
+  opacity: .9;
+  position: relative;
+  text-align: right;
+  margin: 0;
+}
+
+  #menu li {
+    background: url(images/main-navigation/inactive.png) white left bottom repeat-x;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 13px;
+    padding-left: 35px;
+    background-color: white;
+    display: inline;
+    list-style: none;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    behavior: url(_CONTENT_PATH/PIE.htc);
+  }
+
+    #menu li a {
+      text-decoration: none;
+      line-height: 2.8em;
+    }
+
+    /* Here would be a good place for CSS preprocessoring
+   there is no other way than copy paste and search/replace to accomplish this */
+
+    #menu li.hilfe:hover, #menu li.hilfe.active {
+      text-decoration: none;
+      background: url(images/main-navigation/hilfe.png) white 2% center no-repeat;
+      -pie-background: url(_CONTENT_PATH/images/main-navigation/hilfe.png) white 2% center no-repeat;
+      behavior: url(_CONTENT_PATH/PIE.htc);
+    }
+
+    #menu li.indexpage:hover, #menu li.indexpage.active {
+      text-decoration: none;
+      background: url(images/main-navigation/startseite.png) white 2% center no-repeat;
+      -pie-background: url(_CONTENT_PATH/images/main-navigation/startseite.png) white 2% center no-repeat;
+      behavior: url(_CONTENT_PATH/PIE.htc);
+    }
+
+  #menu .indexpage {
+    background: url(images/main-navigation/inactive.png) left 100% repeat-x, url(images/main-navigation/startseite.png) white 2% center no-repeat;
+    -pie-background: url(_CONTENT_PATH/images/main-navigation/inactive.png) left 100% repeat-x, url(_CONTENT_PATH/images/main-navigation/startseite.png) white 2% center no-repeat;
+    behavior: url(_CONTENT_PATH/PIE.htc);
+  }
+
+  #menu .hilfe {
+    background: url(images/main-navigation/inactive.png) left bottom repeat-x, url(images/main-navigation/hilfe.png) white 2% center no-repeat;
+    -pie-background: url(_CONTENT_PATH/images/main-navigation/inactive.png) left bottom repeat-x, url(_CONTENT_PATH/images/main-navigation/hilfe.png) white 2% center no-repeat;
+    behavior: url(_CONTENT_PATH/PIE.htc);
+  }
+
+  #menu .navlogoff {
+    font-size: 11px;
+  }
+
+  /*Not used anymore, was used to grey out inactive tabs*/
+  #menu .inprogress {
+    opacity: .5;
+    background: none !important;
+    background-color: white !important;
+    padding-left: 15px;
+  }
+
+/* FORM LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 0 1.4em 1.4em 1.4em;
+  margin: 0 0 1.5em 0;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+textarea {
+  min-height: 75px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 1.2em;
+  color: #444;
+  width: 200px;
+}
+
+select {
+  border: 1px solid #ccc;
+  padding: 2px;
+  font-size: 1.2em;
+  color: #444;
+}
+
+input {
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table {
+  border: solid 1px #e8eef4;
+  border-collapse: collapse;
+}
+
+  table td {
+    padding: 5px;
+    border: solid 1px #e8eef4;
+  }
+
+  table th {
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+  }
+
+/* MISC  
+----------------------------------------------------------*/
+.clear {
+  clear: both;
+}
+
+.error {
+  color: Red;
+}
+
+
+div#title {
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+#logindisplay {
+  font-size: 1.1em;
+  display: block;
+  text-align: right;
+  margin: 10px;
+  color: White;
+}
+
+  #logindisplay a:link {
+    color: white;
+    text-decoration: underline;
+  }
+
+  #logindisplay a:visited {
+    color: white;
+    text-decoration: underline;
+  }
+
+  #logindisplay a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+  color: #ff0000;
+}
+
+.field-validation-valid {
+  display: none;
+}
+
+.input-validation-error {
+  border: 1px solid #ff0000;
+  background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+span.editor-label {
+  display: inline-block;
+  width: 180px;
+  vertical-align: top;
+}
+
+.text-box {
+  width: 30em;
+}
+
+  .text-box.multi-line {
+    height: 6.5em;
+  }
+
+.tri-state {
+  width: 6em;
+}
+
+#profilePicture {
+  max-height: 160px;
+  max-width: 160px;
+}
+
+/* FAQ */
+#faq dt {
+  padding: 0.3em;
+  font-weight: bold;
+}
+
+#faq dd {
+  padding: 0.5em 0.3em 1em;
+}
+
+  #faq dd ul {
+    list-style-type: disc;
+  }
+
+
+.infoboard-square {
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+}
+
+#current-time {
+  float: left;
+  position: relative;
+  top: 91px;
+  background: url(images/arrow_website_reservation.png) no-repeat right 50%;
+  padding: 3px 20px 3px 0;
+}
+
+#in-six-time {
+  float: left;
+  position: absolute;
+  top: 555px;
+  background: url(images/arrow_website_reservation.png) no-repeat right 50%;
+  padding: 3px 20px 3px 0;
+}
+
+#first-inter-time {
+  float: left;
+  position: absolute;
+  top: 320px;
+  background: url(images/arrow_website_reservation.png) no-repeat right 50%;
+  padding: 3px 20px 3px 0;
+}
+
+#second-inter-time {
+  float: left;
+  position: absolute;
+  top: 443px;
+  background: url(images/arrow_website_reservation.png) no-repeat right 50%;
+  padding: 3px 20px 3px 0;
+}
+
+#infotable {
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+#infotable-caption {
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #10519c;
+  margin: 1px;
+}
+
+.number {
+  color: white;
+  background-color: #3385e4;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.time-table-column {
+  float: left;
+  height: 410px;
+  overflow: hidden;
+}
+
+/*.tournament, .tournament.fc-event-skin, .tournament .fc-event-skin, .interclub, .interclub.fc-event-skin, .interclub .fc-event-skin {
+  background-color: #d19c1a;
+  border-color: #d19c1a;
+}*/
+
+.free {
+  background-color: #2ba617;
+}
+
+.match, .match.fc-event-skin, .match .fc-event-skin {
+  background-color: #dd1010;
+  border-color: #dd1010;
+}
+
+.leg-closed {
+  background-image: url("images/closed-leg.png");
+  height: 100%;
+}
+
+.closed {
+  background-image: url("images/gesperrt-platz_klein.png");
+  height: 100%;
+}
+
+  .closed.fc-event-skin, .closed .fc-event-skin {
+    background-color: red;
+    border-color: red;
+  }
+
+.school, .school.fc-event-skin, .school .fc-event-skin {
+  background-color: #33689c;
+  border-color: #33689c;
+}
+
+#infoboardlegend {
+  position: absolute;
+  float: right;
+  bottom: 0;
+  right: 50px;
+}
+
+  #infoboardlegend > div {
+    float: left;
+    margin: 0 50px 0 0;
+  }
+
+    #infoboardlegend > div > div {
+      height: 35px;
+      width: 35px;
+    }
+
+  #infoboardlegend .leg-turnament {
+    width: 62px;
+  }
+
+#userreservation {
+  position: absolute;
+  right: 55px;
+  top: 50px;
+}
+
+.important {
+  color: red;
+}
+
+.userreservation {
+  color: white;
+  background-color: #2ba617;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#adminNavigation {
+  width: 30%;
+  float: left;
+}
+
+  #adminNavigation > div {
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #adminNavigation > .active {
+    border-radius: 10px 0px 0px 10px;
+    -pie-border-radius: 10px;
+    background-color: #c7c6c6;
+    box-shadow: -5px 0px 10px 5px gainsboro;
+  }
+
+.linkImage {
+  float: left;
+}
+
+  .linkImage img {
+    height: 50px;
+  }
+
+  .linkImage.janitor img {
+    height: 60px;
+    margin-left: 9px;
+  }
+
+  .linkImage.tenniscoach img {
+    height: 55px;
+    margin-left: 3px;
+  }
+
+  .linkImage.tournament img {
+    height: 57px;
+    margin-left: 5px;
+  }
+
+  .linkImage.interclub img {
+    height: 48px;
+  }
+
+  .linkImage.wirt img {
+    margin-left: 4px;
+  }
+
+  .linkImage.eventmanager img {
+    height: 60px;
+    margin-left: 7px;
+  }
+
+  .linkImage.werbung img {
+    height: 60px;
+    margin-left: 8px;
+  }
+
+  .linkImage.news img {
+    height: 45px;
+  }
+
+.adminMenuNotAvailable img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: gray;
+}
+
+.adminMenuNotAvailable > .linkText {
+  color: gainsboro;
+}
+
+.linkText {
+  padding-top: 15px;
+  padding-left: 90px;
+  height: 100%;
+}
+
+.adminMenuAvailable > .linkText a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.court-image {
+  cursor: pointer;
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  background:
+  /* background-image */ url("images/tennis_court_empty.jpg")
+  /* background-repeat */ no-repeat
+  /* background-position */ center
+  /* background-size*/ / auto 100px;
+  -pie-background: url("_CONTENT_PATH/images/tennis_court_empty.jpg") no-repeat center / auto 100px;
+  behavior: url("_CONTENT_PATH/PIE.htc");
+}
+
+  .court-image.court-locked {
+    background:
+    /* background-image */ url("images/gesperrt-platz.png")
+    /* background-repeat */ no-repeat
+    /* background-position */ center
+    /* background-size*/ / auto 75px,
+    /* background-image */ url("images/tennis_court_empty.jpg")
+    /* background-repeat */ no-repeat
+    /* background-position */ center
+    /* background-size*/ / auto 100px;
+    -pie-background: url("_CONTENT_PATH/images/gesperrt-platz.png") no-repeat center auto 75px, url("_CONTENT_PATH/images/tennis_court_empty.jpg") no-repeat center / auto 100px;
+    behavior: url("_CONTENT_PATH/PIE.htc");
+  }
+
+/*Admin*/
+
+#adminNavigation > .active {
+  background-color: gainsboro;
+}
+
+#edit-user {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: -595px;
+}
+
+  #edit-user form {
+    margin-left: 300px;
+  }
+
+  #edit-user a {
+    margin-left: 300px;
+  }
+
+#user-list {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+  width: 250px;
+}
+
+  #user-list ul {
+    list-style-type: disc;
+  }
+
+#ranked-members {
+  -webkit-padding-start: 23px;
+}
+
+  #ranked-members li {
+    list-style-type: none;
+  }
+
+#court-images {
+  position: absolute;
+  margin-top: -595px;
+  margin-left: 505px;
+  overflow-y: scroll;
+  height: 594px;
+  width: 220px;
+}
+
+#court-input {
+  position: absolute;
+  margin-left: 320px;
+  margin-top: -595px;
+}
+
+.selected-user {
+  margin-left: 300px;
+}
+
+#ranked-selected {
+  margin-left: 0px;
+  margin-top: -25px;
+}
+
+#club-member-caption {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: -70px;
+}
+
+#ranked-member-caption {
+  position: absolute;
+  margin-left: 650px;
+  margin-top: -70px;
+}
+
+#member-list {
+  position: absolute;
+  margin-left: 735px;
+  margin-top: -25px;
+}
+
+#clubtourn-member-list-container #member-list {
+  height: 600px;
+  overflow: auto;
+}
+
+#selected-user-rank {
+  margin-left: 0px;
+}
+
+#greyback {
+  /*position: absolute;*/
+  margin-left: 282px;
+  height: 629px;
+  background-color: gainsboro;
+  z-index: -1;
+  box-shadow: 0px 0px 10px 10px gainsboro;
+}
+
+#calendar {
+  position: absolute;
+  margin-top: -550px;
+  max-width: 600px;
+  height: 525px;
+  margin-left: 306px;
+  overflow-y: scroll;
+}
+
+#courtSelect {
+  position: absolute;
+  margin-left: 306px;
+  margin-top: -595px;
+}
+
+.fc-table {
+  table-layout: fixed;
+}
+
+.fc-header-left {
+  width: 95px;
+}
+
+.fc-header-center {
+  width: 291px;
+}
+
+.fc-header-title h2 {
+  font-size: 13px;
+}
+
+#back-button {
+  position: absolute;
+  margin-left: 306px;
+  margin-top: -33px;
+}
+
+#create-booking-series {
+  display: none;
+}
+
+#booking-series-links {
+  position: absolute;
+  margin-top: -600px;
+  margin-left: 400px;
+}
+
+
+#interclub-booking #booking-series-links {
+  display: none;
+}
+
+#clear-field {
+  position: absolute;
+  margin-left: 415px;
+  margin-top: 40px;
+}
+
+#add-to-ranked {
+  position: absolute;
+  margin: -588px 0px 0px 640px;
+}
+
+#delete-current-tournament {
+  position: absolute;
+  margin-top: -588px;
+  margin-left: 450px;
+}
+
+#add-player {
+  position: absolute;
+  margin-top: 10px;
+}
+
+#delete-ranked-player {
+  display: none;
+}
+
+#edit-ranked-user {
+  display: none;
+}
+
+#gender-filters {
+  margin-top: 80px;
+}
+
+#filter-men {
+  margin-left: 120px;
+  margin-top: -41px;
+}
+
+#filter-women-input {
+  position: absolute;
+}
+
+#filter-all {
+  position: absolute;
+  margin-top: 5px;
+}
+
+#ranked-edit-user #edit-user {
+  position: absolute;
+  margin-top: -25px;
+}
+
+.user-list-entry:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.user-list-entry.has-card-0 {
+  list-style-type: circle;
+}
+
+#advertisements {
+  position: absolute;
+  margin-left: 290px;
+  margin-top: -555px;
+  overflow: scroll;
+  height: 559px;
+}
+
+#save-ads {
+  position: absolute;
+  margin-left: 365px;
+  margin-top: -597px;
+}
+
+#new-advertisement {
+  position: absolute;
+  margin-top: -595px;
+  margin-left: 312px;
+}
+
+.advertisement-entry {
+  border-style: solid;
+  border-color: transparent;
+}
+
+  .advertisement-entry.selected {
+    border-color: black;
+  }
+
+  .advertisement-entry:hover {
+    border-color: black;
+    cursor: pointer;
+  }
+
+#news-admin {
+  position: absolute;
+  margin-top: -553px;
+  margin-left: 300px;
+  overflow: scroll;
+  height: 550px;
+}
+
+#newsfeeds p .text-box {
+  width: 315px;
+}
+
+.advertisement-edit-image {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+#login-error .validation-summary-errors {
+  position: absolute;
+  margin-top: 270px;
+  margin-left: 3px;
+}
+
+#news-admin .validation-summary-errors {
+  position: absolute;
+  margin-top: -321px;
+  margin-left: 46px;
+}
+
+#ads-admin .validation-summary-errors {
+  position: absolute;
+  margin-top: -605px;
+  margin-left: 460px;
+}
+
+#passwordchange-error {
+  position: absolute;
+  margin-top: 350px;
+}
+
+#new-newsfeed {
+  position: absolute;
+  margin-top: -600px;
+  margin-left: 299px;
+}
+
+#edit-user-links {
+  position: absolute;
+  margin-top: -580px;
+  margin-left: 600px;
+  z-index: 1;
+}
+
+  #edit-user-links > #reset-password {
+    display: none;
+  }
+
+#delete-user {
+  display: none;
+}
+
+#delete-cards {
+  display: none;
+}
+
+#delete-links {
+  position: absolute;
+  margin: -254px 0px 0px 685px;
+  z-index: 1;
+}
+
+.booking-series-entry {
+  border-style: solid;
+  border-width: 1px;
+}
+
+#contact-success {
+  color: green;
+}
+
+/*bookingSeries*/
+#bookin-series {
+  -webkit-padding-start: 0px;
+  list-style: none;
+}
+
+/*Ranked Webiste*/
+
+#ranking-list-wrap {
+  position: absolute;
+  margin-left: 530px;
+  margin-top: -40px;
+}
+
+  #ranking-list-wrap.challenge-player #rankning-list {
+    position: absolute;
+    list-style: none;
+    overflow: auto;
+    height: 300px;
+    margin-top: 40px;
+    width: 605px;
+    margin-left: -175px;
+  }
+
+    #ranking-list-wrap.challenge-player #rankning-list li {
+      float: left;
+      display: inline;
+      width: 33.333%;
+    }
+
+.hasGame-true {
+  color: red;
+}
+
+#ranking-list-wrap.enter-result {
+  position: absolute;
+  list-style: none;
+  overflow: hidden;
+  height: 400px;
+  margin-left: 665px;
+  margin-top: -17px;
+}
+
+  #ranking-list-wrap.enter-result #rankning-list {
+    list-style: none;
+  }
+
+#rankning-list {
+  position: relative;
+  list-style: none;
+  list-style-position: inside;
+  -webkit-padding-start: 0px;
+  overflow: scroll;
+  height: 550px;
+  width: 250px;
+}
+
+#ranking-list-wrap.enter-result #rankning-list li:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+#close-ranked {
+  display: none;
+  margin-top: 510px;
+  height: 30px;
+  width: 100px;
+  border: solid;
+}
+
+  #close-ranked p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-top: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+  }
+
+#back-ranked {
+  margin-top: 510px;
+  height: 30px;
+  width: 100px;
+  border: solid;
+}
+
+  #back-ranked p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-top: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+  }
+
+  #back-ranked.chall-player {
+    /*margin-top: 25px;*/
+  }
+
+#current-ranking {
+  position: absolute;
+  margin-left: 530px;
+  margin-top: -75px;
+}
+
+.ranked-button {
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  border: solid;
+  margin-top: 25px;
+}
+
+  .ranked-button p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-top: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+  }
+
+#list-title-chall {
+  position: absolute;
+  margin-left: 354px;
+  margin-top: -22px;
+}
+
+#steps {
+  position: absolute;
+  margin-left: 355px;
+  margin-top: 285px;
+}
+
+  #steps p {
+    margin-bottom: -10px;
+  }
+
+#rank-edit {
+  position: absolute;
+  margin-left: 365px;
+  margin-top: -17px;
+}
+
+  #rank-edit .rank-input {
+    width: 30px;
+  }
+
+  #rank-edit #new-rank {
+    position: absolute;
+    margin-top: 5px;
+    display: none;
+  }
+
+  #rank-edit #former-rank {
+    display: none;
+  }
+
+  #rank-edit #new-rank-input {
+    margin-left: 26px;
+  }
+
+  #rank-edit #former-rank-input {
+    margin-left: 5px;
+  }
+
+  #rank-edit #rank-link {
+    margin-top: 45px;
+    display: none;
+  }
+
+#rules-wrap {
+  margin-top: -20px;
+  margin-left: 350px;
+  position: absolute;
+  height: 500px;
+  overflow: auto;
+}
+
+#rules-title {
+  position: absolute;
+  margin-left: 350px;
+  margin-top: -72px;
+}
+
+
+#ranked-game-options {
+  position: absolute;
+  margin-top: -20px;
+}
+
+/*User Ads*/
+
+#open-add-ad input {
+  height: 37px;
+  width: 25px;
+}
+
+#titel-ads {
+  position: absolute;
+  margin-left: 38%;
+  margin-top: -5%;
+}
+
+#ad-title-input {
+  min-height: 15px;
+  height: 20px !important;
+  margin-left: 1.5%;
+  margin-top: 5%;
+}
+
+#create-ad {
+  background-image: url(images/post-it-300ky-r.png);
+  background-repeat: no-repeat;
+  height: 265px;
+  margin-left: 3%;
+  margin-top: -6.5%;
+}
+
+  #create-ad.hidden {
+    display: none;
+  }
+
+  #create-ad textarea {
+    background-color: transparent;
+    border: none;
+    resize: none;
+  }
+
+#create-ad-text {
+  position: absolute;
+  margin-left: 1.5%;
+}
+
+/*#create-ad-text.looking-for-player {
+  margin-top: 5%;
+}*/
+
+#ad-price-input {
+  min-height: 15px;
+  height: 20px !important;
+  margin-left: 1.5%;
+  margin-top: 15%;
+}
+
+#add-ad-button {
+  position: absolute;
+  margin-top: 2%;
+}
+
+  #add-ad-button.looking-for-player {
+    margin-top: 18%;
+  }
+
+#ads-wrapper {
+  margin-top: 35px;
+  height: 320px;
+  overflow: auto;
+}
+
+  #ads-wrapper.collapsed {
+    height: 520px;
+  }
+
+#ad-text-input {
+  height: 125px;
+  width: 200px;
+  overflow: auto;
+  vertical-align: top;
+}
+
+.ad {
+  background-image: url(images/post-it-300ky-r.png);
+  background-repeat: no-repeat;
+  width: 253px;
+  height: 264px;
+  margin-top: 25px;
+  overflow: auto;
+}
+
+  .ad > div {
+    width: 195px;
+  }
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: black;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: black;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: black;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: black;
+}
+
+.ad .ad-text {
+  margin-left: 10%;
+  height: 130px;
+  overflow: auto;
+}
+
+.ad .owner {
+  margin-left: 10%;
+}
+
+.ad .delete {
+  margin-left: 230px;
+  margin-top: 16px;
+  background-image: url("images/x-icon.png");
+  width: 23px;
+  height: 23px;
+}
+
+.ad .spacer {
+  margin-top: 16px;
+}
+
+/*Look for Player*/
+
+#ad-filters {
+  position: absolute;
+  margin-left: 38%;
+  width: 255px;
+}
+
+#filter-age {
+  margin-left: 1.25%;
+}
+
+#age-input-min {
+  width: 25px;
+}
+
+#age-input-max {
+  width: 25px;
+}
+
+/*End Look for Player*/
+
+/*Infoboard Calendar*/
+
+#back-calendar {
+  position: absolute;
+  width: 120px;
+  height: 45px;
+  margin: 7px 0px 0px 491px;
+  border: solid 1px #e8eef4;
+  display: none;
+}
+
+  #back-calendar p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px;
+  }
+
+#calendar.infoboard {
+  position: absolute;
+  margin-top: 53px;
+  margin-left: 490px;
+  width: 440px;
+  overflow: auto;
+}
+
+  #calendar.infoboard .fc-day-number {
+    display: none;
+  }
+
+  #calendar.infoboard .fc-header {
+    display: none;
+  }
+
+  #calendar.infoboard .fc-week5 {
+    display: none;
+  }
+
+  #calendar.infoboard .fc-week4 > td > div {
+    max-height: 64px;
+  }
+
+  #calendar.infoboard .fc-week3 > td > div {
+    max-height: 64px;
+  }
+
+  #calendar.infoboard .fc-week2 > td > div {
+    max-height: 64px;
+  }
+
+  #calendar.infoboard .fc-week1 > td > div {
+    max-height: 64px;
+  }
+
+  #calendar.infoboard .fc-week0 > td > div {
+    max-height: 64px;
+  }
+
+.week0-wrapper {
+  position: absolute;
+  height: 86px;
+  width: 440px;
+  overflow-y: hidden;
+}
+
+.week1-wrapper {
+  position: absolute;
+  height: 151px;
+  width: 440px;
+  overflow-y: hidden;
+}
+
+.week2-wrapper {
+  position: absolute;
+  height: 216px;
+  width: 440px;
+  overflow-y: hidden;
+}
+
+.week3-wrapper {
+  position: absolute;
+  height: 282px;
+  width: 440px;
+  overflow-y: hidden;
+}
+
+.week4-wrapper {
+  position: absolute;
+  height: 348px;
+  width: 440px;
+  overflow-y: hidden;
+}
+
+#courts-inf {
+  position: absolute;
+  margin-left: 410px;
+  margin-top: 73px;
+}
+
+  #courts-inf .court-div {
+    width: 79px;
+    height: 64px;
+    /*padding: 5px;*/
+    border: solid 1px #e8eef4;
+    border-bottom-style: none;
+  }
+
+#title-days {
+  position: absolute;
+  margin-top: -57px;
+  margin-left: 624px;
+}
+
+/*Ende Infoboard Kalender*/
+
+/*Turnier Admin*/
+
+#challenge-player-mask {
+  margin-left: 380px;
+}
+
+#admin.chall-player {
+  position: absolute;
+  margin-top: 490px;
+  margin-left: 125px;
+  height: 30px;
+  width: 100px;
+  border: solid;
+}
+
+  #admin.chall-player p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-top: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+  }
+
+#challenge-start {
+  position: absolute;
+  margin-top: 8%;
+}
+
+  #challenge-start p input {
+    width: 100px;
+  }
+
+#challenge-date {
+  position: absolute;
+  margin-top: 4%;
+}
+
+#challenge-date-pick {
+  width: 100px;
+  margin-left: 68px;
+}
+
+#challenge-challenger {
+  position: absolute;
+  margin-top: 13.5%;
+}
+
+#challenge-defender {
+  position: absolute;
+  margin-top: 17.5%;
+}
+
+#challenge-court {
+  position: absolute;
+}
+
+#send-game {
+  position: absolute;
+  margin-top: 22%;
+  margin-left: 38%;
+}
+
+  #send-game p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    margin-top: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+  }
+
+#select-challenger {
+  margin-left: 55px;
+}
+
+#select-defender {
+  margin-left: 33px;
+  width: 227px;
+}
+
+#challenge-defender {
+  display: none;
+}
+
+#select-court {
+  margin-left: 80px;
+}
+
+#challenge-start input {
+  margin-left: 58px;
+}
+
+/*Ende Turnier Admin*/
+
+/*Beginn RankedGmaes Admin*/
+
+#ranked-games-list {
+  margin-left: 380px;
+  position: absolute;
+  height: 464px;
+  width: 500px;
+  overflow: auto;
+}
+
+.rGame {
+  border: solid 1px;
+  margin-top: 5px;
+  width: 475px;
+}
+
+.game-date input {
+  width: 50px;
+}
+
+.game-start input {
+  width: 50px;
+}
+
+.game-end input {
+  width: 50px;
+}
+
+.game-court input {
+  width: 75px;
+}
+
+.game-rank input {
+  width: 50px;
+}
+
+.select-winner {
+  margin-top: 1.5%;
+  padding-left: 5px;
+}
+
+.enter-game-1 {
+  padding-left: 5px;
+}
+
+.enter-game-2 {
+  padding-left: 5px;
+}
+
+.enter-game-3 {
+  padding-left: 5px;
+}
+
+.game1-score1 {
+  margin-left: 6%;
+}
+
+.game2-score1 {
+  margin-left: 6%;
+}
+
+.game3-score1 {
+  margin-left: 1%;
+}
+
+/*Ende RankedGames Admin*/
+
+/*Beginn Ranked Game Admin*/
+
+.score-field {
+  width: 50px !important;
+}
+
+/*Ende Ranked Games Admin*/
+
+/*Beginn Display Played Games*/
+
+.player2 {
+  position: absolute;
+  margin-top: -6.7%;
+  margin-left: 25%;
+}
+
+.player1 {
+  padding-left: 5px;
+}
+
+.game-1score1 input {
+  margin-left: 11%;
+}
+
+.game-2score1 input {
+  margin-left: 90%;
+}
+
+.game-1score2 input {
+  margin-left: 11%;
+}
+
+.game-2score2 input {
+  margin-left: 90%;
+}
+
+.game-1score3 input {
+  margin-left: 6%;
+}
+
+.game-2score3 input {
+  margin-left: 46%;
+}
+
+.game-winner {
+  padding-left: 5px;
+}
+
+.winner-input {
+  margin-left: 5.5%;
+}
+
+.game-2score3 {
+  margin-left: 30%;
+}
+
+.contested-rank {
+  padding-left: 5px;
+  padding-bottom: 2.5%;
+}
+
+.game-players {
+  padding-left: 5px;
+}
+
+/*Ende Display Played Games*/
+
+/*Beginn RankedGames*/
+
+.future-game > div {
+  padding-left: 5px;
+}
+
+.game-rank input {
+  margin-left: 5%;
+}
+
+.game-court input {
+  margin-left: 22.5%;
+}
+
+.game-end input {
+  margin-left: 22.5%;
+}
+
+.game-start input {
+  margin-left: 23.25%;
+}
+
+.game-date input {
+  margin-left: 20%;
+}
+
+.game-def input {
+  margin-left: 12.5%;
+}
+
+.game-chall input {
+  margin-left: 17%;
+}
+
+/*Ende RankedGames*/
+
+/*IPA Relevant Beginn*/
+
+/*Tournament Managment Beginn*/
+
+#ladder-container {
+  display: none;
+  width: 30%;
+  margin-left: 55%;
+  margin-top: 4%;
+  overflow: auto;
+  border: solid 1px;
+}
+
+  #ladder-container > div {
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+  }
+
+#close-ladder {
+  width: 22%;
+}
+
+#tournament-options {
+  position: absolute;
+}
+
+#tournament-container {
+  height: 545px;
+  width: 450px;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 2%;
+  overflow: auto;
+}
+
+#clubtournament-container {
+  height: 545px;
+  width: 450px;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 2%;
+  overflow: auto;
+}
+
+.tournament-display {
+  position: initial;
+  margin-bottom: 2.5%;
+  width: 90%;
+  height: 58%;
+  border: solid 1px;
+}
+
+  .tournament-display.no-buttons {
+    height: 46%;
+  }
+
+  .tournament-display.old {
+    height: 49%;
+  }
+
+.tournament-label {
+  margin-top: 7%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+
+.tournament-button {
+  width: 40%;
+  height: 20%;
+  margin-left: 5%;
+  margin-top: 1.5%;
+}
+
+.tournament-input {
+  float: right;
+  margin-right: 11%;
+  margin-top: -4%;
+  width: 27%;
+}
+
+.description-tourn {
+  position: absolute;
+  margin-top: -6%;
+  margin-left: 47%;
+}
+
+/*Tournament Managment End*/
+
+/*IPA Relevant End*/
+
+/*Clubtournament Website Start*/
+
+#display-default {
+  display: none;
+}
+
+.tourn-expand {
+  position: absolute;
+  padding-top: 10px;
+  z-index: 1000;
+}
+
+.clubtourn-name {
+  position: absolute;
+  padding-top: 10px;
+}
+
+.clubtourn-close {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.clubtourn-link {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.delete-club-tourn {
+  padding-left: 8px;
+}
+
+.upload-pdf {
+  position: absolute;
+  margin-left: 127px;
+  margin-top: -5.8%;
+}
+
+.clubtourn-link input {
+  width: 180px;
+}
+
+.clubtourn-date {
+  padding-left: 10px;
+  padding-top: 40px;
+}
+
+.clubtourn-display.display-closed{
+  border: solid 1px;
+  height: 50px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.clubtourn-display.display-open{
+  border: solid 1px;
+  height: 255px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.name-label {
+  margin-top: -10px;
+  margin-left: 30px;
+}
+
+.clubtourn-comment {
+  padding-left: 10px;
+}
+
+.display-closed .clubtourn-close {
+  display: none;
+}
+
+.display-closed .clubtourn-link {
+  display: none;
+}
+
+.display-closed .delete-club-tourn {
+  display: none;
+}
+
+.display-closed .clubtourn-date {
+  display: none;
+}
+
+.display-closed .upload-pdf {
+  display: none;
+}
+
+.display-closed .clubtourn-comment {
+  display: none;
+}
+
+.display-open .clubtourn-comment {
+  display: block;
+}
+
+.display-open .clubtourn-date {
+  display: block;
+}
+
+.display-open .upload-pdf {
+  display: block;
+}
+
+
+.display-open .clubtourn-close {
+  display: block;
+}
+
+.display-open .clubtourn-link {
+  display: block;
+}
+
+.display-open .delete-club-tourn {
+  display: block;
+}
+
+/*Clubtournament Website End*/

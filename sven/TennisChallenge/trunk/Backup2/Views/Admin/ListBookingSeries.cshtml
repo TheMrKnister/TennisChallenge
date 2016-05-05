@@ -1,0 +1,15 @@
+﻿@model IEnumerable<TennisWeb.Models.BookingSeriesSimple>
+@{
+  ViewBag.Title = "Buchungsserien";
+}
+
+<h2>Buchungsserien</h2>
+
+@if (Model.Any())
+{
+  @Html.DisplayForModel()
+}
+else
+{
+  <p>Keine Buchungsserien</p>
+}

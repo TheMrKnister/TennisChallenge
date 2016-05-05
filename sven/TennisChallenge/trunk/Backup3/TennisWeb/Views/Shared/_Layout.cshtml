@@ -1,0 +1,84 @@
+﻿@using TennisWeb.Utils
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>@ViewBag.Title</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Glegoo|Asap' rel='stylesheet' type='text/css' />
+  @RenderSection("Header", required: false)
+
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+</head>
+@{
+  var indexActive = (ViewBag.NavTopCat == NavigationTopCat.Index) ? "active" : "";
+  var infoboardActive = (ViewBag.NavTopCat == NavigationTopCat.Infoboard) ? "active" : "";
+  var profileActive = (ViewBag.NavTopCat == NavigationTopCat.Profile) ? "active" : "";
+  var adminActive = (ViewBag.NavTopCat == NavigationTopCat.Admin) ? "active" : "";
+  var tournActive = (ViewBag.NavTopCat == NavigationTopCat.Tournament) ? "active" : "";
+  var lookingForPlayerActive = (ViewBag.NavTopCat == NavigationTopCat.LookinngForPlayer) ? "active" : "";
+  var tennisMarketActive = (ViewBag.NavTopCat == NavigationTopCat.TennisMarket) ? "active" : "";
+}
+
+
+<body>
+  <div id="background-image">
+    <img src="@Url.Content("~/Content/images/background/tennis_0002_2560.jpg")" alt="" />
+  </div>
+  <div id="wrapper">
+    <div id="header">
+      <div class="inside">
+        <div id="menucontainer">
+          <ul id="menu">
+            @if (User.Identity.IsAuthenticated)
+            {
+              if (User.IsInRoles(RoleNames.AllRoles))
+              {
+              <li class="hilfe @adminActive">@Html.ActionLink("Administration", "Index", "Admin")</li>
+              }
+              <li class="hilfe @infoboardActive">@Html.ActionLink("Reservation", "Infoboard", "Home")</li>
+              <li class="hilfe @lookingForPlayerActive">@Html.ActionLink("Spieler suchen", "LookingForPlayer", "UserAds")</li>
+              <li class="hilfe @tennisMarketActive">@Html.ActionLink("Tennisbörse", "TennisMarket", "UserAds")</li>
+              <li class="hilfe @tournActive">@Html.ActionLink("Turnier", "TournamentStart", "Tournament")</li>
+              <li class="@profileActive hilfe">@Html.ActionLink("Profil", "UserProfile", "Home")
+                @Html.ActionLink("(Abmelden)", "LogOff", "Account", null, new { @class = "navlogoff" })</li>
+            }
+            else
+            {
+              <li class="@indexActive indexpage">@Html.ActionLink("Startseite", "Index", "Home")</li>
+              <li class="@profileActive hilfe">@Html.ActionLink("Login/Registrieren", "LogOn", "Account")</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="main">
+        <div class="inside">
+          <noscript>
+            <div class="warning">
+              Diese Webseite benötigt JavaScript. Bitte verwenden Sie einen JavaScript fähigen Browser
+                 und aktivieren Sie JavaScript.
+            </div>
+          </noscript>
+          @RenderBody()
+        </div>
+      </div>
+      <div id="footer">
+        <div class="inside">
+          <span class="copyright">© @DateTime.Now.Year.ToString() Inspectron AG. @Html.ActionLink("Impressum", "Imprint", "Home")</span><span class="kontakt-faq">@Html.ActionLink("Kontakt", "Contact", "Home") | @Html.ActionLink("FAQ", "Faq", "Home")</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="clear">
+  </div>
+
+  @Scripts.Render("~/bundles/jquery")
+  <!-- [if lt IE 9]>@Scripts.Render("bundles/pie")<![endif] -->
+  @RenderSection("scripts", required: false)
+</body>
+</html>

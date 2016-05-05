@@ -1,0 +1,28 @@
+﻿@*IPA Relevant Beginn*@
+<div id="tournament-options">
+  <div id="tour-old" class="ranked-button">
+    @*<a href="@Url.Action("ClubTournOld", "ClubTourn")">*@
+      <p>Abgeschlossene Turnier</p>
+    @*</a>*@
+  </div>
+  <div id="tour-new" class="ranked-button">
+    @*<a href="@Url.Action("ClubTournNew", "ClubTourn")">*@
+      <p>Offene Turniere</p>
+    @*</a>*@
+  </div>
+ @* checks if User has the role CasualTournamentOrganizer, Function not writen during IPA*@
+  @if (User.IsInRoles(RoleNames.CasualTournamentOrganizer))
+  {
+    <div id="tour-management" class="ranked-button">
+      <a href="@Url.Action("ClubTournManage", "ClubTourn")">
+        <p>Verwalten</p>
+      </a>
+    </div>
+  }
+  <div id="back" class="ranked-button">
+    <a href="@Url.Action("ClubTournStart", "ClubTourn")">
+      <p>Zurück</p>
+    </a>
+  </div>
+</div>
+@*IPA Relevant End*@

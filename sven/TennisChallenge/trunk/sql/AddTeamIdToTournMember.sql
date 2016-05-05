@@ -1,0 +1,4 @@
+USE TennisChallenge
+
+ALTER TABLE TournamentMember
+ADD TeamId UNIQUEIDENTIFIER DEFAULT NULL

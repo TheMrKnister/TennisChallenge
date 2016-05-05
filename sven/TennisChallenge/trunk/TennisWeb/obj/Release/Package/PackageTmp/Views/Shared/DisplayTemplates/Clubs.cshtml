@@ -1,0 +1,7 @@
+﻿@model IEnumerable<TennisChallenge.Dal.Club>
+<ul class="plain-list">
+  @foreach (var c in Model)
+  {
+    <li>@Html.DisplayFor(_ => c.Name)</li>
+  }
+</ul>

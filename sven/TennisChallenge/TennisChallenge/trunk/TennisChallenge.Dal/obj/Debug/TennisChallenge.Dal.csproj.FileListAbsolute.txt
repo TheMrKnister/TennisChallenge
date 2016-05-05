@@ -1,0 +1,8 @@
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.dll.config
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\bin\Debug\TennisChallenge.Dal.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\bin\Debug\EntityFramework.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\bin\Debug\EntityFramework.xml
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.dll
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.pdb
+D:\projects\tennischallenge\sven\TennisChallenge\TennisChallenge\trunk\TennisChallenge.Dal\obj\Debug\TennisChallenge.Dal.csprojResolveAssemblyReference.cache

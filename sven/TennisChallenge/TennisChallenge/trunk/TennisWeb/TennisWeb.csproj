@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F50A9912-A372-4D27-A30C-A592F116532E}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TennisWeb</RootNamespace>
+    <AssemblyName>TennisWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CaptchaLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcCaptchaLib.1.3.0.3\lib\CaptchaLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter, Version=2.3.3.0, Culture=neutral, PublicKeyToken=c7694541b0ac80e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\valueinjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="WebGrease, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ClubManagementController.cs" />
+    <Compile Include="Controllers\ClubTournController.cs" />
+    <Compile Include="Controllers\FileImportController.cs" />
+    <Compile Include="Controllers\FileUploadController.cs" />
+    <Compile Include="Controllers\ResourcesController.cs" />
+    <Compile Include="Controllers\TestApiController.cs" />
+    <Compile Include="Controllers\TournamentController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InfoBoardController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\PictureCleanupController.cs" />
+    <Compile Include="Controllers\UserAdsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AdminModels.cs" />
+    <Compile Include="Models\BookingMemberModel.cs" />
+    <Compile Include="Models\BookingModels.cs" />
+    <Compile Include="Models\ClubManagementModel.cs" />
+    <Compile Include="Models\CourtVm.cs" />
+    <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\RankedModels.cs" />
+    <Compile Include="Models\ContactFormModel.cs" />
+    <Compile Include="Models\UserAdModel.cs" />
+    <Compile Include="Models\InfoBoardModels.cs" />
+    <Compile Include="Models\MemberModel.cs" />
+    <Compile Include="Models\TournamentModel.cs" />
+    <Compile Include="Models\PasswordResetModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Content Include="advertisement_images\004b6ddf-c541-47de-9bc9-8606b118533c.png" />
+    <Content Include="advertisement_images\061730d5-e904-4dda-a7b2-0f346795f8da.jpg" />
+    <Content Include="advertisement_images\098ccd54-2c5b-4803-98cf-cc31c709d564.jpg" />
+    <Content Include="advertisement_images\0d0cef6d-3889-495d-95de-19df027a72c1.jpg" />
+    <Content Include="advertisement_images\0e144cc1-9bd3-4b92-b4c7-7df8829bc77a.png" />
+    <Content Include="advertisement_images\1356f7b3-99d5-4be0-84ea-f0eb96f4e882.jpg" />
+    <Content Include="advertisement_images\20c0e487-bd22-4be5-8523-8c01fe5902d9.jpg" />
+    <Content Include="advertisement_images\2a41f27d-6320-4edd-9d3d-045886c87dbf.jpg" />
+    <Content Include="advertisement_images\3a24926d-a42f-4317-ba9b-2ef6811e837d.jpg" />
+    <Content Include="advertisement_images\3cc7c088-a520-4e6c-997c-ef06807042c0.jpg" />
+    <Content Include="advertisement_images\3fd2055e-afd4-4c57-bb50-459c8764eb80.png" />
+    <Content Include="advertisement_images\429b7c9e-5afd-456a-abe1-3e41c4aae9f1.jpg" />
+    <Content Include="advertisement_images\5b55a743-e661-424d-8387-e67896b531da.jpg" />
+    <Content Include="advertisement_images\5cb8a0f4-ae9a-49f8-9cb1-5995a0cc2549.png" />
+    <Content Include="advertisement_images\69e03fce-5889-41f8-8644-9d409498b61b.jpg" />
+    <Content Include="advertisement_images\75c2d7d8-842f-43f6-910b-5472131a3c61.jpg" />
+    <Content Include="advertisement_images\83608e71-d510-46c0-943c-82f819502e16.jpg" />
+    <Content Include="advertisement_images\8c2ef68a-efbe-4417-8d84-d7cd913eb3d1.png" />
+    <Content Include="advertisement_images\93c3dddf-6770-4f69-bb04-5792c9f275df.jpg" />
+    <Content Include="advertisement_images\98f39c98-cf13-4eb3-9281-a3fd7b491a5a.jpg" />
+    <Content Include="advertisement_images\afafcc27-9f59-4514-9e19-ed820073eaea.png" />
+    <Content Include="advertisement_images\b1ee23f9-5fc9-456e-bf52-e35022b8bfe9.jpg" />
+    <Content Include="advertisement_images\bd9e2d5b-ed7d-4fec-91bd-c90239e5dfe8.jpg" />
+    <Content Include="advertisement_images\c9e09f08-7ac4-49d0-b98c-ea75a97ed0c7.jpg" />
+    <Content Include="advertisement_images\cad14777-60b1-4f88-9776-ed8e5850658a.jpg" />
+    <Content Include="advertisement_images\cb8762ae-f620-45ad-92f0-c6e5a29e6564.jpg" />
+    <Content Include="advertisement_images\cf0cd184-df9e-46cf-9880-aac0608f035b.jpg" />
+    <Content Include="advertisement_images\cfade451-19cc-411e-81a5-20c1bb4ff7bf.jpg" />
+    <Content Include="advertisement_images\d1ebcedb-20b5-478f-95ec-49c2381cd272.jpg" />
+    <Content Include="advertisement_images\d34956a3-948b-4a78-8969-97a46435ea16.jpg" />
+    <Content Include="advertisement_images\d7e5779b-bb3e-46a0-90d7-f1336bc86476.jpg" />
+    <Content Include="Content\images\adminEdit.png" />
+    <Content Include="Content\images\Arrows-Left-icon.png" />
+    <Content Include="Content\images\arrow_sans_up-128.png" />
+    <Content Include="Content\images\Benutzer_1.png" />
+    <Content Include="Content\images\closed-leg.png" />
+    <Content Include="Content\images\Eventmanager7.png" />
+    <Content Include="Content\images\Interclubleiter6.png" />
+    <Content Include="Content\images\News9.png" />
+    <Content Include="Content\images\Platzwart2.png" />
+    <Content Include="Content\images\post-it-300k.png" />
+    <Content Include="Content\images\post-it-300ky-r.png" />
+    <Content Include="Content\images\post-it-300ky.png" />
+    <Content Include="Content\images\spacer.gif" />
+    <Content Include="Content\images\Tenniscoach3.png" />
+    <Content Include="Content\images\Turnierleiter5.png" />
+    <Content Include="Content\images\Werbung8.png" />
+    <Content Include="Content\images\Wirt6.png" />
+    <Content Include="Content\images\x-icon.png" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\clubtourn-website.js" />
+    <Content Include="Scripts\Interclub.js" />
+    <Content Include="Scripts\challenge-player.js" />
+    <Content Include="Scripts\enter-result.js" />
+    <Content Include="Scripts\challenge-admin.js" />
+    <Content Include="Scripts\infoboard-tournament.js" />
+    <Content Include="Scripts\infoboard-gameplan.js" />
+    <Content Include="Scripts\assign-player.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\TennisChallenge\Clock.js" />
+    <Content Include="Scripts\TennisChallenge\Error.js" />
+    <Content Include="Scripts\TennisChallenge\Model.js" />
+    <Content Include="Scripts\TennisChallenge\UI.js" />
+    <Content Include="Scripts\TennisChallenge\Utils.js" />
+    <Content Include="Scripts\tournament-begin.js" />
+    <Content Include="Scripts\player-filter.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
+    <Content Include="Scripts\view-ranked-games.js" />
+    <Content Include="Scripts\ranked-game-admin.js" />
+    <Content Include="Scripts\ranked-games-list.js" />
+    <Content Include="Scripts\user-ads.js" />
+    <Content Include="Scripts\ranked-rules.js" />
+    <Content Include="Scripts\ranked-members.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\Standby.js" />
+    <Content Include="Scripts\CourtLocking.js" />
+    <Compile Include="Services\CsvFileReadService.cs" />
+    <Compile Include="Services\CsvMemberParser.cs" />
+    <Compile Include="Services\Member\MemberService.cs" />
+    <Compile Include="Utils\AdminNavigationCat.cs" />
+    <Compile Include="Utils\BookingSeriesUtils.cs" />
+    <Compile Include="Utils\CustomValueInjections.cs" />
+    <Compile Include="Utils\FilterFunctions.cs" />
+    <Compile Include="Utils\ManifestResult.cs" />
+    <Compile Include="Utils\SelectListUtils.cs" />
+    <Compile Include="WebApi\StandbyController.cs" />
+    <Compile Include="WebApi\CourtLockingController.cs" />
+    <Compile Include="WebApi\UserController.cs" />
+    <Compile Include="WebApi\EventFeedController.cs" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\fullcalendar.print.css" />
+    <Content Include="Content\images\arrow_website_reservation.png" />
+    <Content Include="Content\images\gesperrt-platz_klein.png" />
+    <Content Include="Content\images\mitspielen.png" />
+    <Content Include="Content\images\event_manager.png" />
+    <Content Include="Content\images\gesperrt-platz_klein.png" />
+    <Content Include="Content\images\advertisement.png" />
+    <Content Include="Content\images\host.png" />
+    <Content Include="Content\images\interclub_organizer.png" />
+    <Content Include="Content\images\janitor.png" />
+    <Content Include="Content\images\topicalities.png" />
+    <Content Include="Content\images\tournament_organizer.png" />
+    <Content Include="Content\PIE.htc" />
+    <Content Include="Content\themes\base\jquery-ui-timepicker-addon.css" />
+    <Content Include="schedule.vbs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\EditAdvertisements.js" />
+    <Content Include="Scripts\EditNewsFeeds.js" />
+    <Content Include="Scripts\fullcalendar.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
+    <Content Include="Scripts\FullcalendarHookup.js" />
+    <Content Include="Scripts\gcal.js" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.1.min.js" />
+    <Content Include="Scripts\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\localization\messages_ar.js" />
+    <Content Include="Scripts\localization\messages_bg.js" />
+    <Content Include="Scripts\localization\messages_ca.js" />
+    <Content Include="Scripts\localization\messages_cs.js" />
+    <Content Include="Scripts\localization\messages_da.js" />
+    <Content Include="Scripts\localization\messages_de.js" />
+    <Content Include="Scripts\localization\messages_el.js" />
+    <Content Include="Scripts\localization\messages_es.js" />
+    <Content Include="Scripts\localization\messages_et.js" />
+    <Content Include="Scripts\localization\messages_eu.js" />
+    <Content Include="Scripts\localization\messages_fa.js" />
+    <Content Include="Scripts\localization\messages_fi.js" />
+    <Content Include="Scripts\localization\messages_fr.js" />
+    <Content Include="Scripts\localization\messages_he.js" />
+    <Content Include="Scripts\localization\messages_hr.js" />
+    <Content Include="Scripts\localization\messages_hu.js" />
+    <Content Include="Scripts\localization\messages_it.js" />
+    <Content Include="Scripts\localization\messages_ja.js" />
+    <Content Include="Scripts\localization\messages_ka.js" />
+    <Content Include="Scripts\localization\messages_kk.js" />
+    <Content Include="Scripts\localization\messages_lt.js" />
+    <Content Include="Scripts\localization\messages_lv.js" />
+    <Content Include="Scripts\localization\messages_my.js" />
+    <Content Include="Scripts\localization\messages_nl.js" />
+    <Content Include="Scripts\localization\messages_no.js" />
+    <Content Include="Scripts\localization\messages_pl.js" />
+    <Content Include="Scripts\localization\messages_pt_BR.js" />
+    <Content Include="Scripts\localization\messages_pt_PT.js" />
+    <Content Include="Scripts\localization\messages_ro.js" />
+    <Content Include="Scripts\localization\messages_ru.js" />
+    <Content Include="Scripts\localization\messages_si.js" />
+    <Content Include="Scripts\localization\messages_sk.js" />
+    <Content Include="Scripts\localization\messages_sl.js" />
+    <Content Include="Scripts\localization\messages_sr.js" />
+    <Content Include="Scripts\localization\messages_sv.js" />
+    <Content Include="Scripts\localization\messages_th.js" />
+    <Content Include="Scripts\localization\messages_tr.js" />
+    <Content Include="Scripts\localization\messages_uk.js" />
+    <Content Include="Scripts\localization\messages_vi.js" />
+    <Content Include="Scripts\localization\messages_zh.js" />
+    <Content Include="Scripts\localization\messages_zh_TW.js" />
+    <Content Include="Scripts\localization\methods_de.js" />
+    <Content Include="Scripts\localization\methods_nl.js" />
+    <Content Include="Scripts\localization\methods_pt.js" />
+    <Content Include="Scripts\PIE.js" />
+    <Content Include="Scripts\TennisChallengeUtils.js" />
+    <Compile Include="Utils\Calc.cs" />
+    <Compile Include="Utils\DateRangeAttribute.cs" />
+    <Compile Include="Utils\EmailAttribute.cs" />
+    <Compile Include="Utils\IPrincipalExtensions.cs" />
+    <Compile Include="Utils\MailHelper.cs" />
+    <Compile Include="Utils\MyAuthorizeAttribute.cs" />
+    <Compile Include="Utils\NavigationTopCat.cs" />
+    <Compile Include="Utils\Parameters.cs" />
+    <Compile Include="Utils\Picture.cs" />
+    <Compile Include="Utils\RoleNames.cs" />
+    <Compile Include="Utils\ValueInjecterExtensions.cs" />
+    <Content Include="Scripts\UserList.js" />
+    <Content Include="uplimg\03dc41f9-fdf7-44df-9829-ed8d9e3825a5.jpg" />
+    <Content Include="uplimg\04e8adc8-8db2-47da-8f09-dba7b590c1b2.jpg" />
+    <Content Include="uplimg\0d693aa2-d450-430a-864f-3e2738728eb8.png" />
+    <Content Include="uplimg\17f1e6b9-e57a-46bf-aed1-9573419bacd9.jpg" />
+    <Content Include="uplimg\1cae769c-e8a2-4d14-acd3-00c65d8a4762.jpg" />
+    <Content Include="uplimg\1f3a5c6a-e194-4d7b-9a8f-9bbbbffabcc8.jpg" />
+    <Content Include="uplimg\225a8f9a-0036-455f-af25-8e8fe13e9020.jpg" />
+    <Content Include="uplimg\24f88322-9981-4ba8-aa71-49669c62d45f.jpg" />
+    <Content Include="uplimg\2a64b3ac-b099-4667-b640-a7c79885520b.jpg" />
+    <Content Include="uplimg\2bc012ec-30ae-4996-b560-33f46b7d43bb.jpg" />
+    <Content Include="uplimg\2d26b72b-f96d-449e-91ef-587a73caf389.jpg" />
+    <Content Include="uplimg\308e52e3-3032-40c8-9547-13709d643b44.jpg" />
+    <Content Include="uplimg\332d0580-8cfb-45c2-875b-9168133cfad6.jpg" />
+    <Content Include="uplimg\336e647a-c174-450f-b209-dc044554bf12.jpg" />
+    <Content Include="uplimg\3c264be7-c39f-43da-8b6c-d795b25527e5.jpg" />
+    <Content Include="uplimg\4a5f5086-8a8a-455d-a08f-2b5e0faec05b.jpg" />
+    <Content Include="uplimg\4e033b12-574c-4311-871b-a288dbd8f468.png" />
+    <Content Include="uplimg\4eea154c-17b7-42a6-8cdc-4ed7ae0a265d.jpg" />
+    <Content Include="uplimg\51c73f0c-9bad-4157-bfe7-f1e888970b07.png" />
+    <Content Include="uplimg\532b5742-4668-409d-9509-691a645eae8d.jpg" />
+    <Content Include="uplimg\5406391b-ad6a-4cc0-a169-cb1832e9ba7c.jpg" />
+    <Content Include="uplimg\55ca9370-8da3-4370-8e55-684fc61c0551.jpg" />
+    <Content Include="uplimg\5740132b-a276-4f94-a461-1817a6e5a4d2.png" />
+    <Content Include="uplimg\59014c38-ba5f-4a5f-be6f-3b0c5d56f9f8.jpg" />
+    <Content Include="uplimg\69693415-abe6-49ed-ba3d-6706e9b04dc8.jpg" />
+    <Content Include="uplimg\6e387724-b786-4ab6-8510-9dcf8db0339a.jpg" />
+    <Content Include="uplimg\7027ca4d-a24f-4883-9b5e-78a81f8d4598.jpg" />
+    <Content Include="uplimg\71fb6647-efb1-4161-bd53-1e99c4096ea7.jpg" />
+    <Content Include="uplimg\7429585e-b1ce-45c2-bcfc-baa46999bfc5.jpg" />
+    <Content Include="uplimg\774cbbc9-a2a6-4058-82d9-a0e440e6c34e.jpg" />
+    <Content Include="uplimg\79949fed-dbf9-43c4-8210-8a773a620f80.png" />
+    <Content Include="uplimg\7d98d88e-e44f-48d9-9cd2-06e91f8bea58.jpg" />
+    <Content Include="uplimg\8283d5a2-c11f-4e1e-b2ff-1e5bb24d0c56.jpg" />
+    <Content Include="uplimg\82e5ceb9-fe8d-4a69-b517-5a2e3d990198.jpg" />
+    <Content Include="uplimg\86b4f244-a9ec-4788-9bcd-6cac0c0af158.jpg" />
+    <Content Include="uplimg\8c8d89cd-7af3-4107-a46e-b6a34495ba43.jpg" />
+    <Content Include="uplimg\911be6d8-7bf5-45be-84cd-4a2af5a32ee2.jpg" />
+    <Content Include="uplimg\930b034f-df96-43bd-b0d8-668eed05fcae.jpg" />
+    <Content Include="uplimg\99c9f84c-3f46-41a6-874c-4e4f80062910.jpg" />
+    <Content Include="uplimg\99ce32c2-c5ac-4dda-8209-3e5fc4727fdc.jpg" />
+    <Content Include="uplimg\9c73b6c1-6f6b-4e42-bb04-22415b271f85.jpg" />
+    <Content Include="uplimg\a5d0d23a-6f10-4828-9a17-226a320a02fb.jpg" />
+    <Content Include="uplimg\aa4cdeb0-63b1-4769-aaa8-9cb1d504a083.jpg" />
+    <Content Include="uplimg\b2ced588-ab0c-4da1-9035-55b6b80a82b8.jpg" />
+    <Content Include="uplimg\c0a58bde-be69-4c15-940a-2a5c6e0e9e87.jpg" />
+    <Content Include="uplimg\c6001d54-269d-41f7-8ad9-9a7b152c7d5d.jpg" />
+    <Content Include="uplimg\c990a066-cd94-4d41-95dc-4862b33ce93f.jpg" />
+    <Content Include="uplimg\ca8bf277-e1c1-4316-9e0c-2c07957e8bcb.jpg" />
+    <Content Include="uplimg\d3d20696-bdef-4110-b25e-0e3fda9a1355.png" />
+    <Content Include="uplimg\db368394-f5a3-47f7-8258-252ce5e8f79e.jpg" />
+    <Content Include="uplimg\e0c71c29-2e5a-485a-b902-bd54ef1e7f22.jpg" />
+    <Content Include="uplimg\e40c5383-0676-4ba1-8347-e9e99c98d3c2.jpg" />
+    <Content Include="uplimg\e696bd09-3948-48a2-ba0c-df0338e28f11.jpg" />
+    <Content Include="uplimg\e97f6122-62f2-448b-bddc-31cf230d4397.jpg" />
+    <Content Include="uplimg\f2dfed7d-a22c-460e-a4a4-6129975bc874.jpg" />
+    <Content Include="uplimg\f5777571-729e-4a8a-98b1-7cdceaeb709a.jpg" />
+    <Content Include="Views\Admin\_AdminMenu.cshtml" />
+    <Content Include="Views\Admin\EditCourtLockings.cshtml" />
+    <Content Include="Views\Admin\_CreateBookingSeries.cshtml" />
+    <Content Include="Views\Admin\_CreateBooking.cshtml" />
+    <Content Include="Views\Admin\CreateTournamentBooking.cshtml" />
+    <Content Include="Views\Admin\CreateInterclubBooking.cshtml" />
+    <Content Include="Views\Admin\EditAdvertisements.cshtml" />
+    <Content Include="Views\Admin\EditNewsFeeds.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\AdvertisementModel.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\NewsFeedModel.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\NewsFeedsModel.cshtml" />
+    <Content Include="Views\Admin\EditUserPassword.cshtml" />
+    <Content Include="Views\Admin\ListBookingSeries.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\BookingSeriesSimple.cshtml" />
+    <Content Include="Views\Admin\AddToRanked.cshtml" />
+    <Content Include="Views\InfoBoard\RankedStart.cshtml" />
+    <Content Include="Views\Tournament\ChallengePlayer.cshtml" />
+    <Content Include="Views\Tournament\EnterResult.cshtml" />
+    <Content Include="Views\Tournament\TournamentStart.cshtml" />
+    <Content Include="Views\Tournament\Rules.cshtml" />
+    <Content Include="Views\UserAds\TennisMarket.cshtml" />
+    <Content Include="Views\Tournament\ChallengeAdmin.cshtml" />
+    <Content Include="Views\Tournament\RankedGames.cshtml" />
+    <Content Include="Views\Tournament\RankedAdmin.cshtml" />
+    <Content Include="Views\Tournament\ViewRankedGames.cshtml" />
+    <Content Include="Views\UserAds\LookingForPlayer.cshtml" />
+    <Content Include="Views\Tournament\TournamentManagment.cshtml" />
+    <Content Include="Views\Tournament\TournamentBeginn.cshtml" />
+    <Content Include="Views\Admin\_CreateTournamentBooking.cshtml" />
+    <Content Include="Views\Shared\_TournamentMenu.cshtml" />
+    <Content Include="Views\Shared\_TournamentManageMenu.cshtml" />
+    <Content Include="Views\Tournament\TournamentOld.cshtml" />
+    <Content Include="Views\Tournament\TournamentNew.cshtml" />
+    <Content Include="Views\ClubTourn\ClubTournStart.cshtml" />
+    <Content Include="Views\Shared\_ClubTournMenu.cshtml" />
+    <Content Include="Views\ClubTourn\ClubTournOld.cshtml" />
+    <Content Include="Views\ClubTourn\ClubTournNew.cshtml" />
+    <Content Include="Views\ClubTourn\ClubTournManage.cshtml" />
+    <Content Include="uplimg\Thumbs.db" />
+    <Content Include="Views\FileUpload\Uploader.cshtml" />
+    <Content Include="Views\ClubManagement\Overview.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\background\004.png" />
+    <Content Include="Content\images\background\005.jpg" />
+    <Content Include="Content\images\background\006.jpg" />
+    <Content Include="Content\images\background\iStock_000018256273.jpg" />
+    <Content Include="Content\images\aktuelles_veranstaltungen.jpg" />
+    <Content Include="Content\images\background\tennis_0002_2560.jpg" />
+    <Content Include="Content\images\bg_button.jpg" />
+    <Content Include="Content\images\default_player_image.png" />
+    <Content Include="Content\images\double.png" />
+    <Content Include="Content\images\layout\startseite.png" />
+    <Content Include="Content\images\single.png" />
+    <Content Include="Content\images\murray.jpg" />
+    <Content Include="Content\images\nadal.jpg" />
+    <Content Include="Content\images\novak.jpg" />
+    <Content Include="Content\images\roger_debuer.png" />
+    <Content Include="Content\images\roger_federer.png" />
+    <Content Include="Content\images\tennis_court_blue.jpg" />
+    <Content Include="Content\images\tennis_court_yellow.jpg" />
+    <Content Include="Content\images\gesperrt-platz.png" />
+    <Content Include="Content\images\info_icon_blue_white.png" />
+    <Content Include="Content\images\ongoing_game.png" />
+    <Content Include="Content\images\rfid_card_icon.png" />
+    <Content Include="Content\images\tct_logo.png" />
+    <Content Include="Content\images\bg_court_caption.jpg" />
+    <Content Include="Content\images\tennisschule_platz.png" />
+    <Content Include="Content\images\tennis_court_empty.jpg" />
+    <Content Include="Content\images\bg_titlebar.jpg" />
+    <Content Include="Content\images\turnier_platz.png" />
+    <Content Include="Content\InfoBoard.css" />
+    <Content Include="Content\images\main-navigation\hilfe.png" />
+    <Content Include="Content\images\main-navigation\inactive.png" />
+    <Content Include="Content\images\main-navigation\karte.png" />
+    <Content Include="Content\images\main-navigation\startseite.png" />
+    <Content Include="Content\keyboard.css" />
+    <Content Include="Content\Jcrop.gif" />
+    <Content Include="Content\jquery.Jcrop.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\captcha.js" />
+    <Content Include="Scripts\EditorHookup.js" />
+    <Content Include="Scripts\InfoBoard.js" />
+    <Content Include="Scripts\jquery.fileupload.js" />
+    <Content Include="Scripts\jquery.iframe-transport.js" />
+    <Content Include="Scripts\jquery.Jcrop.js" />
+    <Content Include="Scripts\PictureEdit.js" />
+    <Content Include="Scripts\jquery.keyboard.js" />
+    <Content Include="Scripts\keyboard-custom-layouts.js" />
+    <Content Include="Scripts\jquery.placeholder.min.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-de-CH.js" />
+    <Content Include="Scripts\RangeDateValidator.js" />
+    <Content Include="Scripts\raphael-min.js" />
+    <Content Include="Scripts\tennis-challenge.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Start\App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_InfoBoardLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\InfoBoard\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\RegisterDate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Confirmation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Verify.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Member\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Member\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Imprint.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\LocalFolder.pubxml" />
+    <Content Include="Views\Home\Infoboard.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Faq.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Member\Edit.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\EditDate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\ImageUrl.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ImageUrl.cshtml" />
+    <Content Include="Views\Home\NoInfoboard.cshtml" />
+    <Content Include="Views\Account\Recovery.cshtml" />
+    <Content Include="Views\Account\RecoverySuccess.cshtml" />
+    <Content Include="Views\InfoBoard\Standby.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Clubs.cshtml" />
+    <Content Include="Views\Admin\CreateUser.cshtml" />
+    <Content Include="Views\Admin\DeleteUser.cshtml" />
+    <Content Include="Views\Admin\EditUser.cshtml" />
+    <Content Include="Views\Shared\_CreateOrEditMember.cshtml" />
+    <Content Include="Views\Admin\UsersInClubsList.cshtml" />
+    <Content Include="Views\Admin\CreateTeacherBooking.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TennisChallenge.Dal\TennisChallenge.Dal.csproj">
+      <Project>{e3e08ccd-5067-427b-a6ba-3c101288ac75}</Project>
+      <Name>TennisChallenge.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10736</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/TennisWeb</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

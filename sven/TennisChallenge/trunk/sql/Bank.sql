@@ -1,0 +1,8 @@
+use TennisChallenge
+
+CREATE TABLE Bank (
+TransactionId UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
+MemberFk UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Member(MemberKey),
+TransactionDate DATETIME,
+ValueAmount FLOAT,
+)

@@ -1,0 +1,89 @@
+﻿@model TennisWeb.Models.MemberModel
+
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.TitleFk)</span>
+  <span class="editor-field">
+    @Html.DropDownListFor(m => m.TitleFk, new SelectList(Model.Titles, "TitleKey", "Name"), "Bitte auswählen...")
+    @Html.ValidationMessageFor(m => m.TitleFk)
+  </span>
+</div>
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.Firstname)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.Firstname)
+    @Html.ValidationMessageFor(m => m.Firstname)
+  </span>
+  <span class="editor-label">@Html.LabelFor(m => m.Lastname)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.Lastname)
+    @Html.ValidationMessageFor(m => m.Lastname)
+  </span>
+</div>
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.Birthday)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.Birthday, "EditDate")
+    @Html.ValidationMessageFor(m => m.Birthday)
+  </span>
+  <span class="editor-label">@Html.LabelFor(m => m.Street)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.Street)
+    @Html.ValidationMessageFor(m => m.Street)
+  </span>
+</div>
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.Zip)</span>
+  <span class="editor-field">
+    @Html.TextBoxFor(m => m.Zip)
+    @Html.ValidationMessageFor(m => m.Zip)
+  </span>
+  <span class="editor-label">@Html.LabelFor(m => m.City)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.City)
+    @Html.ValidationMessageFor(m => m.City)
+  </span>
+</div>
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.PrivatePhone)</span>
+  <span class="editor-field">
+    @Html.TextBoxFor(m => m.PrivatePhone)
+    @Html.ValidationMessageFor(m => m.PrivatePhone)
+  </span>
+  <span class="editor-label">@Html.LabelFor(m => m.BusinessPhone)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.BusinessPhone)
+    @Html.ValidationMessageFor(m => m.BusinessPhone)
+  </span>
+</div>
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.MobilePhone)</span>
+  <span class="editor-field">
+    @Html.TextBoxFor(m => m.MobilePhone)
+    @Html.ValidationMessageFor(m => m.MobilePhone)
+  </span>
+</div>
+<div class="display-row">
+  <span class="editor-label">@Html.LabelFor(m => m.LicenseNumber)</span>
+  <span class="editor-field">
+    @Html.EditorFor(m => m.LicenseNumber)
+    @Html.ValidationMessageFor(m => m.LicenseNumber)
+  </span>
+  <span class="editor-label">@Html.Label("clubFks", "Klubs")</span>
+  <span class="editor-field">
+    @Html.ListBoxFor(m => m.ClubFks, new MultiSelectList(Model.AllClubs, "ClubKey", "Name", Model.ClubFks))
+  </span>
+</div>
+<div class="display-row">
+  <div class="editor-label">@Html.LabelFor(m => m.PictureUrl)</div>
+  <div class="editor-field">
+    @Html.EditorFor(m => m.PictureUrl)
+    <span id="pictureLink">
+      @Html.DisplayFor(m => m.PictureUrl)<br />
+      <button id="newPicture" type="button">Neues Bild / Bild Löschen</button>
+    </span>
+    <input type="hidden" name="crop_x" />
+    <input type="hidden" name="crop_y" />
+    <input type="hidden" name="crop_w" />
+    <input type="hidden" name="crop_h" />
+  </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@{
+  ViewBag.Title = "Interclub Turnier Start";
+  ViewBag.NavTopCat = NavigationTopCat.Tournament;
+}
+
+@section scripts{
+  @Scripts.Render("~/bundle/clubtournwebsite")
+  <script type="text/javascript">
+    GetInterclub = '@Url.Action("GetInterclubTournament", "Tournament")';
+    GetPlayers = '@Url.Action("GetTournamentPlayers", "Tournament")';
+    DeleteTournament = '@Url.Action("DeleteTournament", "Tournament")';
+    SetIntStatus = '@Url.Action("SetInterclubStatus", "Tournament")';
+    GetTournInfos = '@Url.Action("GetClubtournInfos", "Tournament")';
+    SetLink = '@Url.Action("SetUrlLink", "Tournament")';
+    SetComment = '@Url.Action("SetTournComment", "Tournament")';
+    Site = "admin";
+  </script>
+}
+
+<h2>Verwaltung Clubturniere</h2>
+
+@Html.Partial("_ClubTournMenu")
+
+@if (User.IsInRoles(RoleNames.CasualTournamentOrganizer))
+{
+  <div id="clubtournament-container">
+    <div id="display-default" class="clubtourn-display display-closed">
+      <div class="tourn-expand"><button type="button" class="tourn-close">+</button></div>
+      <div class="clubtourn-name"><label class="name-label">Kein Name</label></div>
+      <div class="clubtourn-date"><label class="date-label">xx.xx.xxxx</label></div>
+      <div class="clubtourn-close">Anmeldung geschlossen: <input type="checkbox" /></div>
+      <div class="clubtourn-link">Link: <input type="text" /></div>
+      <div class="clubtourn-comment">Kommentar: <textarea cols="25"></textarea></div>
+      <div class="delete-club-tourn"><button type="button" class="cancel-clubtourn">Turnier Absagen</button></div>      
+        <div class="upload-pdf"><button type="button" class="plan-link">Link Speichern</button></div>    
+    </div>
+  </div>
+  
+  <div id="clubtourn-member-list-container">
+    <ul id="member-list"></ul>
+  </div>
+}

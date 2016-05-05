@@ -1,0 +1,50 @@
+﻿@model TennisWeb.Models.NewsFeedModel
+
+@{
+  ViewData.TemplateInfo.HtmlFieldPrefix =
+    System.Text.RegularExpressions.Regex.Replace(ViewData.TemplateInfo.HtmlFieldPrefix, @"\[\d+\]$", "[" + Model.Id.ToString() + "]");
+}
+
+<fieldset data-newsfeed-id="@Model.Id">
+  <input type="hidden" name="NewsFeeds.Index" value="@Model.Id" />
+  @Html.HiddenFor(m => m.Id)
+  @Html.HiddenFor(m => m.ClubKey)
+  @Html.HiddenFor(m => m.Delete, new { @class = "delete" })
+
+  <legend>Newsfeed</legend>
+
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Name)
+  </div>
+  <div class="editor-field">
+    @Html.EditorFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Active)
+  </div>
+  <div class="editor-field">
+    @Html.EditorFor(m => m.Active)
+    @Html.ValidationMessageFor(m => m.Active)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Url)
+  </div>
+  <div class="editor-field">
+    @Html.EditorFor(m => m.Url)
+    @Html.ValidationMessageFor(m => m.Url)
+  </div>
+
+  <div class="editor-label">
+    @Html.LabelFor(m => m.Duration)
+  </div>
+  <div class="editor-field">
+    @Html.EditorFor(m => m.Duration)
+    @Html.ValidationMessageFor(m => m.Duration)
+  </div>
+
+  <input type="button" class="delete-newsfeed" name="delete-newsfeed" value="Löschen" data-newsfeed-id="@Model.Id" />
+
+</fieldset>

@@ -1,0 +1,1038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Diese Datei wird vom Veröffentlichungs-/Packvorgang Ihres Webprojekts verwendet. Sie können das Verhalten dieses Vorgangs anpassen,
+indem Sie diese MSBuild-Datei bearbeiten. Besuchen Sie "http://go.microsoft.com/fwlink/?LinkID=208121", um weitere Informationen zu erhalten. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Projekte\Tennis Challenge\WebPublish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/07/2014 11:50:47</publishTime>
+    </File>
+    <File Include="bin/CaptchaLib.dll">
+      <publishTime>02/07/2014 11:50:50</publishTime>
+    </File>
+    <File Include="bin/de/System.Web.Helpers.resources.dll">
+      <publishTime>07/10/2012 23:31:52</publishTime>
+    </File>
+    <File Include="bin/de/System.Web.Mvc.resources.dll">
+      <publishTime>07/10/2012 23:30:40</publishTime>
+    </File>
+    <File Include="bin/de/System.Web.Razor.resources.dll">
+      <publishTime>07/10/2012 23:31:40</publishTime>
+    </File>
+    <File Include="bin/de/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>07/10/2012 23:31:52</publishTime>
+    </File>
+    <File Include="bin/de/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>07/10/2012 23:31:44</publishTime>
+    </File>
+    <File Include="bin/de/System.Web.WebPages.resources.dll">
+      <publishTime>07/10/2012 23:31:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/07/2014 11:50:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/07/2014 11:50:45</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/07/2014 11:50:48</publishTime>
+    </File>
+    <File Include="bin/Omu.ValueInjecter.dll">
+      <publishTime>02/07/2014 11:50:51</publishTime>
+    </File>
+    <File Include="bin/schedule.vbs">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="bin/System.Data.Entity.dll">
+      <publishTime>03/18/2010 18:31:26</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>02/07/2014 11:50:51</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>02/07/2014 11:50:50</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>02/07/2014 11:50:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/10/2012 12:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>02/07/2014 11:50:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>02/07/2014 11:50:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/10/2012 21:51:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/07/2014 11:50:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>02/07/2014 11:50:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/17/2012 11:22:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/10/2012 12:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/10/2012 12:03:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/10/2012 12:03:34</publishTime>
+    </File>
+    <File Include="bin/TennisChallenge.Dal.dll">
+      <publishTime>07/28/2014 16:39:52</publishTime>
+    </File>
+    <File Include="bin/TennisWeb.dll">
+      <publishTime>07/28/2014 16:39:53</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/07/2014 11:50:47</publishTime>
+    </File>
+    <File Include="Content/fullcalendar.css">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/fullcalendar.print.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/images/adminEdit.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/advertisement.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/aktuelles_veranstaltungen.jpg">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/Arrows-Left-icon.png">
+      <publishTime>05/28/2014 16:07:21</publishTime>
+    </File>
+    <File Include="Content/images/arrow_sans_up-128.png">
+      <publishTime>07/25/2014 11:14:58</publishTime>
+    </File>
+    <File Include="Content/images/arrow_website_reservation.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/background/004.png">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/images/background/005.jpg">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/images/background/006.jpg">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/images/background/iStock_000018256273.jpg">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/images/background/tennis_0002_2560.jpg">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/images/Benutzer_1.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/bg_button.jpg">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/bg_court_caption.jpg">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/bg_titlebar.jpg">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/closed-leg.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/default_player_image.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/double.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/Eventmanager7.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/event_manager.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/gesperrt-platz.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/gesperrt-platz_klein.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/host.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/info_icon_blue_white.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/Interclubleiter6.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/interclub_organizer.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/janitor.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/layout/startseite.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/main-navigation/hilfe.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/main-navigation/inactive.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/main-navigation/karte.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/main-navigation/startseite.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/mitspielen.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/murray.jpg">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/nadal.jpg">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/News9.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/novak.jpg">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/ongoing_game.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/Platzwart2.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/post-it-300k.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/post-it-300ky-r.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/post-it-300ky.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/rfid_card_icon.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/roger_debuer.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/roger_federer.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/single.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/spacer.gif">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/tct_logo.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/Tenniscoach3.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/tennisschule_platz.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/tennis_court_blue.jpg">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/tennis_court_empty.jpg">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/tennis_court_yellow.jpg">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/images/topicalities.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/tournament_organizer.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/Turnierleiter5.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/turnier_platz.png">
+      <publishTime>02/07/2014 11:50:41</publishTime>
+    </File>
+    <File Include="Content/images/Werbung8.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/Wirt6.png">
+      <publishTime>04/19/2014 15:07:33</publishTime>
+    </File>
+    <File Include="Content/images/x-icon.png">
+      <publishTime>02/07/2014 11:50:40</publishTime>
+    </File>
+    <File Include="Content/InfoBoard.css">
+      <publishTime>07/25/2014 11:14:59</publishTime>
+    </File>
+    <File Include="Content/Jcrop.gif">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/jquery.Jcrop.css">
+      <publishTime>02/07/2014 11:50:39</publishTime>
+    </File>
+    <File Include="Content/keyboard.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/PIE.htc">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>07/25/2014 11:14:59</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/animated-overlay.gif">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui-timepicker-addon.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery-ui.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.accordion.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.all.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.autocomplete.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.base.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.button.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.core.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.datepicker.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.dialog.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.menu.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.progressbar.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.resizable.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.selectable.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.slider.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.spinner.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tabs.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.theme.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/jquery.ui.tooltip.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/animated-overlay.gif">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_222222_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_454545_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_888888_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery-ui.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.accordion.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.autocomplete.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.button.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.core.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.datepicker.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.dialog.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.menu.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.progressbar.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.resizable.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.selectable.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.slider.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.spinner.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tabs.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Content/themes/base/minified/jquery.ui.tooltip.min.css">
+      <publishTime>02/07/2014 11:50:42</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>07/25/2014 11:14:57</publishTime>
+    </File>
+    <File Include="schedule.vbs">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/assign-player.js">
+      <publishTime>06/16/2014 16:45:30</publishTime>
+    </File>
+    <File Include="Scripts/captcha.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/challenge-admin.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/challenge-player.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/clubtourn-website.js">
+      <publishTime>07/25/2014 11:14:57</publishTime>
+    </File>
+    <File Include="Scripts/CourtLocking.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/EditAdvertisements.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/EditNewsFeeds.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/EditorHookup.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/enter-result.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/fullcalendar.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/FullcalendarHookup.js">
+      <publishTime>04/19/2014 15:07:31</publishTime>
+    </File>
+    <File Include="Scripts/gcal.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/infoboard-gameplan.js">
+      <publishTime>07/25/2014 11:14:57</publishTime>
+    </File>
+    <File Include="Scripts/infoboard-tournament.js">
+      <publishTime>07/25/2014 11:14:57</publishTime>
+    </File>
+    <File Include="Scripts/InfoBoard.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/Interclub.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.9.1.min.map">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.10.1.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.10.1.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-timepicker-addon.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fileupload.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.iframe-transport.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.Jcrop.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery.keyboard.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.placeholder.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.ui.datepicker-de-CH.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/keyboard-custom-layouts.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_ar.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_bg.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_ca.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_cs.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_da.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_de.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_el.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_es.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_et.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_eu.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_fa.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_fi.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_fr.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_he.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_hr.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_hu.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_it.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_ja.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_ka.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_kk.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_lt.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_lv.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_my.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_nl.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_no.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_pl.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_pt_BR.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_pt_PT.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_ro.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_ru.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_si.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_sk.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_sl.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_sr.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_sv.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_th.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_tr.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_uk.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_vi.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_zh.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/messages_zh_TW.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/methods_de.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/methods_nl.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/localization/methods_pt.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/PictureEdit.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/PIE.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/player-filter.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/RangeDateValidator.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/ranked-game-admin.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/ranked-games-list.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/ranked-members.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/ranked-rules.js">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Scripts/raphael-min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/Standby.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/tennis-challenge.js">
+      <publishTime>07/28/2014 13:55:49</publishTime>
+    </File>
+    <File Include="Scripts/TennisChallengeUtils.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/tournament-begin.js">
+      <publishTime>06/16/2014 16:45:30</publishTime>
+    </File>
+    <File Include="Scripts/underscore.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/underscore.min.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/user-ads.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Scripts/UserList.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/view-ranked-games.js">
+      <publishTime>02/07/2014 11:50:34</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>02/07/2014 11:50:35</publishTime>
+    </File>
+    <File Include="Views/Account/ChangePassword.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/ChangePasswordSuccess.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/Confirmation.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/LogOn.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/Recovery.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/RecoverySuccess.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Account/Verify.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Admin/AddToRanked.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateInterclubBooking.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateTeacherBooking.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateTournamentBooking.cshtml">
+      <publishTime>05/28/2014 16:07:20</publishTime>
+    </File>
+    <File Include="Views/Admin/CreateUser.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/DeleteUser.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/EditAdvertisements.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/EditCourtLockings.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/EditNewsFeeds.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/EditUser.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/EditUserPassword.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/Index.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/ListBookingSeries.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/UsersInClubsList.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/_AdminMenu.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Admin/_CreateBooking.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/_CreateBookingSeries.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Admin/_CreateTournamentBooking.cshtml">
+      <publishTime>07/25/2014 11:14:57</publishTime>
+    </File>
+    <File Include="Views/ClubTourn/ClubTournManage.cshtml">
+      <publishTime>07/25/2014 11:14:58</publishTime>
+    </File>
+    <File Include="Views/ClubTourn/ClubTournNew.cshtml">
+      <publishTime>07/25/2014 11:14:58</publishTime>
+    </File>
+    <File Include="Views/ClubTourn/ClubTournOld.cshtml">
+      <publishTime>07/25/2014 11:14:58</publishTime>
+    </File>
+    <File Include="Views/ClubTourn/ClubTournStart.cshtml">
+      <publishTime>06/16/2014 16:45:31</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Home/Faq.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Home/Imprint.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Home/Infoboard.cshtml">
+      <publishTime>05/08/2014 13:43:41</publishTime>
+    </File>
+    <File Include="Views/Home/NoInfoboard.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/InfoBoard/Index.cshtml">
+      <publishTime>07/25/2014 11:14:57</publishTime>
+    </File>
+    <File Include="Views/InfoBoard/RankedStart.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/InfoBoard/Standby.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Member/Delete.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Member/Edit.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Member/Index.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/BookingSeriesSimple.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/Clubs.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/DateTime.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/DisplayTemplates/ImageUrl.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/AdvertisementModel.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/EditDate.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/ImageUrl.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/NewsFeedModel.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/NewsFeedsModel.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/EditorTemplates/RegisterDate.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/_ClubTournMenu.cshtml">
+      <publishTime>06/16/2014 16:45:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_CreateOrEditMember.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_InfoBoardLayout.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_LogOnPartial.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/Shared/_TournamentManageMenu.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_TournamentMenu.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Tournament/ChallengeAdmin.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Tournament/ChallengePlayer.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Tournament/EnterResult.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Tournament/RankedAdmin.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Tournament/RankedGames.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Tournament/Rules.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/Tournament/TournamentBeginn.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Tournament/TournamentManagment.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Tournament/TournamentNew.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Tournament/TournamentOld.cshtml">
+      <publishTime>04/19/2014 15:07:32</publishTime>
+    </File>
+    <File Include="Views/Tournament/TournamentStart.cshtml">
+      <publishTime>06/16/2014 16:45:31</publishTime>
+    </File>
+    <File Include="Views/Tournament/ViewRankedGames.cshtml">
+      <publishTime>02/07/2014 11:50:38</publishTime>
+    </File>
+    <File Include="Views/UserAds/LookingForPlayer.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/UserAds/TennisMarket.cshtml">
+      <publishTime>02/07/2014 11:50:37</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/07/2014 11:50:36</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/28/2014 16:40:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

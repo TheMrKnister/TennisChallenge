@@ -1,0 +1,68 @@
+﻿@model TennisWeb.Models.ClubManagementModel
+
+@{
+  ViewBag.Title = "Overview";
+}
+
+@Scripts.Render("~/bundles/edituser")
+
+<div class="list-panel-position">
+  <h3>Erfasste Clubs</h3>
+  <input type="text" name="club-name-input" />
+  <div class="property-list">
+    <ul>
+      @foreach (var club in Model.Clubs)
+      {
+        <li onclick="SelectUser()">@club.Name</li>
+      }
+    </ul>
+  </div>
+  @*<h3 class="selected-user">Kein User ausgewählt</h3>*@
+
+  @*<button type="submit">Speichern</button>*@
+</div>
+<div class="list-panel-position">
+  <h3>Erfasste Benutezr</h3>
+  <input type="text" name="user-name-input" />
+  <div class="property-list">
+    <ul>
+      @foreach (var club in Model.Clubs)
+      {
+        <li>@club.Name</li>
+      }
+    </ul>
+  </div>
+</div>
+<div class="list-panel-position">
+  <h3>Wen beides gewählt (Knopf zeigen)</h3>
+  @Html.ActionLink("Manager zuweisen", "AddManagerToClub")<br />
+</div>
+
+
+
+<div id="club-management-table">
+  <table>
+    <thead>
+      <tr>Name des Managers</tr>
+      <tr>Zugewiesner Club</tr>
+      <tr></tr>
+    </thead>
+    <tbody>
+      @foreach (var clubManager in Model.ClubManagers)
+      {
+        <tr>
+          <td>
+            @clubManager.User.Member.FullName
+          </td>
+          <td>
+            @clubManager.Club.Name
+          </td>
+          <td>
+            <input type="submit" value="Entfernen"/>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+</div>

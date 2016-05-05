@@ -1,0 +1,164 @@
+﻿@model AdminNavigationCat?
+@{
+  var editUserActive = AdminNavigationCat.EditUser == Model ? "active" : "";
+  var janitorActive = AdminNavigationCat.Janitor == Model ? "active" : "";
+  var teacherActive = AdminNavigationCat.Teacher == Model ? "active" : "";
+  var tournamentActive = AdminNavigationCat.Tournament == Model ? "active" : "";
+  var interclubActive = AdminNavigationCat.Interclub == Model ? "active" : "";
+  var hostActive = AdminNavigationCat.Host == Model ? "active" : "";
+  var eventActive = AdminNavigationCat.Event == Model ? "active" : "";
+  var advertisementActive = AdminNavigationCat.Advertisement == Model ? "active" : "";
+  var topicalitiesActive = AdminNavigationCat.Topicalities == Model ? "active" : "";
+
+  var isClubAdmin = User.IsInRoles(RoleNames.ClubAdmin);
+  var isJanitor = User.IsInRoles(RoleNames.Janitor);
+  var isTennisTeacher = User.IsInRoles(RoleNames.TennisTeacher);
+  var isCasualTournamentOrganizer = User.IsInRoles(RoleNames.CasualTournamentOrganizer);
+  var isInterClubOrganizer = User.IsInRoles(RoleNames.InterClubOrganizer);
+  var isHost = User.IsInRoles(RoleNames.Host);
+  var isEventManager = User.IsInRoles(RoleNames.EventManager);
+  var isAdvertisementManager = User.IsInRoles(RoleNames.AdvertisementManager);
+  var isTopicalityManger = User.IsInRoles(RoleNames.TopicalityManger);
+}
+
+<div id="adminNavigation">
+  <div class="@editUserActive @(isClubAdmin ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage User">
+      <img src="@Url.Content("~/Content/images/Benutzer_1.png")" alt="Edit Users" />
+    </div>
+    <div class="linkText">
+      @if (isClubAdmin)
+      {
+        @Html.ActionLink("Benutzer Bearbeiten", "EditUser")
+      }
+      else
+      {
+        @:Benutzer Bearbeiten
+      }
+    </div>
+  </div>
+  <div class="@janitorActive @(isJanitor ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage janitor">
+      <img src="@Url.Content("~/Content/images/Platzwart2.png")" alt="Janitor" />
+    </div>
+    <div class="linkText">
+      @if (isJanitor)
+      {
+        @Html.ActionLink("Platzwart", "EditCourtLockings")
+      }
+      else
+      {
+        @:Platzwart
+      }
+    </div>
+  </div>
+  <div class="@teacherActive @(isTennisTeacher ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage tenniscoach">
+      <img src="@Url.Content("~/Content/images/Tenniscoach3.png")" alt="Tennis Teacher" />
+    </div>
+    <div class="linkText">
+      @if (isTennisTeacher)
+      {
+        @Html.ActionLink("Tennis Lehrer", "CreateTeacherBooking")
+      }
+      else
+      {
+        @:Tennis Lehrer
+      }
+    </div>
+  </div>
+  <div class="@tournamentActive @(isCasualTournamentOrganizer ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage tournament">
+      <img src="@Url.Content("~/Content/images/Turnierleiter5.png")" alt="Tournament Organizer" />
+    </div>
+    <div class="linkText">
+      @if (isCasualTournamentOrganizer)
+      {
+        @Html.ActionLink("Turnierleiter", "CreateTournamentBooking")
+      }
+      else
+      {
+        @:Turnierleiter
+      }
+    </div>
+  </div>
+  <div class="@interclubActive @(isInterClubOrganizer ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage interclub">
+      <img src="@Url.Content("~/Content/images/Interclubleiter6.png")" alt="Edit Users" />
+    </div>
+    <div class="linkText">
+      @if (isInterClubOrganizer)
+      {
+        @Html.ActionLink("Interklubleiter", "CreateInterclubBooking")
+      }
+      else
+      {
+        @:Interklubleiter
+      }
+    </div>
+  </div>
+  <div class="@hostActive @(false ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage wirt">
+      <img src="@Url.Content("~/Content/images/Wirt6.png")" alt="Edit Users" />
+    </div>
+    <div class="linkText">
+      @* TODO: Implement Host *@
+      @if (false)
+      {
+        @Html.ActionLink("Wirt", "UsersInClubsList")
+      }
+      else
+      {
+        @:Wirt
+      }
+    </div>
+  </div>
+  <div class="@eventActive @(false ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage eventmanager">
+      <img src="@Url.Content("~/Content/images/Eventmanager7.png")" alt="Edit Users" />
+    </div>
+    <div class="linkText">
+      @* TODO: Implement Event Manager *@
+      @if (false)
+      {
+        @Html.ActionLink("Eventmanager", "UsersInClubsList")
+      }
+      else
+      {
+        @:Eventmanager
+      }
+    </div>
+  </div>
+  <div class="@advertisementActive @(isAdvertisementManager ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage §">
+      <img src="@Url.Content("~/Content/images/Werbung8.png")" alt="Edit Users" />
+    </div>
+    <div class="linkText">
+      @if (isAdvertisementManager)
+      {
+        @Html.ActionLink("Werbung", "EditAdvertisements")
+      }
+      else
+      {
+        @:Werbung
+      }
+    </div>
+  </div>
+  <div class="@topicalitiesActive @(isTopicalityManger ? "adminMenuAvailable" : "adminMenuNotAvailable")">
+    <div class="linkImage news">
+      <img src="@Url.Content("~/Content/images/News9.png")" alt="Edit Users" />
+    </div>
+    <div class="linkText">
+      @if (isTopicalityManger)
+      {
+        @Html.ActionLink("Aktualitäten", "EditNewsFeeds")
+      }
+      else
+      {
+        @:Aktualitäten
+      }
+    </div>
+  </div>
+</div>
+
+<div id="greyback"></div>

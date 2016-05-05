@@ -1,0 +1,24 @@
+﻿@model TennisWeb.Models.NewsFeedsModel
+
+@{
+  ViewBag.Title = "Aktualitäten";
+}
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval", "~/bundles/editnewsfeeds")
+}
+
+@Html.Action("AdminMenu", new { adminNavigationCat = AdminNavigationCat.Topicalities })
+
+<input id="new-newsfeed" type="button" name="new-newsfeed"  value="Neu" data-new-newsfeed-url="@Url.Action("CreateNewsFeed")" />
+<div id="news-admin">
+  @using (Html.BeginForm())
+  {
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+
+    <p>
+      <input id="save-news" type="submit" value="Speichern" />
+    </p>
+  }
+</div>

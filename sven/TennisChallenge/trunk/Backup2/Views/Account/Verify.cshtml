@@ -1,0 +1,56 @@
+﻿@using TennisWeb.Controllers
+@using TennisWeb.Utils
+@model AccountController.VerificationStatus
+
+@{
+  ViewBag.Title = "Konto erstellen";
+  ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+<h2>Neues Konto erstellen</h2>
+
+@switch (Model)
+{
+  case AccountController.VerificationStatus.Success:
+    <div>
+      <p>
+        Du wurdest erfolgreich authentifiziert und kannst dein Konto nun verwenden. Klicke auf weiter, damit du auf 
+        deine Profilseite weitergeleitet wirst.
+      </p>
+    </div>
+    <div class="registration-steps">
+      <span class="step-number-border"><span class="step-number">1</span></span>
+      <span class="step-label">Persönliche Informationen</span>
+      <span class="step-number-border"><span class="step-number">2</span></span>
+      <span class="step-label">Aktivierung</span>
+      <span class="step-number-border"><span class="step-number active">3</span></span>
+      <span class="step-label">Abschluss</span>
+    </div>
+    <div id="continue-link">
+    <p>
+        @Html.ActionLink("Weiter", "UserProfile", "Home")
+      </p>
+      </div>
+   break;
+  case AccountController.VerificationStatus.Invalid:
+    <div>
+      <p>
+        Die Authentifizierung ist fehlgeschlagen. Bitte starte den Registrierungsprozess neu.
+      </p>
+      <p>
+        @Html.ActionLink("Registrierung", "Register")
+      </p>
+    </div>
+   break;
+  case AccountController.VerificationStatus.AlreadyConfirmed:
+    <div>
+      <p>
+        Dein Konto wurde bereits erfolgreich bestätigt. Du kannst dich mit deinem Benutzernamen und Passwort anmelden.
+      </p>
+      <p>
+        @Html.ActionLink("Anmelden", "LogOn")
+      </p>
+    </div>
+    break;
+}
+

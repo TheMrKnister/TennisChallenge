@@ -1,0 +1,18 @@
+﻿@using TennisWeb.Utils
+@model dynamic
+
+@{
+  ViewBag.Title = "Konto Löschen";
+  ViewBag.NavTopCat = NavigationTopCat.Profile;
+}
+
+<h2>Konto Löschen</h2>
+Möchten Sie Ihr Konto @User.Identity.Name wirklich Löschen?
+
+@using (Html.BeginForm()) {
+    <div>
+      <input type="submit" value="Löschen" />
+    </div>
+}
+
+@Html.ActionLink("Zurück", "Index")
